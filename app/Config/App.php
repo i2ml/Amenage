@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:8080/';
+	public $baseURL = 'http://localhost/Catalogue-Diagnostique-AT/public/';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ class App extends BaseConfig
 	| should run under for this request.
 	|
 	*/
-	public $defaultLocale = 'en';
+	public $defaultLocale = 'fr';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -88,7 +88,7 @@ class App extends BaseConfig
 	| found, the first locale will be used.
 	|
 	*/
-	public $supportedLocales = ['en'];
+	public $supportedLocales = ['fr'];
 
 	/*
 	|--------------------------------------------------------------------------
@@ -99,7 +99,7 @@ class App extends BaseConfig
 	| dates with the date helper, and can be retrieved through app_timezone()
 	|
 	*/
-	public $appTimezone = 'America/Chicago';
+	public $appTimezone = 'France/Paris';
 
 	/*
 	|--------------------------------------------------------------------------
