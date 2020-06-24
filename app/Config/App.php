@@ -99,7 +99,7 @@ class App extends BaseConfig
 	| dates with the date helper, and can be retrieved through app_timezone()
 	|
 	*/
-	public $appTimezone = 'France/Paris';
+	public $appTimezone = 'Europe/Paris';
 
 	/*
 	|--------------------------------------------------------------------------

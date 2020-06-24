@@ -2,7 +2,7 @@
 
 <?= \Config\Services::validation()->listErrors(); ?>
 
-<form action="/news/create" method="post">
+<form action="/Catalogue-Diagnostique-AT/public/news/create" method="post">
     <?= csrf_field() ?>
 
     <label for="title">Title</label>
