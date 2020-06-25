@@ -8,14 +8,14 @@ class AideTechniqueModel extends Model
 {
     protected $table = 'aidetechnique';
 
-    public function getAideTechnique($description = false)
+    public function getAideTechnique($id = false)
     {
-        if ($description === false) {
+        if ($id === false) {
             return $this->findAll();
         }
 
         return $this->asArray()
-            ->where(['description' => $description])
+            ->where(['id' => $id])
             ->first();
     }
 }
