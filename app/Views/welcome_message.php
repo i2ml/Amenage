@@ -30,7 +30,36 @@
 			<div class="col-xl-12 col-lg-12 col-md-12 whiteBackground">
 				<!-- Nested Row within Card Body -->
 				<div class="row">
-					<p>banane</p>
+					<img class="fit-picture" src="assets/img/baniere.png" alt="Banière page d'accueil">
+				</div>
+				<div class="row align-items-center m-5">
+					<div class="col-lg">
+						<!-- Topbar Search -->
+						<form>
+							<div class="input-group">
+								<input type="text" class="form-control bg-light border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2">
+								<div class="input-group-append">
+									<button class="btn btn-primary" type="button">
+										<i class="fas fa-search fa-sm"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg">
+						<div class="row justify-content-center m-3">
+							<button type="button" class="btn btn-primary w-50  btn-lg btn-block">Parcourir une catégorie</button>
+						</div>
+						<div class="row justify-content-center m-3">
+							<button type="button" class="btn btn-primary w-50 btn-lg btn-block">Cibler mon besoin</button>
+						</div>
+						<div class="row justify-content-center m-3">
+							<button type="button" class="btn btn-primary w-50 btn-lg btn-block">Informations</button>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center m-5">
+					mentions légales
 				</div>
 			</div>
 		</div>

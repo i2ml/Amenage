@@ -1,3 +1,7 @@
 .whiteBackground {
-    background-color: #DDDFEB;
+    background-color: #FFF;
+}
+
+.fit-picture{
+    width: 100%;
 }
