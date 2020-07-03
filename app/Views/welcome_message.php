@@ -24,17 +24,14 @@
 
 	<div class="container col-xl-10">
 
-		<!-- Outer Row -->
 		<div class="justify-content-center">
 
-			<div class="col-xl-12 col-lg-12 col-md-12 whiteBackground">
-				<!-- Nested Row within Card Body -->
+			<div class="col-xl-12 col-lg-12 col-md-12 bg-white">
 				<div class="row">
 					<img class="fit-picture" src="assets/img/baniere.png" alt="Banière page d'accueil">
 				</div>
 				<div class="row align-items-center m-5">
 					<div class="col-lg">
-						<!-- Topbar Search -->
 						<form>
 							<div class="input-group">
 								<input type="text" class="form-control bg-light border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2">
@@ -48,18 +45,18 @@
 					</div>
 					<div class="col-lg">
 						<div class="row justify-content-center m-3">
-							<button type="button" class="btn btn-primary w-50  btn-lg btn-block">Parcourir une catégorie</button>
+							<a type="button" class="btn btn-primary w-50  btn-lg btn-block" href="categories">Parcourir une catégorie</a>
 						</div>
 						<div class="row justify-content-center m-3">
-							<button type="button" class="btn btn-primary w-50 btn-lg btn-block">Cibler mon besoin</button>
+							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="cibler-mon-besoin">Cibler mon besoin</a>
 						</div>
 						<div class="row justify-content-center m-3">
-							<button type="button" class="btn btn-primary w-50 btn-lg btn-block">Informations</button>
+							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="about">Informations</a>
 						</div>
 					</div>
 				</div>
 				<div class="row justify-content-center m-5">
-					mentions légales
+					<a href="mentions-legales">Mentions légales</a>
 				</div>
 			</div>
 		</div>
