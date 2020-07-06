@@ -55,7 +55,28 @@
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center m-5">
+				<div class="row justify-content-center">
+					<h1 class="h3 mb-0 text-gray-800">Nos partenaires</h1>
+				</div>
+				<div class="row justify-content-center">
+					<div class="card shadow mb-4 m-3">
+						<div class="card-body">
+							<div class="text-center">
+								<h6 class="m-0 font-weight-bold">CFPPA 30</h6>
+								<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="assets\img\Logo CFPPA30 Gard.png" alt="logo partenaire">
+							</div>
+						</div>
+					</div>
+					<div class="card shadow mb-4 m-3">
+						<div class="card-body">
+							<div class="text-center">
+								<h6 class="m-0 font-weight-bold">Département du gard</h6>
+								<img class="img-fluid px-3 px-sm-4 mt-1 mb-1 img-verysmall" src="assets\img\logo_gard_2019_rvb_1000X1000.jpg" alt="logo partenaire">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center pb-5">
 					<a href="mentions-legales">Mentions légales</a>
 				</div>
 			</div>
