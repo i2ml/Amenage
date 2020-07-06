@@ -56,9 +56,17 @@
 					</div>
 				</div>
 				<div class="row justify-content-center">
-					<h1 class="h3 mb-0 text-gray-800">Nos partenaires</h1>
+					<h1 class="h3 mb-0 text-gray-800">Les acteurs du projet</h1>
 				</div>
 				<div class="row justify-content-center">
+					<div class="card shadow mb-4 m-3">
+						<div class="card-body">
+							<div class="text-center">
+								<h6 class="m-0 font-weight-bold">Fondation i2ml</h6>
+								<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="assets\img\Logo_Square.png" alt="logo partenaire">
+							</div>
+						</div>
+					</div>
 					<div class="card shadow mb-4 m-3">
 						<div class="card-body">
 							<div class="text-center">
