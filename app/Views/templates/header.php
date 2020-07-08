@@ -27,7 +27,7 @@
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">Catalogue AT</div>
+            <div class="sidebar-brand-text pl-2 mx-6">Catalogue AT</div>
         </a>
 
         <div class="col-11 justify-content-center">

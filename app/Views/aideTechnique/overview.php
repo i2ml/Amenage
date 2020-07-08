@@ -13,7 +13,9 @@
 
     <?php endforeach; ?>
 
-<?php else : ?>
+<?php else : 
+    // TODO : faire la partie ci-dessous
+    ?>
 
     <h3>No News</h3>
 
