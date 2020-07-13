@@ -23,7 +23,7 @@
     <!-- Topbar -->
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow justify-content-end container-fluid">
 
-        <a class="d-flex align-items-center justify-content-center" href=".">
+        <a class="d-flex align-items-center justify-content-center" href="<?php echo base_url('public')?>">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
