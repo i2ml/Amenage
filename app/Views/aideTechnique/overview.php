@@ -9,7 +9,7 @@
         <div class="main">
             <?= esc($aideTechnique_item['description']); ?>
         </div>
-        <p><a href="/Catalogue-Diagnostique-AT/public/aideTechnique/<?= esc($aideTechnique_item['id'], 'url'); ?>">Plus de détails</a></p>
+        <p><a href="aideTechniques/<?= esc($aideTechnique_item['id'], 'url'); ?>">Plus de détails</a></p>
 
     <?php endforeach; ?>
 

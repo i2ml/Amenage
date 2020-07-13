@@ -21,7 +21,7 @@
                                 <div class="col-auto">
                                     <i class="<?= esc($emoji[$categorie_item['id']]); ?> fa-2x text-gray-300"></i>
                                 </div>
-                                <a href="aideTechnique" class="stretched-link"></a>
+                                <a href="aideTechniques" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
