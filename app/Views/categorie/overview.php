@@ -6,7 +6,7 @@
     <?php if (!empty($categorie) && is_array($categorie)) :
 
         $colors = array("primary", "secondary", "info", "warning", "danger", "success", "primary", "secondary", "info", "warning", "danger", "success", "primary", "secondary", "info", "warning", "danger", "success");
-        $emoji = array("fas fa-dice", "fas fa-hands", "fas fa-people-arrows", "fas fa-shower", "fas fa-lock", "fas fa-route", "fas fa-couch", "fas fa-couch", "fas fa-bullhorn", "fas fa-dice", "fas fa-glasses", "fas fa-headset");
+        $emoji = array("fas fa-dice", "fas fa-hands", "fas fa-people-arrows", "fas fa-shower", "fas fa-lock", "fas fa-route", "fas fa-couch", "fas fa-couch", "fas fa-bullhorn", "fas fa-dice", "fas fa-glasses", "fas fa-headset", "fas fa-food");
         foreach ($categorie as $categorie_item) : ?>
             <!-- Pending Requests Card Example -->
             

@@ -16,7 +16,7 @@
         </div>
         <div class="card shadow m-3">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Description :</h6>
+                <h4 class="m-0 font-weight-bold text-primary">Description :</h4>
             </div>
             <div class="card-body">
                 <div class="text-justify">
@@ -25,10 +25,61 @@
             </div>
         </div>
     </div>
-    <div class="col-xl-7 col-md-6 mt-md-3 pl-5 pr-5 pt-md-3 pb-md-3">
-        <div class="row">
-            <h4>Catégorie :</h4>
-            <h6>Je suis une banane<?= ucfirst(esc($aideTechnique['idCategorie'])); ?></h6>
+    <div class=" col-xl-7 col-md-6">
+        <div class="card shadow mt-3 mr-3">
+            <div class="card-header py-3">
+                <h4 class="m-0 font-weight-bold text-primary">Caractéristiques :</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Catégorie : </h6>
+                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['idCategorie'])); ?></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Dimensions : </h6>
+                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['idDimensions'])); ?></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Remboursement : </h6>
+                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['idPrix'])); ?></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Poids : </h6>
+                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['idPoids'])); ?></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Est ajustable : </h6>
+                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['idPriseEnCharge'])); ?></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Est pliable : </h6>
+                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['idCategorie'])); ?></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Dimensions plié : </h6>
+                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['idCategorie'])); ?></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Requiert 2 personnes : </h6>
+                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['idCategorie'])); ?></h6>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
