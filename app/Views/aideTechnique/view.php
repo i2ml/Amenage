@@ -39,6 +39,23 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
+                        <h6 class="d-inline m-0 font-weight-bold text-primary">Zone : </h6>
+                        <?php
+                        if (esc($aideTechnique['idZone']) === null) {
+                        ?>
+                            <h6 class="d-inline"> Information inconnue ou non applicable.</h6>
+                        <?php
+                        } else {
+                        ?>
+                            <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['zoneNom'])); ?>.</h6>
+                        <?php
+                        }
+                        ?>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto">
                         <h6 class="d-inline m-0 font-weight-bold text-primary">Dimensions : </h6>
                         <h6 class="d-inline">
                             <?php if (esc($aideTechnique['idDim']) === null) {
@@ -275,7 +292,7 @@
                     <div class="col-md-auto">
                         <h6 class="d-inline m-0 font-weight-bold text-primary">Alimentation : </h6>
                         <h6 class="d-inline">
-                            <?= esc($aideTechnique['estAlimenté']);?></h6>
+                            <?= esc($aideTechnique['estAlimenté']); ?></h6>
                     </div>
                 </div>
                 <div class="row">
