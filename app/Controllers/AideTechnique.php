@@ -24,6 +24,15 @@ class AideTechnique extends Controller
     public function search($input = NULL)
     {
         $model = new AideTechniqueModel();
+
+        if ($this->request->getMethod() === 'post' && $this->validate([
+            'searchBar'  => 'required'
+        ])){
+           $input = $this->request->getPost('searchBar');
+        }else{
+            $input = false;
+        }
+
         $data = [
             'aideTechnique'  => $model->search($input),
             'title' => 'Aide techniques',

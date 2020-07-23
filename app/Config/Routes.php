@@ -32,8 +32,9 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('aideTechniques/view/(:segment)', 'AideTechnique::view/$1');
-$routes->get('aideTechniques/(:segment)', 'AideTechnique::search/$1');
+//$routes->get('aideTechniques/(:segment)', 'AideTechnique::search/$1');
 $routes->get('aideTechniques', 'AideTechnique::index');
+$routes->match(['get', 'post'], 'aideTechniques', 'AideTechnique::search');
 $routes->get('categories', 'Categorie::index');
 $routes->get('(:any)', 'Pages::view/$1');
 
