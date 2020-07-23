@@ -35,7 +35,7 @@ class AideTechnique extends Controller
 
         $data = [
             'aideTechnique'  => $model->search($input),
-            'title' => 'Aide techniques',
+            'title' => 'Résultat de la recherche pour : '.$input,
         ];
 
         echo view('templates/header', $data);
