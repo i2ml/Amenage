@@ -31,11 +31,11 @@
 				</div>
 				<div class="row align-items-center m-5">
 					<div class="col-lg">
-						<form>
+						<form action="<?php echo base_url('public/aideTechniques') ?>" method="post">
 							<div class="input-group">
-								<input type="text" class="form-control bg-light border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2">
+								<input type="text" name="searchBar" class="form-control bg-light border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2">
 								<div class="input-group-append">
-									<button class="btn btn-primary" type="button">
+									<button class="btn btn-primary" type="submit">
 										<i class="fas fa-search fa-sm"></i>
 									</button>
 								</div>
