@@ -21,16 +21,15 @@ class AideTechnique extends Controller
         echo view('templates/footer', $data);
     }
 
-    public function search($input = NULL)
+    public function search()
     {
         $model = new AideTechniqueModel();
-
         if ($this->request->getMethod() === 'post' && $this->validate([
             'searchBar'  => 'required'
         ])){
            $input = $this->request->getPost('searchBar');
         }else{
-            $input = false;
+            $input = null;
         }
 
         $data = [
