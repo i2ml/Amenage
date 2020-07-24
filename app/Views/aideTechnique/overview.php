@@ -18,11 +18,84 @@
             <button type="button" class="btn btn-primary">Filtrer les résultats</button>
         </div>
     </div>
+    <div class="row justify-content-md-center">
+        <div class="card shadow mt-3 mb-3 ml-5 mr-5">
+            <div class="card-header py-3">
+                <h4 class="font-weight-bold text-primary text-uppercase mb-0 small">Choix des filtres à appliquer :</h4>
+            </div>
+            <div class="card-body">
+                <form class="font-weight-bold text-secondary small">
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3 ">
+                            <label for="validationCustom01">Largeur maximale (en cm)</label>
+                            <input type="number" class="form-control" id="validationCustom01">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom02">Longueur maximale (en cm)</label>
+                            <input type="number" class="form-control" id="validationCustom02">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom02">Hauteur maximale (en cm)</label>
+                            <input type="number" class="form-control" id="validationCustom02">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom03">Prix maximal.</label>
+                            <input type="number" class="form-control" id="validationCustom03" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 mb-3">
+                            <label for="validationCustom03">Poids maximal.</label>
+                            <input type="number" class="form-control" id="validationCustom03" required>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="validationCustom03">Poids maximal.</label>
+                            <input type="number" class="form-control" id="validationCustom03" required>
+                        </div>
+                        <div class="col-md-2 col-sm-3  mb-3 mt-4 pt-2">
+                            <div class="custom-control custom-checkbox custom-checkbox-success">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                <label class="custom-control-label " for="defaultUnchecked">Est ajustable</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3  mb-3 mt-4 pt-2">
+                            <div class="custom-control custom-checkbox custom-checkbox-success">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked2">
+                                <label class="custom-control-label " for="defaultUnchecked2">Est pliable</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 mb-3 mt-4 pt-2">
+                            <div class="custom-control custom-checkbox custom-checkbox-success">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked3">
+                                <label class="custom-control-label " for="defaultUnchecked3">Peut s'utiliser seul</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3  mb-3 mt-2 pt-2">
+                            Remboursement
+                            <div class="custom-control custom-checkbox custom-checkbox-success">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked4">
+                                <label class="custom-control-label " for="defaultUnchecked4">Total</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-checkbox-success">
+                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked5">
+                                <label class="custom-control-label " for="defaultUnchecked5">Partiel</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <button class="btn btn-primary" type="submit">Appliquer les filtres sélectionnés</button>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
 
+            </div>
+        </div>
+    </div>
     <div class="row justify-content-md-center" id="container">
         <?php foreach ($aideTechnique as $aideTechnique_item) : ?>
 
-            <div class="aideTechnique col-md-5 mb-4">
+            <div class="aideTechnique col-md-5 mb-4 m-3">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
