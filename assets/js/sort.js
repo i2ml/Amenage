@@ -1,20 +1,23 @@
+
 $('option.dropdown-item').click(function () {
     $('option.dropdown-item').removeClass('active');
     $(this).addClass('active');
+    let divs;
     if (this.id == "alphabeticalOrderOption") {
-        let $divs = $("div.aideTechnique");
-        let alphabeticallyOrderedDivs = $divs.sort(function (a, b) {
-            return $(a).find("h5").text().toLowerCase() > $(b).find("h5").text().toLowerCase();
+        divs = $("div.aideTechnique");
+        let alphabeticallyOrderedDivs = divs.sort(function (a, b) {
+            return $(a).find("h5").text().toLowerCase() > $(b).find("h5").text().toLowerCase() ? 1 : ( $(a).find("h5").text().toLowerCase() < $(b).find("h5").text().toLowerCase() ? -1 :0);
         });
         $("#container").html(alphabeticallyOrderedDivs);
     } else {
-        let $divs = $("div.aideTechnique");
-        let notalphabeticallyOrderedDivs = $divs.sort(function (a, b) {
-            return $(a).find("h5").text().toLowerCase() < $(b).find("h5").text().toLowerCase();
+        divs = $("div.aideTechnique");
+        let notalphabeticallyOrderedDivs = divs.sort(function (a, b) {
+            return $(a).find("h5").text().toLowerCase() > $(b).find("h5").text().toLowerCase() ? -1 : ( $(a).find("h5").text().toLowerCase() < $(b).find("h5").text().toLowerCase() ? 1 :0);
         });
         $("#container").html(notalphabeticallyOrderedDivs);
     }
-});
+})
+
 
 $('#filterbutton').click(function () {
     if (!$("#filterForm").hasClass("d-none")) {
@@ -26,4 +29,4 @@ $('#filterbutton').click(function () {
     } else {
         $("#filterForm").removeClass("d-none")
     }
-});
+})
