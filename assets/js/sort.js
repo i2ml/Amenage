@@ -17,9 +17,13 @@ $('option.dropdown-item').click(function () {
 });
 
 $('#filterbutton').click(function () {
-    if($("#filterForm:visible").length === 1){
-        $("#filterForm:visible").hide()
-    }else{
-        $("#filterForm:hidden").show()
+    if (!$("#filterForm").hasClass("d-none")) {
+        if ($("#filterForm:visible").length === 1) {
+            $("#filterForm:visible").hide()
+        } else {
+            $("#filterForm:hidden").show()
+        }
+    } else {
+        $("#filterForm").removeClass("d-none")
     }
 });

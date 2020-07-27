@@ -15,10 +15,10 @@
             </div>
         </div>
         <div class="ml-4 mb-4">
-            <button type="button" class="btn btn-primary" id="filterbutton">Filtrer les résultats</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" id="filterbutton">Filtrer les résultats</button>
         </div>
     </div>
-    <div class="row justify-content-md-center" id="filterForm">
+    <div class="row justify-content-md-center d-none" id="filterForm">
         <div class="card shadow mt-3 mb-3 ml-5 mr-5">
             <div class="card-header py-3">
                 <h4 class="font-weight-bold text-primary text-uppercase mb-0 small">Choix des filtres à appliquer :</h4>
@@ -83,7 +83,8 @@
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
-                        <button class="btn btn-primary" type="submit">Appliquer les filtres sélectionnés</button>
+                        <button class="btn btn-primary mr-3" type="button">Réinitialiser les filtres</button>
+                        <button class="btn btn-primary ml-3" type="submit">Appliquer les filtres</button>
                     </div>
                 </form>
             </div>
