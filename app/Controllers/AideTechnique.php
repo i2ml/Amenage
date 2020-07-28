@@ -26,20 +26,40 @@ class AideTechnique extends Controller
         $model = new AideTechniqueModel();
         if ($this->request->getMethod() === 'post' && $this->validate([
             'searchBar'  => 'required'
-        ])){
-           $input = $this->request->getPost('searchBar');
-        }else{
+        ])) {
+            $input = $this->request->getPost('searchBar');
+        } else {
             $input = null;
         }
 
         $data = [
             'aideTechnique'  => $model->search($input),
-            'title' => 'Résultat de la recherche pour : '.$input,
+            'title' => 'Résultat de la recherche pour : ' . $input,
         ];
 
         echo view('templates/header', $data);
         echo view('aideTechnique/overview', $data);
         echo view('templates/footer', $data);
+    }
+
+    public function filter()
+    {
+        $model = new AideTechniqueModel();
+        if ($this->request->getMethod() === 'post') {
+            $input = $this->request->getPost();
+        } else {
+            $input = null;
+        }
+        if ($input['isReset'] == "false") {
+            $data = [
+                'aideTechnique'  => $model->filter($input['test']),
+            ];
+        }else{
+            $data = [
+                'aideTechnique'  => $model->filter(),
+            ];
+        }
+        echo view('aideTechnique/listeAt', $data);
     }
 
 
