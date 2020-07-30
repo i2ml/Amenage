@@ -32,42 +32,55 @@ $('#filterbutton').click(function () { //filter menu appeareance
 
 $(document).ready(
     $('#submit-filter').click(function () { //filter applied
-
-        let test = $('#validationCustom01').val();
-
+        console.log($('#estAjustable'))
         $.ajax({
             url: 'aideTechniques',
             method: 'post',
             data: {
                 isReset: false,
-                test: 1
+                largeurMax: $('#largeurMax').val(),
+                longueurMax: $('#longueurMax').val(),
+                hauteurMax: $('#hauteurMax').val(),
+                prixMax: $('#prixMax').val(),
+                supPoidsMax: $('#supPoidsMax').val(),
+                poidsMax: $('#poidsMax').val(),
+                estAjustable: $('#estAjustable').is(":checked"),
+                estPliable: $('#estPliable').is(":checked"),
+                solo: $('#solo').is(":checked")
             },
             success: function (response) {
                 $('#container').html(response)
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown)
+                alert(jqXHR.responseText)
             }
         });
-    }));
+    })
+);
 
 $(document).ready(
     $('#reset-filter').click(function () { //filter applied
-
-        let test = $('#validationCustom01').val();
-
         $.ajax({
             url: 'aideTechniques',
             method: 'post',
             data: {
                 isReset: true,
-                test: 1
+                largeurMax: null,
+                longueurMax: null,
+                hauteurMax: null,
+                prixMax: null,
+                supPoidsMax: null,
+                poidsMax: null,
+                estAjustable: null,
+                estPliable: null,
+                solo: null
             },
             success: function (response) {
                 $('#container').html(response)
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown)
+                alert(jqXHR.responseText)
             }
         });
-    }))
+    })
+);

@@ -27,47 +27,47 @@
                 <form class="font-weight-bold text-secondary small">
                     <div class="form-row">
                         <div class="col-md-3 mb-3 ">
-                            <label for="validationCustom01">Largeur maximale (en cm)</label>
-                            <input type="number" class="form-control" id="validationCustom01">
+                            <label for="largeurMax">Largeur maximale. (en cm)</label>
+                            <input type="number" class="form-control" id="largeurMax">
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="validationCustom02">Longueur maximale (en cm)</label>
-                            <input type="number" class="form-control" id="validationCustom02">
+                            <label for="longueurMax">Longueur maximale. (en cm)</label>
+                            <input type="number" class="form-control" id="longueurMax">
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="validationCustom02">Hauteur maximale (en cm)</label>
-                            <input type="number" class="form-control" id="validationCustom02">
+                            <label for="hauteurMax">Hauteur maximale. (en cm)</label>
+                            <input type="number" class="form-control" id="hauteurMax">
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="validationCustom03">Prix maximal.</label>
-                            <input type="number" class="form-control" id="validationCustom03">
+                            <label for="prixMax">Prix maximal.</label>
+                            <input type="number" class="form-control" id="prixMax">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-2 mb-3">
-                            <label for="validationCustom03">Poids maximal.</label>
-                            <input type="number" class="form-control" id="validationCustom03">
+                            <label for="supPoidsMax">Poids supporté. (en kg)</label>
+                            <input type="number" class="form-control" id="supPoidsMax">
                         </div>
                         <div class="col-md-2 mb-3">
-                            <label for="validationCustom03">Poids maximal.</label>
-                            <input type="number" class="form-control" id="validationCustom03">
+                            <label for="poidsMax">Poids maximal. (en kg)</label>
+                            <input type="number" class="form-control" id="poidsMax">
                         </div>
                         <div class="col-md-2 col-sm-3  mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                                <label class="custom-control-label " for="defaultUnchecked">Est ajustable</label>
+                                <input type="checkbox" class="custom-control-input" id="estAjustable">
+                                <label class="custom-control-label " for="estAjustable">Est ajustable.</label>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-3  mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked2">
-                                <label class="custom-control-label " for="defaultUnchecked2">Est pliable</label>
+                                <input type="checkbox" class="custom-control-input" id="estPliable">
+                                <label class="custom-control-label " for="estPliable">Est pliable.</label>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-3 mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
-                                <input type="checkbox" class="custom-control-input" id="defaultUnchecked3">
-                                <label class="custom-control-label " for="defaultUnchecked3">Peut s'utiliser seul</label>
+                                <input type="checkbox" class="custom-control-input" id="solo">
+                                <label class="custom-control-label " for="solo">Peut s'utiliser seul.</label>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-3  mb-3 mt-2 pt-2">

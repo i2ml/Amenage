@@ -12,7 +12,7 @@ class AideTechniqueModel extends Model
     {
         $db = db_connect();
         if ($id === false) {
-            $test = $db->query(
+            $query = $db->query(
                 'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
                 dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
                 p.prixMin, p.prixMax,po.poidsMin, z.idZone, z.nom AS zoneNom, po.poidsMax, ait.idPriseEnCharge AS idPec,
@@ -30,10 +30,10 @@ class AideTechniqueModel extends Model
                 LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
                 LEFT JOIN zone z ON z.idZone = lz.idZone'
             )->getResult('array');
-            return $test;
+            return $query;
         }
 
-        $test = $db->query(
+        $query = $db->query(
             'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, z.idZone, z.nom AS zoneNom, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
             p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin
@@ -49,18 +49,18 @@ class AideTechniqueModel extends Model
             LEFT JOIN zone z ON z.idZone = lz.idZone
             WHERE ait.id =' . $id
         )->getResult('array');
-        if (empty($test)) {
+        if (empty($query)) {
             return null;
         }
 
-        return $test[0];
+        return $query[0];
     }
 
     public function search($input = false)
     {
         $db = db_connect();
         if ($input != false) {
-            $test = $db->query(
+            $query = $db->query(
                 'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
                 dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
                 p.prixMin, p.prixMax,po.poidsMin, z.idZone, z.nom AS zoneNom, po.poidsMax, ait.idPriseEnCharge AS idPec,
@@ -79,23 +79,20 @@ class AideTechniqueModel extends Model
                 LEFT JOIN zone z ON z.idZone = lz.idZone
                 WHERE ait.nom LIKE "%' . $input . '%" OR ait.description LIKE "%' . $input . '%" OR z.nom LIKE "%' . $input . '%"'
             )->getResult('array');
-            return $test;
+            return $query;
         }
 
-        if (empty($test)) {
+        if (empty($query)) {
             return null;
         }
-
-        return $test[0];
+        return $query[0];
     }
 
-    public function filter($input = false)
+    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo)
     {
-        var_dump($input);
         $db = db_connect();
-        if ($input != false) {
-            
-            $test = $db->query(
+        if ($isReset == false) {
+            $query = $db->query(
                 'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
                 dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
                 p.prixMin, p.prixMax,po.poidsMin, z.idZone, z.nom AS zoneNom, po.poidsMax, ait.idPriseEnCharge AS idPec,
@@ -112,12 +109,16 @@ class AideTechniqueModel extends Model
                 LEFT JOIN categorie cat ON cat.id = ait.idCategorie
                 LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
                 LEFT JOIN zone z ON z.idZone = lz.idZone
-                WHERE ait.id = '. $input
+                WHERE ((dim.largeurMax <= ' . $largeurMax . ' AND dim.longueurMax <= ' . $longueurMax . ' AND dim.hauteurMax <= ' . $hauteurMax
+                    . ') OR dim.id is NULL) AND (p.prixMax <= ' . $prixMax . ' OR p.id is NULL) 
+                    AND (po.poidsMax <= ' . $poidsMax . ' OR po.id is NULL) AND (psupporte.poidsMax >= ' . $supPoidsMax . ' OR psupporte.id is NULL) 
+                    AND (estAjustable != 3 AND estAjustable >= ' . $estAjustable . ') OR ( ' . $estAjustable . ' = 0) 
+                    AND (estMultiUtilisateur != ' . $solo . ') OR ( ' . $solo . ' = 0)'
             )->getResult('array');
-            return $test;
+            return $query;
         }
 
-        $test = $db->query(
+        $query = $db->query(
             'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
             p.prixMin, p.prixMax,po.poidsMin, z.idZone, z.nom AS zoneNom, po.poidsMax, ait.idPriseEnCharge AS idPec,
@@ -135,6 +136,6 @@ class AideTechniqueModel extends Model
             LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
             LEFT JOIN zone z ON z.idZone = lz.idZone'
         )->getResult('array');
-        return $test;
+        return $query;
     }
 }

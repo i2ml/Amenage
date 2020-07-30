@@ -33,7 +33,7 @@ class AideTechnique extends Controller
         }
 
         $data = [
-            'aideTechnique'  => $model->search($input),
+            'aideTechnique' => $model->search($input),
             'title' => 'Résultat de la recherche pour : ' . $input,
         ];
 
@@ -50,15 +50,20 @@ class AideTechnique extends Controller
         } else {
             $input = null;
         }
-        if ($input['isReset'] == "false") {
-            $data = [
-                'aideTechnique'  => $model->filter($input['test']),
-            ];
-        }else{
-            $data = [
-                'aideTechnique'  => $model->filter(),
-            ];
-        }
+        $data = [
+            'aideTechnique'  => $model->filter(
+                $input['isReset'] == "true",
+                $input['largeurMax'] == null ? 1000000000 : $input['largeurMax'],
+                $input['longueurMax'] == null ? 1000000000 : $input['longueurMax'],
+                $input['hauteurMax'] == null ? 1000000000 : $input['hauteurMax'],
+                $input['prixMax'] == null ? 1000000000 : $input['prixMax'],
+                $input['supPoidsMax'] == null ? 0 : $input['supPoidsMax'] * 1000,
+                $input['poidsMax'] == null ? 1000000000 : $input['poidsMax'] * 1000,
+                $input['estAjustable'] == "false" ?  0 : 1,
+                $input['estPliable'] == "false" ? "" : "AND dimPlie.id is not null",
+                $input['solo'] == "false" ? 0 : 1
+            ),
+        ];
         echo view('aideTechnique/listeAt', $data);
     }
 
