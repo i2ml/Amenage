@@ -34,7 +34,7 @@ $(document).ready(
     $('#submit-filter').click(function () { //filter applied
         console.log($('#estAjustable'))
         $.ajax({
-            url: 'aideTechniques',
+            url: 'aideTechniques/filter',
             method: 'post',
             data: {
                 isReset: false,
