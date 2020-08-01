@@ -1,6 +1,7 @@
 <div class="row justify-content-center m-5">
     <h2><?= esc($title); ?></h2>
 </div>
+<p id="searchInput" class="d-none"> <?= esc($searchInput) ?></p>
 <?php if (!empty($aideTechnique) && is_array($aideTechnique)) :
     $emoji = array("fas fa-dice", "fas fa-hands", "fas fa-people-arrows", "fas fa-shower", "fas fa-lock", "fas fa-route", "fas fa-couch", "fas fa-couch", "fas fa-bullhorn", "fas fa-dice", "fas fa-glasses", "fas fa-headset", null);
 ?>

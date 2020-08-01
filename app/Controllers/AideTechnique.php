@@ -14,6 +14,7 @@ class AideTechnique extends Controller
         $data = [
             'aideTechnique'  => $model->getAideTechnique(),
             'title' => 'Aide techniques',
+            'searchInput' => ""
         ];
 
         echo view('templates/header', $data);
@@ -35,6 +36,7 @@ class AideTechnique extends Controller
         $data = [
             'aideTechnique' => $model->search($input),
             'title' => 'Résultat de la recherche pour : ' . $input,
+            'searchInput' => $input
         ];
 
         echo view('templates/header', $data);
@@ -61,7 +63,8 @@ class AideTechnique extends Controller
                 $input['poidsMax'] == null ? 1000000000 : $input['poidsMax'] * 1000,
                 $input['estAjustable'] == "false" ?  0 : 1,
                 $input['estPliable'] == "false" ? "" : "AND dimPlie.id is not null",
-                $input['solo'] == "false" ? 0 : 1
+                $input['solo'] == "false" ? 0 : 1,
+                $input['searchInput']
             ),
         ];
         echo view('aideTechnique/listeAt', $data);

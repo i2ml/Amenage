@@ -46,7 +46,8 @@ $(document).ready(
                 poidsMax: $('#poidsMax').val(),
                 estAjustable: $('#estAjustable').is(":checked"),
                 estPliable: $('#estPliable').is(":checked"),
-                solo: $('#solo').is(":checked")
+                solo: $('#solo').is(":checked"),
+                searchInput: $('#searchInput').text()
             },
             success: function (response) {
                 $('#container').html(response)
@@ -61,7 +62,7 @@ $(document).ready(
 $(document).ready(
     $('#reset-filter').click(function () { //filter applied
         $.ajax({
-            url: 'aideTechniques',
+            url: 'aideTechniques/filter',
             method: 'post',
             data: {
                 isReset: true,
@@ -73,7 +74,8 @@ $(document).ready(
                 poidsMax: null,
                 estAjustable: null,
                 estPliable: null,
-                solo: null
+                solo: null,
+                searchInput: $('#searchInput').text()
             },
             success: function (response) {
                 $('#container').html(response)

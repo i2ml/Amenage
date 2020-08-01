@@ -88,7 +88,7 @@ class AideTechniqueModel extends Model
         return $query[0];
     }
 
-    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo)
+    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $searchInput)
     {
         $db = db_connect();
         if ($isReset == false) {
@@ -109,11 +109,17 @@ class AideTechniqueModel extends Model
                 LEFT JOIN categorie cat ON cat.id = ait.idCategorie
                 LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
                 LEFT JOIN zone z ON z.idZone = lz.idZone
-                WHERE ((dim.largeurMax <= ' . $largeurMax . ' AND dim.longueurMax <= ' . $longueurMax . ' AND dim.hauteurMax <= ' . $hauteurMax
-                    . ') OR dim.id is NULL) AND (p.prixMax <= ' . $prixMax . ' OR p.id is NULL) 
-                    AND (po.poidsMax <= ' . $poidsMax . ' OR po.id is NULL) AND (psupporte.poidsMax >= ' . $supPoidsMax . ' OR psupporte.id is NULL) 
-                    AND (estAjustable != 3 AND estAjustable >= ' . $estAjustable . ') OR ( ' . $estAjustable . ' = 0) 
-                    AND (estMultiUtilisateur != ' . $solo . ') OR ( ' . $solo . ' = 0)'
+                WHERE ((dim.largeurMax <= ' . $largeurMax . ' AND dim.longueurMax <= ' . $longueurMax . ' AND dim.hauteurMax <= ' . $hauteurMax . ') 
+                    OR dim.id is NULL) 
+                    AND (p.prixMax <= ' . $prixMax . ' OR p.id is NULL) 
+                    AND (po.poidsMax <= ' . $poidsMax . ' OR po.id is NULL) 
+                    AND (psupporte.poidsMax >= ' . $supPoidsMax . ' OR psupporte.id is NULL) 
+                    AND ((estAjustable != 3 AND estAjustable >= ' . $estAjustable . ' AND ' . $estAjustable . ' != 0) 
+                    OR ( ' . $estAjustable . ' = 0)) 
+                    AND ((estMultiUtilisateur != ' . $solo . ') 
+                    OR ( ' . $solo . ' = 0))
+                    AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%" OR z.nom LIKE "%' . $searchInput . '%")' .
+                    $estPliable
             )->getResult('array');
             return $query;
         }
@@ -134,7 +140,8 @@ class AideTechniqueModel extends Model
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
-            LEFT JOIN zone z ON z.idZone = lz.idZone'
+            LEFT JOIN zone z ON z.idZone = lz.idZone
+            WHERE ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%" OR z.nom LIKE "%' . $searchInput . '%"'
         )->getResult('array');
         return $query;
     }
