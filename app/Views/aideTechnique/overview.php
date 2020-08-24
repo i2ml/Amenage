@@ -13,6 +13,8 @@
             <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
                 <option class="dropdown-item active" id="alphabeticalOrderOption">Ordre alphabétique (A-Z)</option>
                 <option class="dropdown-item" id="invertedOrderOption">Ordre alphabétique (Z-A)</option>
+                <option class="dropdown-item" id="priceDownOrderOption">Prix décroissant</option>
+                <option class="dropdown-item" id="priceUpOrderOption">Prix croissant</option>
             </div>
         </div>
         <div class="ml-4 mb-4">
@@ -89,36 +91,32 @@
                     </div>
                 </form>
             </div>
-            <div class="row">
-
-            </div>
         </div>
     </div>
-    <div id="container">
-        <div class="row justify-content-md-center">
-            <?php foreach ($aideTechnique as $aideTechnique_item) : ?>
 
-                <div class="aideTechnique col-md-5 mb-4 m-3">
-                    <div class="card border-left-primary shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <h5 class="font-weight-bold text-primary text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
-                                    <div class="small mb-0 font-weight-bold text-gray-800"><?= esc($aideTechnique_item['description']); ?>
-                                    </div>
+    <div id="container" class="row justify-content-md-center">
+        <?php foreach ($aideTechnique as $aideTechnique_item) : ?>
+            <div class="aideTechnique col-md-5 mb-4 m-3">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <h5 class="font-weight-bold text-primary text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
+                                <div class="small mb-0 font-weight-bold text-gray-800"><?= esc($aideTechnique_item['description']); ?>
                                 </div>
-                                <div class="col-auto">
-                                    <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-300"></i>
-                                </div>
-                                <a href="<?= base_url('public/aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>
                             </div>
+                            <div class="col-auto">
+                                <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-300"></i>
+                                <p class="d-none" id="prix"><?= esc($aideTechnique_item['prixMin']); ?>0</p>
+                            </div>
+                            <a href="<?= base_url('public/aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
-
-            <?php endforeach; ?>
-        </div>
+            </div>
+        <?php endforeach; ?>
     </div>
+
 <?php else :
     // TODO : faire la partie ci-dessous
 ?>
