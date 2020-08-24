@@ -50,9 +50,8 @@ $('#filterbutton').click(function () { //filter menu appeareance
 
 $(document).ready(
     $('#submit-filter').click(function () { //filter applied
-        console.log($('#estAjustable'))
         $.ajax({
-            url: 'aideTechniques/filter',
+            url: 'filter',
             method: 'post',
             data: {
                 isReset: false,
@@ -67,7 +66,8 @@ $(document).ready(
                 solo: $('#solo').is(":checked"),
                 rtotal: $('#rtotal').is(":checked"),
                 rpart: $('#rpart').is(":checked"),
-                searchInput: $('#searchInput').text()
+                searchInput: $('#searchInput').text(),
+                categorie: $('#catid').text()
             },
             success: function (response) {
                 $('#container').html(response)
@@ -82,7 +82,7 @@ $(document).ready(
 $(document).ready(
     $('#reset-filter').click(function () { //filter applied
         $.ajax({
-            url: 'aideTechniques/filter',
+            url: 'filter',
             method: 'post',
             data: {
                 isReset: true,
@@ -97,7 +97,8 @@ $(document).ready(
                 solo: null,
                 rtotal: null,
                 rpart: null,
-                searchInput: $('#searchInput').text()
+                searchInput: $('#searchInput').text(),
+                categorie: $('#catid').text()
             },
             success: function (response) {
                 $('#container').html(response)

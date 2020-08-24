@@ -1,5 +1,6 @@
 <div class="row justify-content-center m-5">
     <h2><?= esc($title); ?></h2>
+    <p id="catid" class="d-none"><?= esc($categorie); ?></p>
 </div>
 <p id="searchInput" class="d-none"> <?= esc($searchInput) ?></p>
 <?php if (!empty($aideTechnique) && is_array($aideTechnique)) :

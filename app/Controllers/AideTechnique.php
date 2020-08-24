@@ -7,14 +7,14 @@ use CodeIgniter\Controller;
 
 class AideTechnique extends Controller
 {
-    public function index()
+    public function index($categorie = null)
     {
         $model = new AideTechniqueModel();
-
         $data = [
-            'aideTechnique'  => $model->getAideTechnique(),
+            'aideTechnique'  => $model->getAideTechnique(null, $categorie),
             'title' => 'Aide techniques',
-            'searchInput' => ""
+            'searchInput' => "",
+            'categorie' => $categorie
         ];
 
         echo view('templates/header', $data);
@@ -36,13 +36,15 @@ class AideTechnique extends Controller
         $data = [
             'aideTechnique' => $model->search($input),
             'title' => 'Résultat de la recherche pour : ' . $input,
-            'searchInput' => $input
+            'searchInput' => $input,
+            'categorie' => ""
         ];
 
         echo view('templates/header', $data);
         echo view('aideTechnique/overview', $data);
         echo view('templates/footer', $data);
     }
+
 
     public function filter()
     {
@@ -66,7 +68,8 @@ class AideTechnique extends Controller
                 $input['solo'] == "false" ? 0 : 1,
                 $input['rtotal'] == "false" ? 0 : 1,
                 $input['rpart'] == "false" ? 0 : 1,
-                $input['searchInput']
+                $input['searchInput'],
+                $input['categorie'] == "" ? 0 : $input['categorie']
             ),
         ];
         echo view('aideTechnique/listeAt', $data);

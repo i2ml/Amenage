@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="">
+<body class="bg-gradient-primary">
 	<!-- bg-gradient-primary -->
 
 	<div class="container col-xl-10">
