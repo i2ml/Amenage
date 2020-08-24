@@ -19,7 +19,8 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="">
+	<!-- bg-gradient-primary -->
 
 	<div class="container col-xl-10">
 
@@ -48,6 +49,9 @@
 						</div>
 						<div class="row justify-content-center m-3">
 							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="cibler-mon-besoin">Cibler mon besoin</a>
+						</div>
+						<div class="row justify-content-center m-3">
+							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="aideTechniques">Voir toutes les aides techniques</a>
 						</div>
 						<div class="row justify-content-center m-3">
 							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="about">Informations</a>
