@@ -64,6 +64,8 @@ class AideTechnique extends Controller
                 $input['estAjustable'] == "false" ?  0 : 1,
                 $input['estPliable'] == "false" ? "" : "AND dimPlie.id is not null",
                 $input['solo'] == "false" ? 0 : 1,
+                $input['rtotal'] == "false" ? 0 : 1,
+                $input['rpart'] == "false" ? 0 : 1,
                 $input['searchInput']
             ),
         ];

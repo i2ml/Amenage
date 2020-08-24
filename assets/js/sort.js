@@ -47,6 +47,8 @@ $(document).ready(
                 estAjustable: $('#estAjustable').is(":checked"),
                 estPliable: $('#estPliable').is(":checked"),
                 solo: $('#solo').is(":checked"),
+                rtotal: $('#rtotal').is(":checked"),
+                rpart: $('#rpart').is(":checked"),
                 searchInput: $('#searchInput').text()
             },
             success: function (response) {
@@ -75,6 +77,8 @@ $(document).ready(
                 estAjustable: null,
                 estPliable: null,
                 solo: null,
+                rtotal: null,
+                rpart: null,
                 searchInput: $('#searchInput').text()
             },
             success: function (response) {

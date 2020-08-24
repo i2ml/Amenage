@@ -88,7 +88,7 @@ class AideTechniqueModel extends Model
         return $query[0];
     }
 
-    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $searchInput)
+    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $rtotal, $rpart, $searchInput)
     {
         $db = db_connect();
         if ($isReset == false) {
@@ -118,6 +118,10 @@ class AideTechniqueModel extends Model
                     OR ( ' . $estAjustable . ' = 0)) 
                     AND ((estMultiUtilisateur != ' . $solo . ') 
                     OR ( ' . $solo . ' = 0))
+                    AND (idPriseEnCharge is not NULL AND ' . $rpart . ' = 1) 
+                    OR ( ' . $rpart . ' = 0)
+                    AND (idPriseEnCharge = idPrix AND ' . $rtotal . ' = 1) 
+                    OR ( ' . $rtotal . ' = 0)
                     AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%" OR z.nom LIKE "%' . $searchInput . '%")' .
                     $estPliable
             )->getResult('array');
