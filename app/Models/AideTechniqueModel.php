@@ -146,7 +146,6 @@ class AideTechniqueModel extends Model
             )->getResult('array');
             return $query;
         }
-        var_dump($categorieID);
         $query = $db->query(
             'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
