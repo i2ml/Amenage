@@ -1,7 +1,6 @@
 <div class="row justify-content-center m-5">
     <h2><?= esc($title); ?></h2>
 </div>
-<div class="container"></div>
 <div class="row justify-content-md-center">
     <?php if (!empty($categorie) && is_array($categorie)) :
 
