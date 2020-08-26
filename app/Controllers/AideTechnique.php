@@ -7,11 +7,11 @@ use CodeIgniter\Controller;
 
 class AideTechnique extends Controller
 {
-    public function index($categorie = null)
+    public function index($categorie = null, $group = null)
     {
         $model = new AideTechniqueModel();
         $data = [
-            'aideTechnique'  => $model->getAideTechnique(null, $categorie),
+            'aideTechnique'  => $model->getAideTechnique(null, $categorie, $group),
             'title' => 'Aide techniques',
             'searchInput' => "",
             'categorie' => $categorie

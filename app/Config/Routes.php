@@ -37,6 +37,7 @@ $routes->get('cibler-mon-besoin', 'Question::index');
 $routes->get('question/(:segment)', 'Question::view/$1');
 $routes->get('aideTechniques/(:segment)', 'AideTechnique::index');
 $routes->get('aideTechniques/categorie/(:segment)', 'AideTechnique::index/$1');
+$routes->get('aideTechniques/group/(:segment)', 'AideTechnique::index//$1');
 $routes->get('aideTechniques', 'AideTechnique::index');
 $routes->match(['get', 'post'], 'aideTechniques', 'AideTechnique::search');
 $routes->match(['get', 'post'], 'filter', 'AideTechnique::filter');

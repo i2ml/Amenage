@@ -18,7 +18,16 @@
                             <div class="col-auto">
                                 <i class=" fa-2x text-gray-300"></i>
                             </div>
-                            <a href="<?= base_url('public/question/' . esc($question_item['id'])) ?>" class="stretched-link"></a>
+                            <?php if ($question_item['idGroupe'] == 0) {
+                            ?>
+                                <a href="<?= base_url('public/question/' . esc($question_item['id'])) ?>" class="stretched-link"></a>
+                            <?php
+                            } else {
+                            ?>
+                                <a href="<?= base_url('public/aideTechniques/group/' . esc($question_item['idGroupe'])) ?>" class="stretched-link"></a>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

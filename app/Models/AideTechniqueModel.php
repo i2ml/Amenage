@@ -8,10 +8,10 @@ class AideTechniqueModel extends Model
 {
     protected $table = 'aidetechnique';
 
-    public function getAideTechnique($id = null, $categorieID = null)
+    public function getAideTechnique($id = null, $categorieId = null, $groupId = null)
     {
         $db = db_connect();
-        if ($categorieID != null) {
+        if ($categorieId != null) {
             $query = $db->query(
                 'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, z.idZone, z.nom AS zoneNom, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
@@ -26,7 +26,28 @@ class AideTechniqueModel extends Model
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
             LEFT JOIN zone z ON z.idZone = lz.idZone
-            WHERE cat.id =' . $categorieID
+            WHERE cat.id =' . $categorieId
+            )->getResult('array');
+            return $query;
+        }
+        if ($groupId != null) {
+            $query = $db->query(
+                'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
+            dim.largeurMin, dim.longueurMin, z.idZone, z.nom AS zoneNom, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
+            p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin
+            ,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté, dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
+            dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
+            dimPlie.largeurMax AS largeurMaxPlie, dimPlie.id AS idDimPlie, psupporte.id AS idPSupporte, psupporte.poidsMin AS poidsMinSupporte,
+            psupporte.poidsMax AS poidsMaxSupporte, ait.estMultiUtilisateur, ait.sutiliseEnExterieur, estAlimenté, cat.nom AS nomCat, cat.id AS idCat
+            FROM aidetechnique ait LEFT JOIN prix pec ON pec.id = ait.idPriseEnCharge LEFT JOIN poids po ON po.id = ait.idPoids 
+            LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
+            LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
+            LEFT JOIN categorie cat ON cat.id = ait.idCategorie
+            LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
+            LEFT JOIN lieurgroupe lg ON lg.idAideTechnique = ait.id
+            LEFT JOIN groupe g ON lg.idGroupe = g.id
+            LEFT JOIN zone z ON z.idZone = lz.idZone
+            WHERE g.id =' . $groupId
             )->getResult('array');
             return $query;
         }
@@ -105,7 +126,7 @@ class AideTechniqueModel extends Model
         return $query[0];
     }
 
-    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $rtotal, $rpart, $searchInput, $categorieID)
+    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $rtotal, $rpart, $searchInput, $categorieId)
     {
         $db = db_connect();
         if ($isReset == false) {
@@ -139,8 +160,8 @@ class AideTechniqueModel extends Model
                     OR ( ' . $rpart . ' = 0))
                     AND ((idPriseEnCharge = idPrix AND ' . $rtotal . ' = 1) 
                     OR ( ' . $rtotal . ' = 0))
-                    AND ((cat.id = ' . $categorieID . ' ) 
-                    OR ( ' . $categorieID . ' = 0))
+                    AND ((cat.id = ' . $categorieId . ' ) 
+                    OR ( ' . $categorieId . ' = 0))
                     AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%" OR z.nom LIKE "%' . $searchInput . '%")' .
                     $estPliable
             )->getResult('array');
@@ -163,7 +184,7 @@ class AideTechniqueModel extends Model
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
             LEFT JOIN zone z ON z.idZone = lz.idZone
-            WHERE ((cat.id = ' . $categorieID . ' ) OR ( ' . $categorieID . ' = 0)) AND 
+            WHERE ((cat.id = ' . $categorieId . ' ) OR ( ' . $categorieId . ' = 0)) AND 
             (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%" OR z.nom LIKE "%' . $searchInput . '%")'
         )->getResult('array');
         return $query;
