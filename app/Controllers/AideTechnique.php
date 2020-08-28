@@ -3,18 +3,56 @@
 namespace App\Controllers;
 
 use App\Models\AideTechniqueModel;
+use App\Models\CategorieModel;
+use App\Models\GroupeModel;
 use CodeIgniter\Controller;
 
 class AideTechnique extends Controller
 {
-    public function index($categorie = null, $group = null)
+    public function index()
     {
         $model = new AideTechniqueModel();
         $data = [
-            'aideTechnique'  => $model->getAideTechnique(null, $categorie, $group),
+            'aideTechnique'  => $model->getAideTechnique(),
             'title' => 'Aide techniques',
             'searchInput' => "",
-            'categorie' => $categorie
+            'categorie' => "",
+            'group' => ""
+        ];
+
+        echo view('templates/header', $data);
+        echo view('aideTechnique/overview', $data);
+        echo view('templates/footer', $data);
+    }
+
+    public function displayByCategorie($categorie = null)
+    {
+        $model = new AideTechniqueModel();
+        $categorieModel = new CategorieModel();
+        $data = [
+            'aideTechnique'  => $model->getAideTechnique(null, $categorie),
+            'title' => 'Aide techniques de la catégorie : ' . $categorieModel->getCategorie($categorie)['nom'],
+            'searchInput' => "",
+            'categorie' => $categorie,
+            'group' => ""
+        ];
+
+        echo view('templates/header', $data);
+        echo view('aideTechnique/overview', $data);
+        echo view('templates/footer', $data);
+    }
+
+    public function displayByGroup($group = null)
+    {
+        $model = new AideTechniqueModel();
+        $groupeModel = new GroupeModel();
+        $data = [
+            'aideTechnique'  => $model->getAideTechnique(null, null, $group),
+            'title' => 'Aide techniques du groupe : ' . $groupeModel->getGroupe($group)['nom'],
+            'infos' => $groupeModel->getGroupe($group)['infos'],
+            'searchInput' => "",
+            'categorie' => "",
+            'group' => $group
         ];
 
         echo view('templates/header', $data);
@@ -37,7 +75,8 @@ class AideTechnique extends Controller
             'aideTechnique' => $model->search($input),
             'title' => 'Résultat de la recherche pour : ' . $input,
             'searchInput' => $input,
-            'categorie' => ""
+            'categorie' => "",
+            'group' => ""
         ];
 
         echo view('templates/header', $data);
