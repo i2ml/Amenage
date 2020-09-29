@@ -1,4 +1,6 @@
-<?php namespace Config;
+<?php
+
+namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
 
@@ -21,7 +23,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost/Catalogue-Diagnostique-AT/';
+	public $baseURL = 'http://localhost/Amenage/';
 
 	/*
 	|--------------------------------------------------------------------------

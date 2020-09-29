@@ -36,7 +36,7 @@
 	</logging>
 
 	<php>
-		<server name="app.baseURL" value="http://localhost/Catalogue-Diagnostique-AT/"/>
+		<server name="app.baseURL" value="http://localhost/Amenage/"/>
 
 		<!-- Directory containing phpunit.xml -->
 		<const name="HOMEPATH" value="./"/>
