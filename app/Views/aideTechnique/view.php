@@ -1,12 +1,6 @@
 <div class="row mt-md-3 ml-md-3">
     <h1 class="h3 mb-0 text-gray-800"><?= ucfirst(esc($aideTechnique['nom'])); ?></h1>
 </div>
-<?php var_dump(count($zones));
-
-
-
-
-?>
 <div class="row">
     <div class="col-xl-5 col-md-6">
         <div class="card shadow m-3">
