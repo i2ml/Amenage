@@ -68,7 +68,7 @@ class AideTechniqueModel extends Model
         }
         $query = $db->query(
             'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
-            dim.largeurMin, dim.longueurMin, z.nom AS zoneNom, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
+            dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
             p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin
             ,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté, dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
             dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
@@ -123,7 +123,7 @@ class AideTechniqueModel extends Model
             $query = $db->query(
                 'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
                 dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
-                p.prixMin, p.prixMax,po.poidsMin, z.idZone, z.nom AS zoneNom, po.poidsMax, ait.idPriseEnCharge AS idPec,
+                p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec,
                 pec.prixMin AS priseEnChargeMin,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté,
                 dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
                 dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie,
@@ -135,8 +135,6 @@ class AideTechniqueModel extends Model
                 LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
                 LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
                 LEFT JOIN categorie cat ON cat.id = ait.idCategorie
-                LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
-                LEFT JOIN zone z ON z.idZone = lz.idZone
                 WHERE ((dim.largeurMax <= ' . $largeurMax . ' AND dim.longueurMax <= ' . $longueurMax . ' AND dim.hauteurMax <= ' . $hauteurMax . ') 
                     OR dim.id is NULL) 
                     AND (p.prixMax <= ' . $prixMax . ' OR p.id is NULL) 
@@ -152,7 +150,7 @@ class AideTechniqueModel extends Model
                     OR ( ' . $rtotal . ' = 0))
                     AND ((cat.id = ' . $categorieId . ' ) 
                     OR ( ' . $categorieId . ' = 0))
-                    AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%" OR z.nom LIKE "%' . $searchInput . '%")' .
+                    AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")' .
                     $estPliable
             )->getResult('array');
             return $query;
@@ -160,7 +158,7 @@ class AideTechniqueModel extends Model
         $query = $db->query(
             'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
-            p.prixMin, p.prixMax,po.poidsMin, z.idZone, z.nom AS zoneNom, po.poidsMax, ait.idPriseEnCharge AS idPec,
+            p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec,
             pec.prixMin AS priseEnChargeMin,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté,
             dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
             dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie,
@@ -172,10 +170,8 @@ class AideTechniqueModel extends Model
             LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
-            LEFT JOIN lieurzone lz ON lz.idAideTechnique = ait.id
-            LEFT JOIN zone z ON z.idZone = lz.idZone
             WHERE ((cat.id = ' . $categorieId . ' ) OR ( ' . $categorieId . ' = 0)) AND 
-            (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%" OR z.nom LIKE "%' . $searchInput . '%")'
+            (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")'
         )->getResult('array');
         return $query;
     }

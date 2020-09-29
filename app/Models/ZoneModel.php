@@ -18,4 +18,12 @@ class ZoneModel extends Model
             ->where(['id' => $id])
             ->first();
     }
+
+
+    public function getZonesFromAideTechniqueId($id)
+    {
+        $db = db_connect();
+        $test = $db->query('SELECT * FROM zone z JOIN lieurzone lz ON lz.idZone = z.id WHERE lz.idAideTechnique = ' . $id)->getResult('array');
+        return $test;
+    }
 }

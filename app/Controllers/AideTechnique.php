@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\AideTechniqueModel;
 use App\Models\CategorieModel;
 use App\Models\GroupeModel;
+use App\Models\ZoneModel;
 use CodeIgniter\Controller;
 
 class AideTechnique extends Controller
@@ -118,8 +119,11 @@ class AideTechnique extends Controller
     public function view($id = NULL)
     {
         $model = new AideTechniqueModel();
+        $zoneModel = new ZoneModel();
+
         if (is_numeric($id)) {
             $data['aideTechnique'] = $model->getAideTechnique($id);
+            $data['zones'] = $zoneModel->getZonesFromAideTechniqueId($id);
         }
 
         if (empty($data['aideTechnique'])) {
