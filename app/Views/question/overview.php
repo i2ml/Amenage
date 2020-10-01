@@ -20,11 +20,11 @@
                             </div>
                             <?php if ($question_item['idGroupe'] == 0) {
                             ?>
-                                <a href="<?= base_url('public/question/' . esc($question_item['id'])) ?>" class="stretched-link"></a>
+                                <a href="<?= base_url('question/' . esc($question_item['id'])) ?>" class="stretched-link"></a>
                             <?php
                             } else {
                             ?>
-                                <a href="<?= base_url('public/aideTechniques/group/' . esc($question_item['idGroupe'])) ?>" class="stretched-link"></a>
+                                <a href="<?= base_url('aideTechniques/group/' . esc($question_item['idGroupe'])) ?>" class="stretched-link"></a>
                             <?php
                             }
                             ?>

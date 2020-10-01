@@ -25,7 +25,7 @@
     <!-- Topbar -->
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow justify-content-end container-fluid">
 
-        <a class="d-flex align-items-center justify-content-center" href="<?php echo base_url('public') ?>">
+        <a class="d-flex align-items-center justify-content-center" href="<?php echo base_url() ?>">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -34,7 +34,7 @@
 
         <div class="col-11 justify-content-center">
             <!-- Topbar Search -->
-            <form class="d-none d-sm-block float-right form-inline mr-md-3 my-2 my-md-0 mw-100 navbar-search" action="<?php echo base_url('public/aideTechniques') ?>" method="post">
+            <form class="d-none d-sm-block float-right form-inline mr-md-3 my-2 my-md-0 mw-100 navbar-search" action="<?php echo base_url('aideTechniques') ?>" method="post">
                 <div class="input-group">
                     <input type="text" name="searchBar" class="form-control bg-light border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
                     <div class="input-group-append">

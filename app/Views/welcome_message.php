@@ -32,7 +32,7 @@
 				</div>
 				<div class="row align-items-center m-5">
 					<div class="col-lg">
-						<form action="<?php echo base_url('public/aideTechniques') ?>" method="post">
+						<form action="<?php echo base_url('aideTechniques') ?>" method="post">
 							<div class="input-group">
 								<input type="text" name="searchBar" class="form-control bg-light border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
 								<div class="input-group-append">
