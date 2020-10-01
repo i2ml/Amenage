@@ -19,12 +19,74 @@
 
 </head>
 
-<body class="">
-	<!-- bg-gradient-primary -->
-	<div class="row">
-		<img class="fit-picture" src="<?php echo base_url('assets/img/baniere.png'); ?>" alt="Banière page d'accueil">
-	</div>
+<body>
+	<div class="hero-bg">
 
+		<header>
+			<a class="logo" href="/"><img class=" p-2" src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" alt="logo"></a>
+		</header>
+		<!-- bg-gradient-primary -->
+		<div class="hero-infos">
+			<div>
+				<h1 class="title">Amènâge - Catalogue d'aide technique</h1>
+			</div>
+			<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge" id="buttonJoin"><i class="fa fa-bullseye buttonIcon"></i>
+				Cibler mon besoin !</a>
+			<a href="about" class="button buttonGrey buttonLarge buttonUse"><i class="fas fa-chevron-right buttonIcon"></i>En savoir plus...</a>
+		</div>
+		<div class="waves">
+			<svg width="100%" height="175px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+					<stop offset="0%" stop-color="#fff" />
+				</linearGradient>
+				<path fill="url(#grad1)" d="
+                    M0 67
+                    C 273,183
+                    822,-40
+                    1920.00,106
+                    V 359
+                    H 0
+                    V 67
+                    Z">
+					<animate repeatCount="indefinite" fill="url(#grad1)" attributeName="d" dur="35s" attributeType="XML" values="
+                    M0 77
+                    C 473,283
+                    822,-40
+                    1920,116
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+                    M0 77
+                    C 473,-40
+                    1222,283
+                    1920,136
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+                    M0 77
+                    C 973,260
+                    1722,-53
+                    1920,120
+                    V 359
+                    H 0
+                    V 67
+                    Z;
+                    M0 77
+                    C 473,283
+                    822,-40
+                    1920,116
+                    V 359
+                    H 0
+                    V 67
+                    Z
+                    ">
+					</animate>
+				</path>
+			</svg>
+		</div>
+	</div>
 	<div class="container col-xl-10">
 
 		<div class="justify-content-center">
@@ -49,13 +111,7 @@
 							<a type="button" class="btn btn-primary w-50  btn-lg btn-block" href="categories">Parcourir une catégorie</a>
 						</div>
 						<div class="row justify-content-center m-3">
-							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="cibler-mon-besoin">Cibler mon besoin</a>
-						</div>
-						<div class="row justify-content-center m-3">
 							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="aideTechniques">Voir toutes les aides techniques</a>
-						</div>
-						<div class="row justify-content-center m-3">
-							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="about">Informations</a>
 						</div>
 					</div>
 				</div>
@@ -89,7 +145,9 @@
 					</div>
 				</div>
 				<div class="row justify-content-center pb-5">
-					<a href="mentions-legales">Mentions légales</a>
+					<p>
+						<a href="mentions-legales">Mentions légales</a>
+					</p>
 				</div>
 			</div>
 		</div>

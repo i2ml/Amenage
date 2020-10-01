@@ -1,8 +1,141 @@
-.fit-picture{
-    width: 100%;
+.fit-picture {
+	width: 100%;
 }
 
-.img-verysmall{
-    width: 12rem;
+.img-verysmall {
+	width: 12rem;
 }
 
+.hero-bg {
+	min-height: 600px;
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+		url(../img/696.jpg);
+	background-color: #7289da;
+	background-size: 2000px;
+	background-position: center;
+	position: relative;
+}
+
+.logo img {
+	max-width: 200px;
+}
+
+.hero-infos {
+	text-align: center;
+	display: table;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 175px;
+}
+
+.waves {
+	position: absolute;
+	bottom: -5px;
+	right: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.hero-infos .title {
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 110%;
+	color: #fff;
+}
+
+.hero-infos .description {
+	font-size: 20px;
+	line-height: 110%;
+	color: #fff;
+	margin-top: 40px;
+}
+
+.button {
+	cursor: pointer;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	transition-property: background-color, color, box-shadow, mix-blend-mode;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	border: none;
+}
+
+.buttonLarge {
+	line-height: 24px;
+	border-radius: 28px;
+	font-size: 20px;
+	padding: 16px 32px;
+}
+
+.buttonSmall {
+	border-radius: 28px;
+	font-size: 16px;
+	padding: 6px 22px;
+	line-height: 22px;
+}
+
+.buttonWhite {
+	background-color: #fff;
+	color: #23272a;
+}
+
+.buttonJoin {
+	margin-top: 24px;
+}
+
+.paddingWave {
+	padding-bottom: 150px;
+}
+
+.buttonWhite:hover {
+	color: #2b67a6;
+}
+
+.buttonIcon {
+	margin-right: 16px;
+}
+
+.buttonSmallIcon {
+	margin-right: 8px;
+}
+
+.buttonGrey {
+	background: #23272a;
+	color: #fff;
+}
+
+.buttonGrey:hover {
+	background: #2a2e30;
+}
+
+.buttonUse {
+	margin-left: 24px;
+	margin-top: 24px;
+}
+
+.buttonUser {
+	margin-left: 12px;
+}
+
+.buttonUserHover {
+	display: none;
+}
+
+.buttonUser:hover .buttonUserNormal {
+	display: none;
+}
+
+.buttonUser:hover .buttonUserHover {
+	display: block;
+}
+
+.buttonLanguage {
+	margin-left: 24px;
+	background: none;
+	transition: none;
+	color: #fff;
+	padding: 6px 12px;
+	width: 69px;
+}
