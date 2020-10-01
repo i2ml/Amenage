@@ -16,19 +16,9 @@
                 </div>
             </div>
         </div>
-        <div class="card shadow m-3">
-            <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold text-primary">Description :</h4>
-            </div>
-            <div class="card-body">
-                <div class="text-justify">
-                    <?= esc($aideTechnique['description']); ?>
-                </div>
-            </div>
-        </div>
     </div>
     <div class=" col-xl-7 col-md-6">
-        <div class="card shadow mt-3 mr-3">
+        <div class="card shadow mt-3 mr-4">
             <div class="card-header py-3">
                 <h4 class="m-0 font-weight-bold text-primary">Caractéristiques :</h4>
             </div>
@@ -339,6 +329,16 @@
                             }
                             ?></h6>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="card shadow mr-4 mt-3">
+            <div class="card-header py-3">
+                <h4 class="m-0 font-weight-bold text-primary">Description :</h4>
+            </div>
+            <div class="card-body">
+                <div class="text-justify">
+                    <?= esc($aideTechnique['description']); ?>
                 </div>
             </div>
         </div>
