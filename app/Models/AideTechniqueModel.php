@@ -15,8 +15,9 @@ class AideTechniqueModel extends Model
             $query = $db->query(
                 'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin,  dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
-            p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin
-            ,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté, dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
+            p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin,
+            ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
+            pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté, dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
             dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
             dimPlie.largeurMax AS largeurMaxPlie, dimPlie.id AS idDimPlie, psupporte.id AS idPSupporte, psupporte.poidsMin AS poidsMinSupporte,
             psupporte.poidsMax AS poidsMaxSupporte, ait.estMultiUtilisateur, ait.sutiliseEnExterieur, estAlimenté, cat.nom AS nomCat, cat.id AS idCat
@@ -24,6 +25,7 @@ class AideTechniqueModel extends Model
             LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
+            LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
             WHERE cat.id =' . $categorieId
             )->getResult('array');
             return $query;
@@ -32,6 +34,7 @@ class AideTechniqueModel extends Model
             $query = $db->query(
                 'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
+            ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
             p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin
             ,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté, dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
             dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
@@ -43,6 +46,7 @@ class AideTechniqueModel extends Model
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN lieurgroupe lg ON lg.idAideTechnique = ait.id
             LEFT JOIN groupe g ON lg.idGroupe = g.id
+            LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
             WHERE g.id =' . $groupId
             )->getResult('array');
             return $query;
@@ -56,13 +60,15 @@ class AideTechniqueModel extends Model
                 dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
                 dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie,
                 dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
+                ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
                 dimPlie.largeurMax AS largeurMaxPlie, dimPlie.id AS idDimPlie, psupporte.id AS idPSupporte,
                 psupporte.poidsMin AS poidsMinSupporte, psupporte.poidsMax AS poidsMaxSupporte, ait.estMultiUtilisateur,
                 ait.sutiliseEnExterieur, estAlimenté, cat.nom AS nomCat, cat.id AS idCat FROM aidetechnique ait
                 LEFT JOIN prix pec ON pec.id = ait.idPriseEnCharge LEFT JOIN poids po ON po.id = ait.idPoids
                 LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
                 LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
-                LEFT JOIN categorie cat ON cat.id = ait.idCategorie'
+                LEFT JOIN categorie cat ON cat.id = ait.idCategorie
+                LEFT JOIN photo ph ON ph.idAideTechnique = ait.id'
             )->getResult('array');
             return $query;
         }
@@ -73,11 +79,13 @@ class AideTechniqueModel extends Model
             ,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté, dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
             dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
             dimPlie.largeurMax AS largeurMaxPlie, dimPlie.id AS idDimPlie, psupporte.id AS idPSupporte, psupporte.poidsMin AS poidsMinSupporte,
-            psupporte.poidsMax AS poidsMaxSupporte, ait.estMultiUtilisateur, ait.sutiliseEnExterieur, estAlimenté, cat.nom AS nomCat, cat.id AS idCat
+            psupporte.poidsMax AS poidsMaxSupporte, ait.estMultiUtilisateur, ait.sutiliseEnExterieur, estAlimenté, cat.nom AS nomCat, cat.id AS idCat,
+            ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias
             FROM aidetechnique ait LEFT JOIN prix pec ON pec.id = ait.idPriseEnCharge LEFT JOIN poids po ON po.id = ait.idPoids 
             LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
+            LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
             WHERE ait.id =' . $id
         )->getResult('array');
         if (empty($query)) {
@@ -100,11 +108,13 @@ class AideTechniqueModel extends Model
                 dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
                 dimPlie.largeurMax AS largeurMaxPlie, dimPlie.id AS idDimPlie, psupporte.id AS idPSupporte,
                 psupporte.poidsMin AS poidsMinSupporte, psupporte.poidsMax AS poidsMaxSupporte, ait.estMultiUtilisateur,
+                ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
                 ait.sutiliseEnExterieur, estAlimenté, cat.nom AS nomCat, cat.id AS idCat FROM aidetechnique ait
                 LEFT JOIN prix pec ON pec.id = ait.idPriseEnCharge LEFT JOIN poids po ON po.id = ait.idPoids
                 LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
                 LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
                 LEFT JOIN categorie cat ON cat.id = ait.idCategorie
+                LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
                 WHERE ait.nom LIKE "%' . $input . '%" OR ait.description LIKE "%' . $input . '%"'
             )->getResult('array');
             return $query;
@@ -129,12 +139,14 @@ class AideTechniqueModel extends Model
                 dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie,
                 dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
                 dimPlie.largeurMax AS largeurMaxPlie, dimPlie.id AS idDimPlie, psupporte.id AS idPSupporte,
+                ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
                 psupporte.poidsMin AS poidsMinSupporte, psupporte.poidsMax AS poidsMaxSupporte, ait.estMultiUtilisateur,
                 ait.sutiliseEnExterieur, estAlimenté, cat.nom AS nomCat, cat.id AS idCat FROM aidetechnique ait
                 LEFT JOIN prix pec ON pec.id = ait.idPriseEnCharge LEFT JOIN poids po ON po.id = ait.idPoids
                 LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
                 LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
                 LEFT JOIN categorie cat ON cat.id = ait.idCategorie
+                LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
                 WHERE ((dim.largeurMax <= ' . $largeurMax . ' AND dim.longueurMax <= ' . $longueurMax . ' AND dim.hauteurMax <= ' . $hauteurMax . ') 
                     OR dim.id is NULL) 
                     AND (p.prixMax <= ' . $prixMax . ' OR p.id is NULL) 
@@ -163,6 +175,7 @@ class AideTechniqueModel extends Model
             dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
             dimPlie.hauteurMin AS hauteurMinPlie, dimPlie.hauteurMin AS hauteurMinPlie,
             dimPlie.hauteurMax AS hauteurMaxPlie, dimPlie.longueurMax AS longueurMaxPlie,
+            ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
             dimPlie.largeurMax AS largeurMaxPlie, dimPlie.id AS idDimPlie, psupporte.id AS idPSupporte,
             psupporte.poidsMin AS poidsMinSupporte, psupporte.poidsMax AS poidsMaxSupporte, ait.estMultiUtilisateur,
             ait.sutiliseEnExterieur, estAlimenté, cat.nom AS nomCat, cat.id AS idCat FROM aidetechnique ait
@@ -170,6 +183,7 @@ class AideTechniqueModel extends Model
             LEFT JOIN prix p ON ait.idPrix = p.id LEFT JOIN dimensions dim ON dim.id = ait.idDimensions 
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
+            LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
             WHERE ((cat.id = ' . $categorieId . ' ) OR ( ' . $categorieId . ' = 0)) AND 
             (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")'
         )->getResult('array');

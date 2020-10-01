@@ -6,8 +6,10 @@
         <div class="card shadow m-3">
             <div class="card-body">
                 <div class="text-center">
-                    <?php if (file_exists(base_url('assets/img/illustrationsAt/' . $aideTechnique['id'] . '.jpg'))) : ?>
-                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php base_url('assets/img/illustrationsAt/' . $aideTechnique['id'] . '.jpg'); ?>" alt="Banière page d'accueil">
+                    <?php
+                    if (strlen($aideTechnique['photoUrl']) != 0) : ?>
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo ($aideTechnique['photoUrl']) ?>" alt="Banière page d'accueil">
+                        <p>Crédit photo : <?php echo ($aideTechnique['photoSource']) ?></p>
                     <?php else : ?>
                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/illustrationsAt/error.jpg'); ?>" alt="Banière page d'accueil">
                     <?php endif; ?>
