@@ -19,17 +19,18 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="">
 	<!-- bg-gradient-primary -->
+	<div class="row">
+		<img class="fit-picture" src="<?php echo base_url('assets/img/baniere.png'); ?>" alt="Banière page d'accueil">
+	</div>
 
 	<div class="container col-xl-10">
 
 		<div class="justify-content-center">
 
 			<div class="col-xl-12 col-lg-12 col-md-12 bg-white">
-				<div class="row">
-					<img class="fit-picture" src="<?php echo base_url('assets/img/baniere.png'); ?>" alt="Banière page d'accueil">
-				</div>
+
 				<div class="row align-items-center m-5">
 					<div class="col-lg">
 						<form action="<?php echo base_url('aideTechniques') ?>" method="post">
