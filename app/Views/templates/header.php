@@ -25,14 +25,12 @@
     <!-- Topbar -->
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow justify-content-end container-fluid">
 
-        <a class="d-flex align-items-center justify-content-center" href="<?php echo base_url() ?>">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
-            </div>
-            <div class="sidebar-brand-text pl-2 mx-6">Aménâge</div>
-        </a>
-
-        <div class="col-11 justify-content-center">
+        <div class="col-3 justify-content-center">
+            <a class="ml-5 d-flex align-items-center justify-content-center" href="<?php echo base_url() ?>">
+                <img src="https://cdn.discordapp.com/attachments/727854268987605083/760150393035948052/LOGOSAnsfondgris.png" style="max-width:200px;" alt="logo">
+            </a>
+        </div>
+        <div class="col-9 justify-content-center">
             <!-- Topbar Search -->
             <form class="d-none d-sm-block float-right form-inline mr-md-3 my-2 my-md-0 mw-100 navbar-search" action="<?php echo base_url('aideTechniques') ?>" method="post">
                 <div class="input-group">
