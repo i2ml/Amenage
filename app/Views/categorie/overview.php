@@ -29,8 +29,8 @@
         // TODO : faire la partie ci-dessous
 ?>
 
-    <h3>No News</h3>
+    <h3>Pas de résultat</h3>
 
-    <p>Unable to find any news for you.</p>
+    <p>Aucune catégorie n'a été trouvée. Tentez d'élargir vos critères de sélection</p>
 
 <?php endif ?>
