@@ -130,4 +130,4 @@ nb-configuration.xml
 # Packages
 #-------------------------
 
-/assets/packages
+public/assets/packages
