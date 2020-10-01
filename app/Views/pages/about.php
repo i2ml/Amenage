@@ -1,5 +1,5 @@
 <div class="Box-body px-5 pb-5 justify-content-center text-center">
-    <article class="markdown-body entry-content container-lg" itemprop="text">
+    <div class="container-lg">
         <p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/d303327d7ea0f4c6062e2193c924549286ab5981/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3732373835343236383938373630353038332f3736303135303339333033353934383035322f4c4f474f53416e73666f6e64677269732e706e67"><img src="https://camo.githubusercontent.com/d303327d7ea0f4c6062e2193c924549286ab5981/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3732373835343236383938373630353038332f3736303135303339333033353934383035322f4c4f474f53416e73666f6e64677269732e706e67" alt="" data-canonical-src="https://cdn.discordapp.com/attachments/727854268987605083/760150393035948052/LOGOSAnsfondgris.png" style="max-width:100%;"></a></p>
         <p>Aménâge est une application web permettant d’obtenir simplement et rapidement des informations sur les aides techniques en fonction de sa situation (état de santé, environnement existant et difficultés en découlant).</p>
         <p>Open-source et gratuite, la solution est accessible à tous à l'adresse <a href="https://amenage.i2ml.fr" rel="nofollow">https://amenage.i2ml.fr</a></p>
@@ -22,5 +22,8 @@
             <li>Décompressez le fichier public/assets package.zip</li>
             <li>Renommez le fichier <code>env</code> en <code>.env</code> et complétez les champs qui ne sont pas commentés à l'aide de la commande <code>nano .env</code></li>
         </ul>
-    </article>
+        <h1 class="m-4">Crédits</h1>
+        <a href='https://www.freepik.com/vectors/banner'>Banner vector created by upklyak - www.freepik.com</a>
+    </div>
+
 </div>
