@@ -28,7 +28,7 @@
 		<!-- bg-gradient-primary -->
 		<div class="hero-infos">
 			<div>
-				<h1 class="title">Amènâge - Catalogue d'aide technique</h1>
+				<h1 class="title">Aménâge - Catalogue d'aide technique</h1>
 			</div>
 			<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge" id="buttonJoin"><i class="fa fa-bullseye buttonIcon"></i>
 				Cibler mon besoin !</a>
