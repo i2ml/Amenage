@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Aménâge</title>
-	<meta name="description" content="The small framework with powerful features">
+	<meta name="description" content="Aménâge est une application web permettant d’obtenir simplement et rapidement des informations sur les aides techniques en fonction de sa situation (état de santé, environnement existant et difficultés en découlant).">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico" />
 </head>
