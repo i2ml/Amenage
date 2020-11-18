@@ -30,9 +30,14 @@
 			<div>
 				<h1 class="title">Aménâge - Catalogue d'aide technique</h1>
 			</div>
-			<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge" id="buttonJoin"><i class="fa fa-bullseye buttonIcon"></i>
-				Cibler mon besoin !</a>
-			<a href="about" class="button buttonGrey buttonLarge buttonUse"><i class="fas fa-chevron-right buttonIcon"></i>En savoir plus...</a>
+			<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge" id="buttonJoin">
+				<i class="fa fa-bullseye buttonIcon"></i>
+				Cibler mon besoin !
+			</a>
+			<a href="about" class="button buttonGrey buttonLarge buttonUse">
+				<i class="fas fa-chevron-right buttonIcon"></i>
+				En savoir plus...
+			</a>
 		</div>
 		<div class="waves">
 			<svg width="100%" height="175px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -97,9 +102,9 @@
 					<div class="col-lg">
 						<form action="<?php echo base_url('aideTechniques') ?>" method="post">
 							<div class="input-group">
-								<input type="text" name="searchBar" class="form-control bg-light border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
+								<input type="text" name="searchBar" class="form-control bg-darkerlight border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
 								<div class="input-group-append">
-									<button class="btn btn-primary" type="submit">
+									<button class="btn btn-dark" type="submit">
 										<i class="fas fa-search fa-sm"></i>
 									</button>
 								</div>
@@ -108,10 +113,18 @@
 					</div>
 					<div class="col-lg">
 						<div class="row justify-content-center m-3">
-							<a type="button" class="btn btn-primary w-50  btn-lg btn-block" href="categories">Parcourir une catégorie</a>
-						</div>
-						<div class="row justify-content-center m-3">
-							<a type="button" class="btn btn-primary w-50 btn-lg btn-block" href="aideTechniques">Voir toutes les aides techniques</a>
+							<a href="categories" class="button buttonGrey buttonLarge w-75">
+								<div class="m-auto">
+									<i class="fa fa-folder-open buttonIcon"></i>
+									Parcourir une catégorie
+								</div>
+							</a>
+							<a href="aideTechniques" class="button buttonGrey buttonLarge mt-3 w-75">
+								<div class="m-auto">
+									<i class="fas fa-list-ul buttonIcon"></i>
+									Voir toutes les aides techniques
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
