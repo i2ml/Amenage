@@ -2838,21 +2838,17 @@ fieldset:disabled a.btn {
 
 .btn-dark {
 	color: #fff;
-	background-color: #5a5c69;
-	border-color: #5a5c69;
+	background-color: #373536;
+	border-color: #373536;
 }
 
 .btn-dark:hover {
-	color: #fff;
-	background-color: #484a54;
-	border-color: #42444e;
+	color: #f5bf69;
 }
 
 .btn-dark:focus,
 .btn-dark.focus {
 	color: #fff;
-	background-color: #484a54;
-	border-color: #42444e;
 	box-shadow: 0 0 0 0.2rem rgba(115, 116, 128, 0.5);
 }
 
@@ -3474,7 +3470,7 @@ input[type="button"].btn-block {
 .dropdown-item:active {
 	color: #fff;
 	text-decoration: none;
-	background-color: #4e73df;
+	background-color: #f4be68;
 }
 
 .dropdown-item.disabled,

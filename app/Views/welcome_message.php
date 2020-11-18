@@ -34,7 +34,7 @@
 				<i class="fa fa-bullseye buttonIcon"></i>
 				Cibler mon besoin !
 			</a>
-			<a href="about" class="button buttonGrey buttonLarge buttonUse">
+			<a href="about" class="button btn-dark buttonLarge buttonUse">
 				<i class="fas fa-chevron-right buttonIcon"></i>
 				En savoir plus...
 			</a>
@@ -113,23 +113,23 @@
 					</div>
 					<div class="col-lg">
 						<div class="row justify-content-center m-3">
-							<a href="categories" class="button buttonGrey buttonLarge w-75">
-								<div class="m-auto">
+							<a href="categories" class="button btn-dark buttonLarge w-75">
+								<p class="m-auto">
 									<i class="fa fa-folder-open buttonIcon"></i>
 									Parcourir une catégorie
-								</div>
+								</p>
 							</a>
-							<a href="aideTechniques" class="button buttonGrey buttonLarge mt-3 w-75">
-								<div class="m-auto">
+							<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-75">
+								<p class="m-auto">
 									<i class="fas fa-list-ul buttonIcon"></i>
 									Voir toutes les aides techniques
-								</div>
+								</p>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="row justify-content-center">
-					<h1 class="h3 mb-0 text-gray-800">Les acteurs du projet</h1>
+					<h3 class="h3 mb-0 text-gray-800">Les acteurs du projet</h3>
 				</div>
 				<div class="row justify-content-center">
 					<div class="card shadow mb-4 m-3">

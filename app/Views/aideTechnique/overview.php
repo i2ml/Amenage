@@ -13,7 +13,7 @@
 ?>
     <div class="row justify-content-center">
         <div class="dropdown mb-4">
-            <button class="btn btn-primary dropdown-toggle" type="select" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-dark dropdown-toggle" type="select" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Trier les résultats
             </button>
             <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="ml-4 mb-4">
-            <button type="button" class="btn btn-primary dropdown-toggle" id="filterbutton">Filtrer les résultats</button>
+            <button type="button" class="btn btn-dark dropdown-toggle" id="filterbutton">Filtrer les résultats</button>
         </div>
     </div>
     <div class="row justify-content-md-center d-none" id="filterForm">
@@ -92,8 +92,8 @@
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
-                        <button class="btn btn-primary mr-3" id="reset-filter" type="button">Réinitialiser les filtres</button>
-                        <button class="btn btn-primary ml-3" id="submit-filter" type="button">Appliquer les filtres</button>
+                        <button class="btn btn-dark mr-3" id="reset-filter" type="button">Réinitialiser les filtres</button>
+                        <button class="btn btn-dark ml-3" id="submit-filter" type="button">Appliquer les filtres</button>
                     </div>
                 </form>
             </div>
