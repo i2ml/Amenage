@@ -1,6 +1,6 @@
 <div class="row justify-content-center m-5">
     <h2><?= esc($title); ?></h2>
-    <p id="catid" class="d-none"><?= esc($categorie); ?></p>
+    <p id="catid" class="d-none "><?= esc($categorie); ?></p>
 </div>
 <?php if (isset($infos)) { ?>
     <div class="row justify-content-center m-5">
@@ -13,7 +13,7 @@
 ?>
     <div class="row justify-content-center">
         <div class="dropdown mb-4">
-            <button class="btn btn-dark dropdown-toggle" type="select" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-light dropdown-toggle" type="select" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Trier les résultats
             </button>
             <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
@@ -24,16 +24,16 @@
             </div>
         </div>
         <div class="ml-4 mb-4">
-            <button type="button" class="btn btn-dark dropdown-toggle" id="filterbutton">Filtrer les résultats</button>
+            <button type="button" class="btn btn-light dropdown-toggle" id="filterbutton">Filtrer les résultats</button>
         </div>
     </div>
     <div class="row justify-content-md-center d-none" id="filterForm">
         <div class="card shadow mt-3 mb-3 ml-5 mr-5">
             <div class="card-header py-3">
-                <h4 class="font-weight-bold text-primary text-uppercase mb-0 small">Choix des filtres à appliquer :</h4>
+                <h4 class="font-weight-bold text-gray-900 text-uppercase mb-0 small">Choix des filtres à appliquer :</h4>
             </div>
             <div class="card-body">
-                <form class="font-weight-bold text-secondary small">
+                <form class="font-weight-bold text-gray-900 small">
                     <div class="form-row">
                         <div class="col-md-3 mb-3 ">
                             <label for="largeurMax">Largeur maximale. (en cm)</label>
@@ -92,8 +92,8 @@
                         </div>
                     </div>
                     <div class="row justify-content-md-center">
-                        <button class="btn btn-dark mr-3" id="reset-filter" type="button">Réinitialiser les filtres</button>
-                        <button class="btn btn-dark ml-3" id="submit-filter" type="button">Appliquer les filtres</button>
+                        <button class="btn btn-primary mr-3" id="reset-filter" type="button">Réinitialiser les filtres</button>
+                        <button class="btn btn-primary ml-3" id="submit-filter" type="button">Appliquer les filtres</button>
                     </div>
                 </form>
             </div>
@@ -103,16 +103,16 @@
     <div id="container" class="row justify-content-md-center">
         <?php foreach ($aideTechnique as $aideTechnique_item) : ?>
             <div class="aideTechnique col-md-5 mb-4 m-3">
-                <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card border-left-dark shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <h5 class="font-weight-bold text-primary text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
+                                <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
                                 <div class="small mb-0 font-weight-bold text-gray-800"><?= esc($aideTechnique_item['description']); ?>
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-300"></i>
+                                <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-900"></i>
                                 <p class="d-none" id="prix"><?= esc($aideTechnique_item['prixMin']); ?>0</p>
                             </div>
                             <a href="<?= base_url('aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>

@@ -7,7 +7,7 @@
         $emoji = array("fas fa-dice", "fas fa-hands", "fas fa-people-arrows", "fas fa-shower", "fas fa-lock", "fas fa-route", "fas fa-couch", "fas fa-couch", "fas fa-bullhorn", "fas fa-dice", "fas fa-glasses", "fas fa-headset", null);
         foreach ($categorie as $categorie_item) : ?>
             <div class="col-md-5 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card border-left-dark shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
