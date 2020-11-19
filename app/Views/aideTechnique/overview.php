@@ -130,7 +130,7 @@
 
 <?php else :
 ?>
-    <div class="container mx-3">
+    <div class="container px-5">
         <div class="row d-flex justify-content-center">
             <h3>Nous n'avons pas trouvé de résultat :/</h3>
         </div>

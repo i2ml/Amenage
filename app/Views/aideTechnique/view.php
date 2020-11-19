@@ -1,5 +1,5 @@
 <div class="row mt-md-3 ml-md-3">
-    <h1 class="h3 mb-0 text-gray-800"><?= ucfirst(esc($aideTechnique['nom'])); ?></h1>
+    <h1 class="h3 mb-0 text-gray-800 ml-5"><?= ucfirst(esc($aideTechnique['nom'])); ?></h1>
 </div>
 <div class="row">
     <div class="col-xl-5 col-md-6">
@@ -20,18 +20,18 @@
     <div class=" col-xl-7 col-md-6">
         <div class="card shadow mt-3 mr-4">
             <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold text-primary">Caractéristiques :</h4>
+                <h4 class="m-0 font-weight-bold text-gray-1000">Caractéristiques :</h4>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Catégorie : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Catégorie : </h6>
                         <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['nomCat'])); ?>.</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Zone : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Zone : </h6>
                         <?php
                         if (count($zones) === 0) {
                         ?>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Dimensions : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Dimensions : </h6>
                         <h6 class="d-inline">
                             <?php if (esc($aideTechnique['idDim']) === null) {
                             ?>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Prix : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Prix : </h6>
 
                         <?php
                         if (esc($aideTechnique['idPrix']) === null) {
@@ -128,7 +128,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Remboursement : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Remboursement : </h6>
 
                         <?php
                         if (esc($aideTechnique['idPec']) === null) {
@@ -150,7 +150,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Poids : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Poids : </h6>
                         <?php
                         if (esc($aideTechnique['idPoids']) === null) {
                         ?>
@@ -191,7 +191,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Est ajustable : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Est ajustable : </h6>
                         <h6 class="d-inline">
                             <?php if (esc($aideTechnique['estAjustable']) == 0) {
                                 echo ("Non.");
@@ -207,7 +207,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Dimensions plié : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Dimensions plié : </h6>
                         <h6 class="d-inline">
                             <?php
                             if ($aideTechnique['idDimPlie'] === null) {
@@ -252,7 +252,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Poids supporté : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Poids supporté : </h6>
                         <?php
                         if (esc($aideTechnique['idPSupporte']) === null) {
                         ?>
@@ -293,14 +293,14 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Alimentation : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Alimentation : </h6>
                         <h6 class="d-inline">
                             <?= esc($aideTechnique['estAlimenté']); ?></h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">Necessite une autre personne pour être utilisée : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Necessite une autre personne pour être utilisée : </h6>
                         <h6 class="d-inline">
                             <?php if (esc($aideTechnique['estMultiUtilisateur']) == 0) {
                                 echo ("Non.");
@@ -316,7 +316,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-primary">S'utilise en exterieur : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">S'utilise en exterieur : </h6>
                         <h6 class="d-inline">
                             <?php if (esc($aideTechnique['sutiliseEnExterieur']) == 0) {
                                 echo ("Non.");
@@ -334,7 +334,7 @@
         </div>
         <div class="card shadow mr-4 mt-3">
             <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold text-primary">Description :</h4>
+                <h4 class="m-0 font-weight-bold text-gray-1000">Description :</h4>
             </div>
             <div class="card-body">
                 <div class="text-justify">

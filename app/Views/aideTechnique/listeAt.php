@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <h5 class="font-weight-bold text-primary text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
+                            <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
                             <div class="small mb-0 font-weight-bold text-gray-800"><?= esc($aideTechnique_item['description']); ?>
                             </div>
                         </div>
@@ -23,7 +23,7 @@
     <?php endforeach; ?>
 <?php else :
 ?>
-    <div class="container mx-3">
+    <div class="container px-5">
         <div class="row d-flex justify-content-center">
             <h3>Nous n'avons pas trouvé de résultat :/</h3>
         </div>
