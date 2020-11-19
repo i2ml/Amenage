@@ -23,21 +23,28 @@
 	<div class="hero-bg">
 
 		<header>
-			<a class="logo" href="/"><img class=" p-2" src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" alt="logo"></a>
+			<a class="logo" href="/"><img class="ml-5 mt-2 p-2" src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" alt="logo"></a>
 		</header>
 		<!-- bg-gradient-primary -->
-		<div class="hero-infos">
-			<div>
+		<div class="hero-infos container">
+
+			<div class="row align-items-end hero-titlerow d-flex justify-content-center">
 				<h1 class="title">Aménâge - Catalogue d'aide technique</h1>
 			</div>
-			<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge" id="buttonJoin">
-				<i class="fa fa-bullseye buttonIcon"></i>
-				Cibler mon besoin !
-			</a>
-			<a href="about" class="button btn-dark buttonLarge buttonUse">
-				<i class="fas fa-chevron-right buttonIcon"></i>
-				En savoir plus...
-			</a>
+			<div class="row mt-5 align-items-center hero-row d-flex justify-content-center">
+				<div class="col-12 col-lg-5 my-4">
+					<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge p-3 px-5" id="buttonJoin">
+						<i class="fa fa-bullseye buttonIcon"></i>
+						Cibler mon besoin !
+					</a>
+				</div>
+				<div class="col-12 col-lg-5 my-4">
+					<a href="about" class="button btn-dark buttonLarge p-3 px-5">
+						<i class="fas fa-chevron-right buttonIcon"></i>
+						En savoir plus...
+					</a>
+				</div>
+			</div>
 		</div>
 		<div class="waves">
 			<svg width="100%" height="175px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -113,13 +120,13 @@
 					</div>
 					<div class="col-lg">
 						<div class="row justify-content-center m-3">
-							<a href="categories" class="button btn-dark buttonLarge w-75">
+							<a href="categories" class="button btn-dark buttonLarge w-75 p-3 px-5">
 								<p class="m-auto">
 									<i class="fa fa-folder-open buttonIcon"></i>
 									Parcourir une catégorie
 								</p>
 							</a>
-							<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-75">
+							<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-75 p-3 px-5">
 								<p class="m-auto">
 									<i class="fas fa-list-ul buttonIcon"></i>
 									Voir toutes les aides techniques
