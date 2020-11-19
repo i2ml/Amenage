@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-900"></i>
+                                <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-800"></i>
                                 <p class="d-none" id="prix"><?= esc($aideTechnique_item['prixMin']); ?>0</p>
                             </div>
                             <a href="<?= base_url('aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>

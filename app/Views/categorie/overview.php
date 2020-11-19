@@ -11,11 +11,11 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="h5 font-weight-bold text-primary text-uppercase mb-1"><?= esc($categorie_item['nom']); ?></div>
+                                <div class="h5 font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($categorie_item['nom']); ?></div>
                                 <div class="small mb-0 font-weight-bold text-gray-800">Nombre d'aides techniques : <?= esc($categorie_item['aideTechAmount']); ?></div>
                             </div>
                             <div class="col-auto">
-                                <i class="<?= esc($emoji[$categorie_item['id']]); ?> fa-2x text-gray-300"></i>
+                                <i class="<?= esc($emoji[$categorie_item['id']]); ?> fa-2x text-gray-800"></i>
                             </div>
                             <a href="aideTechniques/categorie/<?= esc($categorie_item['id']); ?>" class="stretched-link"></a>
                         </div>

@@ -12,11 +12,11 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="h5 font-weight-bold text-primary text-uppercase mb-1"><?= esc($question_item['Domaine']); ?></div>
+                                <div class="h5 font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($question_item['Domaine']); ?></div>
                                 <div class="mb-0 font-weight-bold text-gray-800"><?= esc($question_item['intitule']); ?></div>
                             </div>
                             <div class="col-auto">
-                                <i class=" fa-2x text-gray-300"></i>
+                                <i class=" fa-2x text-gray-800"></i>
                             </div>
                             <?php if ($question_item['idGroupe'] == 0) {
                             ?>
