@@ -32,13 +32,13 @@
 				<h1 class="title">Aménâge - Catalogue d'aide technique</h1>
 			</div>
 			<div class="row mt-5 align-items-center hero-row d-flex justify-content-center">
-				<div class="col-12 col-lg-5 my-4">
+				<div class="col-12 col-lg-5 mb-lg-0 mb-3 d-flex justify-content-lg-end justify-content-center">
 					<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge p-3 px-5" id="buttonJoin">
 						<i class="fa fa-bullseye buttonIcon"></i>
 						Cibler mon besoin !
 					</a>
 				</div>
-				<div class="col-12 col-lg-5 my-4">
+				<div class="col-12 col-lg-5 d-flex justify-content-lg-start justify-content-center">
 					<a href="about" class="button btn-dark buttonLarge p-3 px-5">
 						<i class="fas fa-chevron-right buttonIcon"></i>
 						En savoir plus...
@@ -105,8 +105,10 @@
 
 			<div class="col-xl-12 col-lg-12 col-md-12 bg-white">
 
-				<div class="row align-items-center m-5">
-					<div class="col-lg">
+				<div class="row align-items-center mb-5">
+					<div class="col-xl-1 d-xl-block d-none">
+					</div>
+					<div class="col-lg-5 col-xl-4">
 						<form action="<?php echo base_url('aideTechniques') ?>" method="post">
 							<div class="input-group">
 								<input type="text" name="searchBar" class="form-control bg-darkerlight border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
@@ -118,21 +120,25 @@
 							</div>
 						</form>
 					</div>
-					<div class="col-lg">
-						<div class="row justify-content-center m-3">
-							<a href="categories" class="button btn-dark buttonLarge w-75 p-3 px-5">
+					<div class="col-xl-1 d-xl-block d-none">
+					</div>
+					<div class="col-lg-7 col-xl-5">
+						<div class="row d-flex justify-content-center m-3">
+							<a href="categories" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
 								<p class="m-auto">
 									<i class="fa fa-folder-open buttonIcon"></i>
 									Parcourir une catégorie
 								</p>
 							</a>
-							<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-75 p-3 px-5">
+							<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
 								<p class="m-auto">
 									<i class="fas fa-list-ul buttonIcon"></i>
 									Voir toutes les aides techniques
 								</p>
 							</a>
 						</div>
+					</div>
+					<div class="col-xl-1 d-xl-block d-none">
 					</div>
 				</div>
 				<div class="row justify-content-center">
