@@ -145,7 +145,16 @@
 					</div>
 				</div>
 				<div class="row justify-content-center">
-					<h3 class="h3 mb-0 text-gray-800">Les acteurs du projet</h3>
+					<h3 class="h3 mb-0 text-gray-800">Aménâge est également un logiciel 3D !</h3>
+				</div>
+				<div class="row d-flex justify-content-center">
+					<div class="col-6 align-self-center text-center shadow">
+						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="https://www.i2ml.fr/wp-content/uploads/2020/02/Annotation-2020-02-06-114504-1024x553.jpg" alt="No result illustration">
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<h3 class="h3 mb-0 mt-5 text-gray-800">Les acteurs du projet</h3>
 				</div>
 				<div class="row justify-content-center">
 					<div class="card shadow mb-4 m-3">
