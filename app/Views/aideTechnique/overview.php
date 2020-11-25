@@ -67,7 +67,7 @@
                                 <label class="custom-control-label " for="estAjustable">Est ajustable.</label>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-3  mb-3 mt-4 pt-2">
+                        <div class="col-md-2 col-sm-3 mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
                                 <input type="checkbox" class="custom-control-input" id="estPliable">
                                 <label class="custom-control-label " for="estPliable">Est pliable.</label>
@@ -79,15 +79,10 @@
                                 <label class="custom-control-label " for="solo">Peut s'utiliser seul.</label>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-3  mb-3 mt-2 pt-2">
-                            Remboursement
-                            <div class="custom-control custom-checkbox custom-checkbox-success">
-                                <input type="checkbox" class="custom-control-input" id="rtotal">
-                                <label class="custom-control-label " for="rtotal">Total</label>
-                            </div>
+                        <div class="col-md-2 col-sm-3 mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
                                 <input type="checkbox" class="custom-control-input" id="rpart">
-                                <label class="custom-control-label " for="rpart">Partiel</label>
+                                <label class="custom-control-label " for="rpart">Est remboursé</label>
                             </div>
                         </div>
                     </div>
