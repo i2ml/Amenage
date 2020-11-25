@@ -29,9 +29,12 @@
 		<div class="hero-infos container">
 
 			<div class="row align-items-end hero-titlerow d-flex justify-content-center">
-				<h1 class="title">Aménâge - Catalogue d'aide technique</h1>
+				<h1>
+					<div class="d-sm-block d-none title">Aménâge - Catalogue d'aide technique</div>
+					<div class="d-sm-none smalltitle">Aménâge - Catalogue d'aide technique</div>
+				</h1>
 			</div>
-			<div class="row mt-5 align-items-center hero-row d-flex justify-content-center zindex-dropdown">
+			<div class=" row mt-5 align-items-center hero-row d-flex justify-content-center zindex-dropdown">
 				<div class="col-12 col-lg-5 mb-lg-0 mb-3 d-flex justify-content-lg-end justify-content-center">
 					<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge p-3 px-5" id="buttonJoin">
 						<i class="fa fa-bullseye buttonIcon"></i>

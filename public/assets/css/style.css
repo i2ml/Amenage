@@ -2,7 +2,7 @@
 	min-height: 600px;
 	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
 		url(../img/696.jpg);
-	background-color: #7289da;
+	background-color: #ffffff;
 	background-size: 2000px;
 	background-position: center;
 	position: relative;
@@ -31,12 +31,19 @@
 	color: #fff;
 }
 
+.hero-infos .smalltitle {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 110%;
+	color: #fff;
+}
+
 .hero-row {
 	min-height: 6rem;
 }
 
 .hero-titlerow {
-	min-height: 13rem;
+	min-height: 10rem;
 }
 
 .hero-infos .description {
@@ -81,7 +88,7 @@
 }
 
 .buttonWhite:hover {
-	color: #2b67a6;
+	color: #f5bf69;
 }
 
 .buttonIcon {
