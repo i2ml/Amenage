@@ -3881,7 +3881,7 @@ input[type="button"].btn-block {
 	pointer-events: none;
 	content: "";
 	background-color: #fff;
-	border: #b7b9cc solid 1px;
+	border: #ccc7b7 solid 1px;
 }
 
 .custom-control-label::after {
