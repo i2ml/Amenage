@@ -13,6 +13,7 @@ class Question extends Controller
         $data = [
             'questions'  => $model->getQuestion(),
             'title' => 'Dans quel domaine se situe votre problème ?',
+            'questionId' => 0
         ];
 
         echo view('templates/header', $data);
@@ -24,13 +25,15 @@ class Question extends Controller
     {
         $model = new QuestionModel();
 
-        $data['questions'] = $model->getSubQuestion($id);
+        $data = [
+            'questions' => $model->getSubQuestion($id),
+            'title' => $model->getQuestion($id)['intitule'],
+            'questionId' => $id
+        ];
 
         if (empty($data['questions'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the question item: ' . $id);
         }
-
-        $data['title'] = $model->getQuestion($id)['intitule'];
 
         echo view('templates/header', $data);
         echo view('question/overview', $data);

@@ -106,3 +106,7 @@
 .img-verysmall {
 	width: 12rem;
 }
+
+.small-img {
+	max-height: 15rem;
+}

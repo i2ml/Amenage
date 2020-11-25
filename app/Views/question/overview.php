@@ -1,7 +1,12 @@
-<div class="row justify-content-center m-5">
+<div class="row justify-content-center m-5 mb-sm-0">
     <h2><?= esc($title); ?></h2>
 </div>
 <div class="container"></div>
+<div class="row d-sm-flex d-none justify-content-center">
+    <div class="col-10 col-sm-8 col-lg-6 col-xl-4 align-self-center text-center">
+        <img class="img-fluid small-img m-auto" src="<?php echo base_url('assets/img/illustrationsQuestions/' . esc($questionId) . '.jpg'); ?>" alt="No result illustration">
+    </div>
+</div>
 <div class="row justify-content-md-center">
     <?php if (!empty($questions) && is_array($questions)) :
 
@@ -32,8 +37,12 @@
                     </div>
                 </div>
             </div>
-
         <?php endforeach; ?>
+</div>
+<div class="row d-sm-none d-flex justify-content-center">
+    <div class="col-10 col-sm-8 col-lg-6 col-xl-4 align-self-center text-center">
+        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 small-img" src="<?php echo base_url('assets/img/illustrationsQuestions/' . esc($questionId) . '.jpg'); ?>" alt="No result illustration">
+    </div>
 </div>
 <?php else :
 ?>
