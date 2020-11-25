@@ -2007,7 +2007,7 @@ pre code {
 .form-control:focus {
 	color: #6e707e;
 	background-color: #fff;
-	border-color: #bac8f3;
+	border-color: #f3dfba;
 	outline: 0;
 	box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
 }
@@ -3842,11 +3842,11 @@ input[type="button"].btn-block {
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
-	box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+	box-shadow: 0 0 0 0.2rem rgba(246, 194, 62, 0.5);
 }
 
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-	border-color: #bac8f3;
+	border-color: #f3dfba;
 }
 
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
@@ -4009,7 +4009,7 @@ input[type="button"].btn-block {
 }
 
 .custom-select:focus {
-	border-color: #bac8f3;
+	border-color: #f3dfba;
 	outline: 0;
 	box-shadow: 0 0 0 0.2rem rgba(223, 155, 78, 0.5);
 }
@@ -4074,7 +4074,7 @@ input[type="button"].btn-block {
 }
 
 .custom-file-input:focus ~ .custom-file-label {
-	border-color: #bac8f3;
+	border-color: #f3dfba;
 	box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
 }
 
