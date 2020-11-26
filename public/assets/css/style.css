@@ -31,6 +31,10 @@
 	color: #fff;
 }
 
+.subtitle {
+	font-weight: 700;
+}
+
 .hero-infos .smalltitle {
 	font-weight: 700;
 	font-size: 32px;

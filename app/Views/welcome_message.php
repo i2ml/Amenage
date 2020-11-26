@@ -126,7 +126,7 @@
 					<div class="col-xl-1 d-xl-block d-none">
 					</div>
 					<div class="col-lg-7 col-xl-5">
-						<div class="row d-flex justify-content-center m-3">
+						<div class="row d-flex justify-content-center m-3 my-5">
 							<a href="categories" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
 								<p class="m-auto">
 									<i class="fa fa-folder-open buttonIcon"></i>
@@ -144,17 +144,31 @@
 					<div class="col-xl-1 d-xl-block d-none">
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<h3 class="h3 mb-0 text-gray-800">Aménâge est également un logiciel 3D !</h3>
-				</div>
-				<div class="row d-flex justify-content-center">
-					<div class="col-6 align-self-center text-center shadow">
-						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="https://www.i2ml.fr/wp-content/uploads/2020/02/Annotation-2020-02-06-114504-1024x553.jpg" alt="No result illustration">
+				<div class="row justify-content-center my-5">
+					<div class="d-block d-md-none col-8 align-self-center text-center">
+						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
+					</div>
+					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
+						<h2 class="h2 mb-3 subtitle bold">Installez Amenage 3D !</h2>
+						<h3 class="h3 mb-0">Visualisez les aides techniques en 3D dans votre domicile !</h3>
+						<div class="row justify-content-center my-5">
+							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
+								<a href="https://github.com/i2ml/Amenage3D/releases" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+									<p class="m-auto">
+										<i class="fa fa-download buttonIcon"></i>
+										Télécharger gratuitement
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="d-none d-md-block col-5 align-self-center text-center">
+						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
 					</div>
 				</div>
 
 				<div class="row justify-content-center">
-					<h3 class="h3 mb-0 mt-5 text-gray-800">Les acteurs du projet</h3>
+					<h2 class="h3 mb-0 mt-5">Les acteurs du projet</h2>
 				</div>
 				<div class="row justify-content-center">
 					<div class="card shadow mb-4 m-3">
