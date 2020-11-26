@@ -23,12 +23,14 @@
     <!-- Topbar -->
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow justify-content-end container-fluid">
 
-        <div class="col-3 justify-content-center">
+        <div class="col-md-3 col-sm-4 col-11 justify-content-center">
             <a class="ml-5 d-flex align-items-center justify-content-center" href="<?php echo base_url() ?>">
                 <img src="https://cdn.discordapp.com/attachments/727854268987605083/760150393035948052/LOGOSAnsfondgris.png" style="max-width:200px;" alt="logo">
             </a>
         </div>
-        <div class="col-9 justify-content-center">
+        <div class="d-md-none d-block col-1 justify-content-center">
+        </div>
+        <div class="col-md-9 col-7 d-sm-block d-none justify-content-center">
             <!-- Topbar Search -->
             <form class="d-none d-sm-block float-right form-inline mr-md-3 my-2 my-md-0 mw-100 navbar-search" action="<?php echo base_url('aideTechniques') ?>" method="post">
                 <div class="input-group">
@@ -44,7 +46,7 @@
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
+            <li class="nav-item dropdown no-arrow d-none">
                 <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-search fa-fw"></i>
                 </a>
