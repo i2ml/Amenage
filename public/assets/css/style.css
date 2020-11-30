@@ -9,7 +9,7 @@
 }
 
 .hero-bg-project {
-	min-height: 700px;
+	min-height: 750px;
 	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
 		url(../img/backgroundProject.jpg);
 	background-color: #ffffff;
@@ -57,6 +57,9 @@
 }
 
 .hero-titlerow {
+	min-height: 10rem;
+}
+.hero-subtitlerow {
 	min-height: 10rem;
 }
 
