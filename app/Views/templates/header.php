@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow justify-content-end container-fluid">
 
         <div class="col-md-3 col-sm-4 col-11 justify-content-center">
-            <a class="ml-5 d-flex align-items-center justify-content-center" href="<?php echo base_url() ?>">
+            <a class="ml-5 d-flex align-items-center justify-content-center" href="<?php echo base_url('homepage') ?>">
                 <img src="https://cdn.discordapp.com/attachments/727854268987605083/760150393035948052/LOGOSAnsfondgris.png" style="max-width:200px;" alt="logo">
             </a>
         </div>
