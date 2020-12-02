@@ -23,7 +23,7 @@
 	<div class="hero-bg-3d">
 
 		<header>
-			<a class="logo" href="<?php echo base_url('3d') ?>"><img class="ml-5 mt-2 p-2" src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" alt="logo"></a>
+			<a class="logo" href="<?php echo base_url() ?>"><img class="ml-5 mt-2 p-2" src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" alt="logo"></a>
 		</header>
 		<!-- bg-gradient-primary -->
 		<div class="hero-infos container">
