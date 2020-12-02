@@ -28,13 +28,13 @@
 		<!-- bg-gradient-primary -->
 		<div class="hero-infos container">
 
-			<div class="row align-items-end hero-titlerow d-flex justify-content-center">
+			<div class="row align-items-end hero-titlerow d-flex justify-content-center mt-sm-0 mt-sm-5 ">
 				<h1>
 					<div class="d-sm-block d-none title">Aménâge - Faciliter les amenagements pour l'autonomie</div>
 					<div class="d-sm-none smalltitle">Aménâge - Faciliter les amenagements pour l'autonomie</div>
 				</h1>
 			</div>
-			<div class="row align-items-end hero-subtitlerow justify-content-center mt-3">
+			<div class="row d-md-flex d-none align-items-end hero-subtitlerow justify-content-center mt-3">
 				<h2 class="col-6">
 					<div class="d-sm-block d-none smalltitle">Un catalogue d'aides techniques pour découvrir et s'informer</div>
 				</h2>
