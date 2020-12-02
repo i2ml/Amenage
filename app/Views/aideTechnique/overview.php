@@ -137,6 +137,20 @@
                 <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/Character.jpg'); ?>" alt="No result illustration">
             </div>
         </div>
+
+        <div class="row  d-flex justify-content-center">
+            <!-- Topbar Search -->
+            <form class="d-block d-sm-none float-right form-inline mr-md-3 my-2 my-md-0 mw-100 navbar-search" action="<?php echo base_url('aideTechniques') ?>" method="post">
+                <div class="input-group">
+                    <input type="text" name="searchBar" class="form-control bg-darkerlight border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
+                    <div class="input-group-append">
+                        <button class="btn btn-dark" type="submit">
+                            <i class="fas fa-search fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 <?php endif ?>
 
