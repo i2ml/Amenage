@@ -163,7 +163,7 @@
                                 if ($aideTechnique['poidsMax'] < 999) {
                                     echo (esc($aideTechnique['poidsMax']) . "g");
                                 } else {
-                                    echo (esc($aideTechnique['poidsMax'] / 1000) . "Kg");
+                                    echo (esc($aideTechnique['poidsMax'] / 1000) . "kg");
                                 } ?>
                             </h6>
                         <?php
@@ -174,14 +174,14 @@
                                 if ($aideTechnique['poidsMin'] < 999) {
                                     echo (esc($aideTechnique['poidsMin']) . "g");
                                 } else {
-                                    echo (esc($aideTechnique['poidsMin'] / 1000) . "Kg");
+                                    echo (esc($aideTechnique['poidsMin'] / 1000) . "kg");
                                 } ?>
                                 à
                                 <?php
                                 if ($aideTechnique['poidsMax'] < 999) {
                                     echo (esc($aideTechnique['poidsMax']) . "g");
                                 } else {
-                                    echo (esc($aideTechnique['poidsMax'] / 1000) . "Kg");
+                                    echo (esc($aideTechnique['poidsMax'] / 1000) . "kg");
                                 } ?>
                             </h6>
                         <?php
@@ -265,7 +265,7 @@
                                 if ($aideTechnique['poidsMaxSupporte'] < 999) {
                                     echo (esc($aideTechnique['poidsMaxSupporte']) . "g");
                                 } else {
-                                    echo (esc($aideTechnique['poidsMaxSupporte'] / 1000) . "Kg");
+                                    echo (esc($aideTechnique['poidsMaxSupporte'] / 1000) . "kg");
                                 } ?>
                             </h6>
                         <?php
@@ -276,14 +276,14 @@
                                 if ($aideTechnique['poidsMinSupporte'] < 999) {
                                     echo (esc($aideTechnique['poidsMinSupporte']) . "g");
                                 } else {
-                                    echo (esc($aideTechnique['poidsMinSupporte'] / 1000) . "Kg");
+                                    echo (esc($aideTechnique['poidsMinSupporte'] / 1000) . "kg");
                                 } ?>
                                 à
                                 <?php
                                 if ($aideTechnique['poidsMaxSupporte'] < 999) {
                                     echo (esc($aideTechnique['poidsMaxSupporte']) . "g");
                                 } else {
-                                    echo (esc($aideTechnique['poidsMaxSupporte'] / 1000) . "Kg");
+                                    echo (esc($aideTechnique['poidsMaxSupporte'] / 1000) . "kg");
                                 } ?>
                             </h6>
                         <?php
