@@ -13,8 +13,8 @@ class Pages extends Controller
 
     public function view($page = 'home')
     {
-        if ($page == 'homepage') {
-            return view('homepage');
+        if ($page == 'accueil') {
+            return view('accueil');
         }
         if ($page == '3d') {
             return view('amenage3d');

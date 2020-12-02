@@ -45,7 +45,7 @@
 
 			<div class=" row mt-5 align-items-center hero-row d-flex justify-content-center zindex-dropdown">
 				<div class="col-12 col-lg-5 mb-lg-0 mb-3 d-flex justify-content-lg-end justify-content-center">
-					<a href="homepage" class="button buttonWhite buttonLarge p-3 px-5" id="buttonJoin">
+					<a href="accueil" class="button buttonWhite buttonLarge p-3 px-5" id="buttonJoin">
 						<i class="fa fa-bullseye buttonIcon"></i>
 						Trouver des aides techniques
 					</a>
@@ -126,7 +126,7 @@
 						<h3 class="h3 mb-0">Découvrez des aides techniques qui correspondent à votre besoin ou renseignez vous sur les caractèristiques techniques des aides que vous connaissez.</h3>
 						<div class="row justify-content-center my-5">
 							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
-								<a href="homepage" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+								<a href="accueil" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
 									<p class="m-auto">
 										<i class="fa fa-laptop buttonIcon"></i>
 										Aller sur l'application
