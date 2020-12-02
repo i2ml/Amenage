@@ -32,7 +32,7 @@
             <h3>Nous n'avons pas trouvé de résultat :/</h3>
         </div>
         <div class="row d-flex justify-content-center">
-            <p>Aucune aide technique n'a été trouvée. Tentez d'élargir vos critères de sélection !</p>
+            <p>Aucune catégorie n'a été trouvée. Contactez les administrateurs du site !</p>
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-10 col-sm-8 col-lg-6 col-xl-4 align-self-center">
