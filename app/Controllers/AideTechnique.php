@@ -15,7 +15,7 @@ class AideTechnique extends Controller
         $model = new AideTechniqueModel();
         $data = [
             'aideTechnique'  => $model->getAideTechnique(),
-            'title' => 'Aide techniques',
+            'title' => 'Aides techniques',
             'searchInput' => "",
             'categorie' => "",
             'group' => ""
@@ -32,7 +32,7 @@ class AideTechnique extends Controller
         $categorieModel = new CategorieModel();
         $data = [
             'aideTechnique'  => $model->getAideTechnique(null, $categorie),
-            'title' => 'Aide techniques de la catégorie : ' . $categorieModel->getCategorie($categorie)['nom'],
+            'title' => 'Aides techniques de la catégorie : ' . $categorieModel->getCategorie($categorie)['nom'],
             'searchInput' => "",
             'categorie' => $categorie,
             'group' => ""
@@ -49,7 +49,7 @@ class AideTechnique extends Controller
         $groupeModel = new GroupeModel();
         $data = [
             'aideTechnique'  => $model->getAideTechnique(null, null, $group),
-            'title' => 'Aide techniques du groupe : ' . $groupeModel->getGroupe($group)['nom'],
+            'title' => 'Aides techniques du groupe : ' . $groupeModel->getGroupe($group)['nom'],
             'infos' => $groupeModel->getGroupe($group)['infos'],
             'searchInput' => "",
             'categorie' => "",
