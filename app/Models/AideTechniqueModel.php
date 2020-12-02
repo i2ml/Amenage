@@ -126,7 +126,7 @@ class AideTechniqueModel extends Model
         return $query[0];
     }
 
-    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $rtotal, $rpart, $searchInput, $categorieId)
+    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $rembourse, $searchInput, $categorieId)
     {
         $db = db_connect();
         if ($isReset == false) {
@@ -156,10 +156,8 @@ class AideTechniqueModel extends Model
                     OR ( ' . $estAjustable . ' = 0)) 
                     AND ((estMultiUtilisateur != ' . $solo . ') 
                     OR ( ' . $solo . ' = 0))
-                    AND ((idPriseEnCharge is not NULL AND ' . $rpart . ' = 1) 
-                    OR ( ' . $rpart . ' = 0))
-                    AND ((idPriseEnCharge = idPrix AND ' . $rtotal . ' = 1) 
-                    OR ( ' . $rtotal . ' = 0))
+                    AND ((pec.prixMin > 0 AND ' . $rembourse . ' = 1) 
+                    OR ( ' . $rembourse . ' = 0))
                     AND ((cat.id = ' . $categorieId . ' ) 
                     OR ( ' . $categorieId . ' = 0))
                     AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")' .

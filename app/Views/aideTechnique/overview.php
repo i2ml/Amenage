@@ -81,8 +81,8 @@
                         </div>
                         <div class="col-md-2 col-sm-3 mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
-                                <input type="checkbox" class="custom-control-input" id="rpart">
-                                <label class="custom-control-label " for="rpart">Est remboursé</label>
+                                <input type="checkbox" class="custom-control-input" id="rembourse">
+                                <label class="custom-control-label " for="rembourse">Est remboursé</label>
                             </div>
                         </div>
                     </div>

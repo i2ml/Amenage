@@ -64,8 +64,7 @@ $(document).ready(
                 estAjustable: $('#estAjustable').is(":checked"),
                 estPliable: $('#estPliable').is(":checked"),
                 solo: $('#solo').is(":checked"),
-                rtotal: $('#rtotal').is(":checked"),
-                rpart: $('#rpart').is(":checked"),
+                rembourse: $('#rembourse').is(":checked"),
                 searchInput: $('#searchInput').text(),
                 categorie: $('#catid').text()
             },
@@ -96,7 +95,7 @@ $(document).ready(
                 estPliable: null,
                 solo: null,
                 rtotal: null,
-                rpart: null,
+                rembourse: null,
                 searchInput: $('#searchInput').text(),
                 categorie: $('#catid').text()
             },

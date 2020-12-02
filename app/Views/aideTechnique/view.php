@@ -26,7 +26,9 @@
                 <div class="row">
                     <div class="col-md-auto">
                         <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Catégorie : </h6>
-                        <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['nomCat'])); ?>.</h6>
+                        <a href="<?php echo base_url('aideTechniques/categorie/' . esc($aideTechnique['idCat'])) ?>">
+                            <h6 class="d-inline"><?= ucfirst(esc($aideTechnique['nomCat'])); ?>.</h6>
+                        </a>
                     </div>
                 </div>
                 <div class="row">
@@ -134,13 +136,19 @@
                         if (esc($aideTechnique['idPec']) === null) {
                         ?>
                             <h6 class="d-inline"> Information inconnue ou non applicable.</h6>
-                        <?php
+                            <?php
                         } else if (esc($aideTechnique['priseEnChargeMin']) >= esc($aideTechnique['priseEnChargeMax'])) {
-                        ?>
-                            <h6 class="d-inline"> environ <?= esc($aideTechnique['priseEnChargeMax']); ?> €</h6>
-                        <?php
+                            if (esc($aideTechnique['priseEnChargeMin']) == 0) {
+                            ?>
+                                <h6 class="d-inline"> Non remboursé.</h6>
+                            <?php
+                            } else {
+                            ?>
+                                <h6 class="d-inline"> environ <?= esc($aideTechnique['priseEnChargeMax']); ?> €</h6>
+                            <?php
+                            }
                         } else {
-                        ?>
+                            ?>
                             <h6 class="d-inline"> de <?= esc($aideTechnique['priseEnChargeMin']); ?> à <?= esc($aideTechnique['priseEnChargeMax']); ?> €</h6>
                         <?php
                         }
