@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<div class="hero-bg">
+	<div class="hero-bg-3d">
 
 		<header>
 			<a class="logo" href="<?php echo base_url('3d') ?>"><img class="ml-5 mt-2 p-2" src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" alt="logo"></a>
@@ -30,21 +30,21 @@
 
 			<div class="row align-items-end hero-titlerow d-flex justify-content-center">
 				<h1>
-					<div class="d-sm-block d-none title">Aménâge - Faciliter les amenagements pour l'autonomie</div>
-					<div class="d-sm-none smalltitle">Aménâge - Faciliter les amenagements pour l'autonomie</div>
+					<div class="d-sm-block d-none title">Aménâge 3D - Faciliter les amenagements pour l'autonomie</div>
+					<div class="d-sm-none smalltitle">Aménâge 3D- Faciliter les amenagements pour l'autonomie</div>
 				</h1>
 			</div>
 			<div class=" row mt-5 align-items-center hero-row d-flex justify-content-center zindex-dropdown">
 				<div class="col-12 col-lg-5 mb-lg-0 mb-3 d-flex justify-content-lg-end justify-content-center">
-					<a href="cibler-mon-besoin" class="button buttonWhite buttonLarge p-3 px-5" id="buttonJoin">
-						<i class="fa fa-bullseye buttonIcon"></i>
-						Cibler mon besoin !
+					<a href="https://github.com/i2ml/Amenage3D/releases" class="button buttonWhite buttonLarge p-3 px-5" id="buttonJoin">
+						<i class="fa fa-download buttonIcon"></i>
+						Télécharger la dernière version
 					</a>
 				</div>
 				<div class="col-12 col-lg-5 d-flex justify-content-lg-start justify-content-center">
-					<a href="about" class="button btn-dark buttonLarge p-3 px-5">
-						<i class="fas fa-chevron-right buttonIcon"></i>
-						En savoir plus...
+					<a href="https://github.com/i2ml/Amenage3D" class="button btn-dark buttonLarge p-3 px-5">
+						<i class="fab fa-github buttonIcon"></i>
+						Collaborer au logiciel
 					</a>
 				</div>
 			</div>
@@ -108,55 +108,19 @@
 
 			<div class="col-xl-12 col-lg-12 col-md-12 bg-white">
 
-				<div class="row align-items-center mb-5">
-					<div class="col-xl-1 d-xl-block d-none">
-					</div>
-					<div class="col-lg-5 col-xl-4">
-						<form action="<?php echo base_url('aideTechniques') ?>" method="post">
-							<div class="input-group">
-								<input type="text" name="searchBar" class="form-control bg-darkerlight border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
-								<div class="input-group-append">
-									<button class="btn btn-dark" type="submit">
-										<i class="fas fa-search fa-sm"></i>
-									</button>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-xl-1 d-xl-block d-none">
-					</div>
-					<div class="col-lg-7 col-xl-5">
-						<div class="row d-flex justify-content-center m-3 my-5">
-							<a href="categories" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
-								<p class="m-auto">
-									<i class="fa fa-folder-open buttonIcon"></i>
-									Parcourir une catégorie
-								</p>
-							</a>
-							<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
-								<p class="m-auto">
-									<i class="fas fa-list-ul buttonIcon"></i>
-									Voir toutes les aides techniques
-								</p>
-							</a>
-						</div>
-					</div>
-					<div class="col-xl-1 d-xl-block d-none">
-					</div>
-				</div>
 				<div class="row justify-content-center my-5">
 					<div class="d-block d-md-none col-8 align-self-center text-center">
 						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
 					</div>
 					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
-						<h2 class="h2 mb-3 subtitle bold">Installez Amenage 3D !</h2>
-						<h3 class="h3 mb-0">Visualisez les aides techniques en 3D dans votre domicile !</h3>
+						<h2 class="h2 mb-3 subtitle bold">Un logiciel complet</h2>
+						<h3 class="h3 mb-0">Amenage 3D vous permet de modéliser un logement complet, équipé de toutes les aides techniques dont vous pouvez avoir besoin !</h3>
 						<div class="row justify-content-center my-5">
 							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
-								<a href="https://github.com/i2ml/Amenage3D/releases" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+								<a href="examples" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
 									<p class="m-auto">
-										<i class="fa fa-download buttonIcon"></i>
-										Télécharger gratuitement
+										<i class="fa fa-camera buttonIcon"></i>
+										Captures d'écran
 									</p>
 								</a>
 							</div>
@@ -164,6 +128,51 @@
 					</div>
 					<div class="d-none d-md-block col-5 align-self-center text-center">
 						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
+					</div>
+				</div>
+
+				<div class="row justify-content-center my-5">
+					<div class="col-xl-3 col-md-5 col-8 align-self-center text-center">
+						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="https://draftbot.com/public/ressources/github-min.png" alt="No result illustration">
+					</div>
+					<div class="col-xl-1 d-xl-block d-none">
+					</div>
+					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
+						<h2 class="h2 mb-3 subtitle bold">Open source et gratuit</h2>
+						<h3 class="h3 mb-0">Notre logiciel est totalement gratuit et open-source. Retrouvez toutes les solutions libres de la Fondation i2ml sur notre Github :</h3>
+						<div class="row justify-content-center my-5">
+							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
+								<a href="https://github.com/i2ml" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+									<p class="m-auto">
+										<i class="fab fa-github buttonIcon"></i>
+										Github i2ml
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-center my-5">
+					<div class="d-block d-md-none col-8 align-self-center text-center">
+						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/appimg.jpg'); ?>" alt="No result illustration">
+					</div>
+					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
+						<h2 class="h2 mb-3 subtitle bold">Recherchez des aides techniques sur Amenage</h2>
+						<h3 class="h3 mb-0">Découvrez des aides techniques qui correspondent à votre besoin ou renseignez vous sur les caractèristiques techniques des aides que vous connaissez.</h3>
+						<div class="row justify-content-center my-5">
+							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
+								<a href="homepage" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+									<p class="m-auto">
+										<i class="fa fa-laptop buttonIcon"></i>
+										Aller sur l'application
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="d-none d-md-block col-5 align-self-center text-center">
+						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/appimg.jpg'); ?>" alt="No result illustration">
 					</div>
 				</div>
 

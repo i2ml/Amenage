@@ -39,7 +39,7 @@
 					<div class="d-sm-block d-none smalltitle">Un catalogue d'aides techniques pour découvrir et s'informer</div>
 				</h2>
 				<h2 class="col-6">
-					<div class="d-sm-block d-none smalltitle">Un logiciel gratuit pour modéliser en 3D un logement équipé.</div>
+					<div class="d-sm-block d-none smalltitle">Un logiciel gratuit pour modéliser en 3D un logement équipé</div>
 				</h2>
 			</div>
 
@@ -118,10 +118,7 @@
 			<div class="col-xl-12 col-lg-12 col-md-12 bg-white">
 
 				<div class="row justify-content-center my-5">
-					<div class="d-block d-md-none col-8 align-self-center text-center">
-						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/appimg.jpg'); ?>" alt="No result illustration">
-					</div>
-					<div class="d-none d-md-block col-5 align-self-center text-center">
+					<div class="col-md-5 col-8 align-self-center text-center">
 						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/appimg.jpg'); ?>" alt="No result illustration">
 					</div>
 					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">

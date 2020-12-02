@@ -153,7 +153,7 @@
 						<h3 class="h3 mb-0">Visualisez les aides techniques en 3D dans votre domicile !</h3>
 						<div class="row justify-content-center my-5">
 							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
-								<a href="https://github.com/i2ml/Amenage3D/releases" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+								<a href="<?php echo base_url('3d') ?>" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
 									<p class="m-auto">
 										<i class="fa fa-download buttonIcon"></i>
 										Télécharger gratuitement
