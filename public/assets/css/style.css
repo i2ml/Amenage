@@ -36,6 +36,11 @@
 	text-align: center;
 }
 
+.border-left-yellowonhover:hover {
+	border-left: 0.25rem solid #f5bf69 !important;
+	transition-duration: 0.3s;
+}
+
 .waves {
 	position: absolute;
 	bottom: -5px;
