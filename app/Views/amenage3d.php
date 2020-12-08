@@ -30,8 +30,8 @@
 
 			<div class="row align-items-end hero-titlerow d-flex justify-content-center">
 				<h1>
-					<div class="d-sm-block d-none title">Aménâge 3D - Faciliter les amenagements pour l'autonomie</div>
-					<div class="d-sm-none smalltitle">Aménâge 3D- Faciliter les amenagements pour l'autonomie</div>
+					<div class="d-sm-block d-none title">Aménâge 3D - Faciliter les amenagements pour l'autonomie à domicile</div>
+					<div class="d-sm-none smalltitle">Aménâge 3D- Faciliter les amenagements pour l'autonomie à domicile</div>
 				</h1>
 			</div>
 			<div class=" row mt-5 align-items-center hero-row d-flex justify-content-center zindex-dropdown">
