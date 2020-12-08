@@ -1,11 +1,11 @@
 <div class="row mt-md-3 ml-md-3">
     <h5 class="h5 mb-0 text-gray-800 ml-5">
-        <a href="<?php echo base_url('aideTechniques/categorie') ?>">
-            <h5 class="d-inline">Liste des catégories </h5>
+        <a href="<?php echo base_url('categories') ?>">
+            Liste des catégories
         </a>
         >
         <a href="<?php echo base_url('aideTechniques/categorie/' . esc($aideTechnique['idCat'])) ?>">
-            <h5 class="d-inline"><?= ucfirst(esc($aideTechnique['nomCat'])); ?> </h5>
+            <?= ucfirst(esc($aideTechnique['nomCat'])); ?>
         </a>
         >
         <?= ucfirst(esc($aideTechnique['nom'])); ?>

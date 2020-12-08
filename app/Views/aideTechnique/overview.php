@@ -1,3 +1,20 @@
+<div class="row mt-md-3 ml-md-3">
+    <h5 class="h5 mb-0 text-gray-800 ml-5">
+        <?php if ($categorie != "") { ?>
+            <a href="<?php echo base_url('categories') ?>">
+                Liste des catégories
+            </a>
+        <?php } ?>
+        <?php if ($group != "") { ?>
+            <a href="<?php echo base_url('cibler-mon-besoin') ?>">
+                Cibler mon besoin
+            </a>
+        <?php } ?>
+        <?php if (isset($previouspage)) { ?>
+            <?= ucfirst(esc($previouspage)); ?>
+        <?php } ?>
+    </h5>
+</div>
 <div class="row justify-content-center m-5">
     <h2><?= esc($title); ?></h2>
     <p id="catid" class="d-none "><?= esc($categorie); ?></p>

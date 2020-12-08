@@ -35,7 +35,8 @@ class AideTechnique extends Controller
             'title' => 'Aides techniques de la catégorie : ' . $categorieModel->getCategorie($categorie)['nom'],
             'searchInput' => "",
             'categorie' => $categorie,
-            'group' => ""
+            'group' => "",
+            'previouspage' => " > " . $categorieModel->getCategorie($categorie)['nom']
         ];
 
         echo view('templates/header', $data);
@@ -53,7 +54,8 @@ class AideTechnique extends Controller
             'infos' => $groupeModel->getGroupe($group)['infos'],
             'searchInput' => "",
             'categorie' => "",
-            'group' => $group
+            'group' => $group,
+            'previouspage' => "> " . $groupeModel->getGroupe($group)['nom']
         ];
 
         echo view('templates/header', $data);
