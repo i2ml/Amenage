@@ -1,22 +1,27 @@
-<div class="row mt-md-3 ml-md-3">
-    <h5 class="h5 mb-0 text-gray-800 ml-5">
-        <a href="<?php echo base_url('categories') ?>">
-            Liste des catégories
-        </a>
-        >
-        <a href="<?php echo base_url('aideTechniques/categorie/' . esc($aideTechnique['idCat'])) ?>">
-            <?= ucfirst(esc($aideTechnique['nomCat'])); ?>
-        </a>
-        >
-        <?= ucfirst(esc($aideTechnique['nom'])); ?>
-    </h5>
-</div>
-<div class="row mt-md-3 ml-md-3">
-    <h1 class="h3 mb-0 text-gray-800 ml-5"><?= ucfirst(esc($aideTechnique['nom'])); ?></h1>
+<div class="row mt-md-3 mx-3 mb-4 ">
+    <div class="card shadow col-12">
+        <div class="card-body">
+            <h5 class="h5 mb-0 text-gray-800 ml-5">
+                <a href="<?php echo base_url('categories') ?>">
+                    Liste des catégories
+                </a>
+                >
+                <a href="<?php echo base_url('aideTechniques/categorie/' . esc($aideTechnique['idCat'])) ?>">
+                    <?= ucfirst(esc($aideTechnique['nomCat'])); ?>
+                </a>
+                >
+                <?= ucfirst(esc($aideTechnique['nom'])); ?>
+            </h5>
+        </div>
+    </div>
 </div>
 <div class="row">
     <div class="col-xl-5 col-md-6">
+
         <div class="card shadow m-3">
+            <div class="card-header py-3">
+                <h1 class="h3 mb-0 text-gray-900 ml-3 subtitle"><?= ucfirst(esc($aideTechnique['nom'])); ?></h1>
+            </div>
             <div class="card-body">
                 <div class="text-center">
                     <?php

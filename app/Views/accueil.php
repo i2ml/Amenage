@@ -182,6 +182,8 @@ if we ever need a subtitle here
 				</div>
 				<div class="row justify-content-center">
 					<div class="card shadow mb-4 m-3">
+						<a class="stretched-link" href="https://i2ml.fr">
+						</a>
 						<div class="card-body">
 							<div class="text-center">
 								<h6 class="m-0 font-weight-bold">Fondation i2ml</h6>
@@ -190,6 +192,8 @@ if we ever need a subtitle here
 						</div>
 					</div>
 					<div class="card shadow mb-4 m-3">
+						<a class="stretched-link" href="https://www.gard.fr/toute-lactu-du-departement-du-gard/autonomie-la-conference-des-financeurs-lance-son-appel-a-initiatives-2020.html" <div class="text-center">
+						</a>
 						<div class="card-body">
 							<div class="text-center">
 								<h6 class="m-0 font-weight-bold">CFPPA 30</h6>
@@ -198,21 +202,22 @@ if we ever need a subtitle here
 						</div>
 					</div>
 					<div class="card shadow mb-4 m-3">
+						<a class="stretched-link" href="https://www.gard.fr/accueil.html" <div class="text-center">
+						</a>
 						<div class="card-body">
-							<div class="text-center">
-								<h6 class="m-0 font-weight-bold">Département du gard</h6>
-								<img class="img-fluid px-3 px-sm-4 mt-1 mb-1 img-verysmall" src="<?php echo base_url('assets/img/logo_gard_2019_rvb_1000X1000.jpg'); ?>" alt="logo partenaire">
-							</div>
+							<h6 class="m-0 font-weight-bold">Département du gard</h6>
+							<img class="img-fluid px-3 px-sm-4 mt-1 mb-1 img-verysmall" src="<?php echo base_url('assets/img/logo_gard_2019_rvb_1000X1000.jpg'); ?>" alt="logo partenaire">
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center pb-5">
-					<p>
-						<a href="mentions-legales">Mentions légales</a>
-					</p>
-				</div>
+			</div>
+			<div class="row justify-content-center pb-5">
+				<p>
+					<a href="mentions-legales">Mentions légales</a>
+				</p>
 			</div>
 		</div>
+	</div>
 	</div>
 
 </body>

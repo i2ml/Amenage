@@ -18,7 +18,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="h5 font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($question_item['Domaine']); ?></div>
-                                <div class="mb-0 font-weight-bold text-gray-800"><?= esc($question_item['intitule']); ?></div>
+                                <div class="h5 mb-0 text-gray-800"><?= esc($question_item['intitule']); ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class=" fa-2x text-gray-800"></i>
@@ -38,6 +38,11 @@
                 </div>
             </div>
         <?php endforeach; ?>
+        <?php if (sizeof($questions) % 2 != 0) { ?>
+            <div class="col-md-5 mb-4 m-3">
+            </div>
+        <?php
+        } ?>
 </div>
 <div class="row d-sm-none d-flex justify-content-center">
     <div class="col-10 col-sm-8 col-lg-6 col-xl-4 align-self-center text-center">

@@ -1,19 +1,23 @@
-<div class="row mt-md-3 ml-md-3">
-    <h5 class="h5 mb-0 text-gray-800 ml-5">
-        <?php if ($categorie != "") { ?>
-            <a href="<?php echo base_url('categories') ?>">
-                Liste des catégories
-            </a>
-        <?php } ?>
-        <?php if ($group != "") { ?>
-            <a href="<?php echo base_url('cibler-mon-besoin') ?>">
-                Cibler mon besoin
-            </a>
-        <?php } ?>
-        <?php if (isset($previouspage)) { ?>
-            <?= ucfirst(esc($previouspage)); ?>
-        <?php } ?>
-    </h5>
+<div class="row mt-md-3 mx-3 mb-4 ">
+    <div class="card shadow col-12">
+        <div class="card-body">
+            <h5 class="h5 mb-0 text-gray-800 ml-5">
+                <?php if ($categorie != "") { ?>
+                    <a href="<?php echo base_url('categories') ?>">
+                        Liste des catégories
+                    </a>
+                <?php } ?>
+                <?php if ($group != "") { ?>
+                    <a href="<?php echo base_url('cibler-mon-besoin') ?>">
+                        Cibler mon besoin
+                    </a>
+                <?php } ?>
+                <?php if (isset($previouspage)) { ?>
+                    <?= ucfirst(esc($previouspage)); ?>
+                <?php } ?>
+            </h5>
+        </div>
+    </div>
 </div>
 <div class="row justify-content-center m-5">
     <h2><?= esc($title); ?></h2>
@@ -125,10 +129,10 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
-                                <div class="small mb-0 font-weight-bold text-gray-800"><?= esc($aideTechnique_item['description']); ?>
+                                <div class="mb-0 text-gray-800 text-justify"><?= esc($aideTechnique_item['description']); ?>
                                 </div>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-auto mx-5">
                                 <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-800"></i>
                                 <p class="d-none" id="prix"><?= esc($aideTechnique_item['prixMin']); ?>0</p>
                             </div>
@@ -138,6 +142,13 @@
                 </div>
             </div>
         <?php endforeach; ?>
+        <?php if (sizeof($aideTechnique) % 2 != 0) { ?>
+            <div class="col-md-5 mb-4 m-3">
+            </div>
+        <?php
+        } ?>
+
+
     </div>
 
 <?php else :
@@ -155,7 +166,7 @@
             </div>
         </div>
 
-        <div class="row  d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
             <!-- Topbar Search -->
             <form class="d-block d-sm-none float-right form-inline mr-md-3 my-2 my-md-0 mw-100 navbar-search" action="<?php echo base_url('aideTechniques') ?>" method="post">
                 <div class="input-group">
