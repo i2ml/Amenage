@@ -273,7 +273,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-auto">
-                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Poids supporté : </h6>
+                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Poids maximal supporté : </h6>
                         <?php
                         if (esc($aideTechnique['idPSupporte']) === null) {
                         ?>
@@ -306,6 +306,7 @@
                                 } else {
                                     echo (esc($aideTechnique['poidsMaxSupporte'] / 1000) . "kg");
                                 } ?>
+                                suivant les aides techniques.
                             </h6>
                         <?php
                         }
