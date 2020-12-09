@@ -108,7 +108,17 @@
 
 			<div class="col-xl-12 col-lg-12 col-md-12 bg-white">
 
+				<!-- 
+if we ever need a subtitle here
+				<div class="row mb-5 mt-xl-5 align-items-end d-flex justify-content-center">
+					<div class="col-12 align-self-center text-center justify-content-center">
+						<h2 class="subtitle bold"></h2>
+						<h3 class="h3 mb-0"></h3>
+					</div>
+				</div> 
+			-->
 				<div class="row align-items-center mb-5">
+
 					<div class="col-xl-1 d-xl-block d-none">
 					</div>
 					<div class="col-lg-5 col-xl-4">
