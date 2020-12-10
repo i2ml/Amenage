@@ -9,8 +9,9 @@
                 if ($newletter != $lettre) {
                     $lettre = $newletter;
             ?>
-                    <div class="col-md-12 mt-4">
-                        <h5 class="lettre"><?= esc($lettre); ?></h5>
+                    <div class="aideTechnique col-md-12 mt-4">
+                        <h5 class="lettre sortinvert"><?= esc($lettre); ?></h5>
+                        <h5 class="d-none lettre sort-noninvert"><?= esc($lettre); ?></h5>
                         <hr>
                     </div>
                 <?php
@@ -21,7 +22,7 @@
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
+                                    <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1 sort-noninvert sortinvert"><?= esc($aideTechnique_item['nom']); ?></h5>
                                     <div class="mb-0 text-gray-800 text-justify"><?= esc($aideTechnique_item['description']); ?>
                                     </div>
                                 </div>
