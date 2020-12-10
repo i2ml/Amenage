@@ -121,7 +121,7 @@
         </div>
     </div>
 
-    <div id="container" class="row justify-content-md-center">
+    <div class="row justify-content-md-center">
         <div id="container" class="row col-md-10">
             <?php
             $lettre = '';
@@ -130,8 +130,9 @@
                 if ($newletter != $lettre) {
                     $lettre = $newletter;
             ?>
-                    <div class="col-md-12 mt-4">
-                        <h2 class="lettre"><?= esc($lettre); ?></h2>
+                    <div class="aideTechnique col-md-12 mt-4">
+                        <h5 class="lettre sortinvert"><?= esc($lettre); ?></h5>
+                        <h5 class="d-none lettre sort-noninvert"><?= esc($lettre); ?></h5>
                         <hr>
                     </div>
                 <?php
@@ -142,13 +143,12 @@
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
+                                    <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1 sort-noninvert sortinvert"><?= esc($aideTechnique_item['nom']); ?></h5>
                                     <div class="mb-0 text-gray-800 text-justify"><?= esc($aideTechnique_item['description']); ?>
                                     </div>
                                 </div>
                                 <div class="col-auto mx-5">
                                     <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-800"></i>
-                                    <p class="d-none" id="prix"><?= esc($aideTechnique_item['prixMin']); ?>0</p>
                                 </div>
                                 <a href="<?= base_url('aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>
                             </div>

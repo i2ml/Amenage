@@ -10,7 +10,7 @@
                     $lettre = $newletter;
             ?>
                     <div class="col-md-12 mt-4">
-                        <h2 class="lettre"><?= esc($lettre); ?></h2>
+                        <h5 class="lettre"><?= esc($lettre); ?></h5>
                         <hr>
                     </div>
                 <?php
@@ -27,7 +27,6 @@
                                 </div>
                                 <div class="col-auto mx-5">
                                     <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-800"></i>
-                                    <p class="d-none" id="prix"><?= esc($aideTechnique_item['prixMin']); ?>0</p>
                                 </div>
                                 <a href="<?= base_url('aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>
                             </div>

@@ -6,29 +6,15 @@ $('option.dropdown-item').click(function () {  //sort option selected
         case "alphabeticalOrderOption":
             divs = $("div.aideTechnique");
             let alphabeticallyOrderedDivs = divs.sort(function (a, b) {
-                return $(a).find("h5").text().toLowerCase() > $(b).find("h5").text().toLowerCase() ? 1 : ($(a).find("h5").text().toLowerCase() < $(b).find("h5").text().toLowerCase() ? -1 : 0);
+                console.log($(a).find("h5.sortinvert"))
+                return $(a).find("h5.sortinvert").text().toLowerCase() > $(b).find("h5.sortinvert").text().toLowerCase() ? 1 : ($(a).find("h5.sortinvert").text().toLowerCase() < $(b).find("h5.sortinvert").text().toLowerCase() ? -1 : 0);
             });
             $("#container").html(alphabeticallyOrderedDivs);
             break;
-        case "priceDownOrderOption":
-            divs = $("div.aideTechnique");
-            let priceDownOrderedDivs = divs.sort(function (a, b) {
-                return parseInt($(a).find("#prix").text()) > parseInt($(b).find("#prix").text()) ? -1 : (parseInt($(a).find("#prix").text()) < parseInt($(b).find("#prix").text()) ? 1 : 0);
-            });
-            $("#container").html(priceDownOrderedDivs);
-            break;
-        case "priceUpOrderOption":
-            divs = $("div.aideTechnique");
-            let priceUpOrderedDivs = divs.sort(function (a, b) {
-                return parseInt($(a).find("#prix").text()) > parseInt($(b).find("#prix").text()) ? 1 : (parseInt($(a).find("#prix").text()) < parseInt($(b).find("#prix").text()) ? -1 : 0);
-            });
-            $("#container").html(priceUpOrderedDivs);
-            break;
-
         default:
             divs = $("div.aideTechnique");
             let notalphabeticallyOrderedDivs = divs.sort(function (a, b) {
-                return $(a).find("h5").text().toLowerCase() > $(b).find("h5").text().toLowerCase() ? -1 : ($(a).find("h5").text().toLowerCase() < $(b).find("h5").text().toLowerCase() ? 1 : 0);
+                return $(a).find("h5.sort-noninvert").text().toLowerCase() > $(b).find("h5.sort-noninvert").text().toLowerCase() ? -1 : ($(a).find("h5.sort-noninvert").text().toLowerCase() < $(b).find("h5.sort-noninvert").text().toLowerCase() ? 1 : 0);
             });
             $("#container").html(notalphabeticallyOrderedDivs);
             break;
