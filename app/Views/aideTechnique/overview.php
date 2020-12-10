@@ -42,8 +42,6 @@
             <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
                 <option class="dropdown-item active" id="alphabeticalOrderOption">Ordre alphabétique (A-Z)</option>
                 <option class="dropdown-item" id="invertedOrderOption">Ordre alphabétique (Z-A)</option>
-                <option class="dropdown-item" id="priceDownOrderOption">Prix décroissant</option>
-                <option class="dropdown-item" id="priceUpOrderOption">Prix croissant</option>
             </div>
         </div>
         <div class="ml-4 mb-4">
