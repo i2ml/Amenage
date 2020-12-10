@@ -27,7 +27,7 @@ class AideTechniqueModel extends Model
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
             WHERE cat.id =' .
-                    $categorieId . 'ORDER BY ait.nom'
+                    $categorieId . ' ORDER BY ait.nom'
             )->getResult('array');
             return $query;
         }
@@ -48,8 +48,7 @@ class AideTechniqueModel extends Model
             LEFT JOIN lieurgroupe lg ON lg.idAideTechnique = ait.id
             LEFT JOIN groupe g ON lg.idGroupe = g.id
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-            WHERE g.id =' . $groupId
-                    . 'ORDER BY ait.nom'
+            WHERE g.id =' . $groupId . ' ORDER BY ait.nom'
             )->getResult('array');
             return $query;
         }
@@ -89,7 +88,6 @@ class AideTechniqueModel extends Model
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
             WHERE ait.id =' . $id
-                . 'ORDER BY ait.nom'
         )->getResult('array');
         if (empty($query)) {
             return null;
@@ -166,7 +164,7 @@ class AideTechniqueModel extends Model
                     OR ( ' . $categorieId . ' = 0))
                     AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")' .
                     $estPliable
-                    . 'ORDER BY ait.nom'
+                    . ' ORDER BY ait.nom'
             )->getResult('array');
             return $query;
         }
