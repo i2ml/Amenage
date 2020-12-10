@@ -124,33 +124,47 @@
     </div>
 
     <div id="container" class="row justify-content-md-center">
-        <?php foreach ($aideTechnique as $aideTechnique_item) : ?>
-            <div class="aideTechnique col-md-5 mb-4 m-3">
-                <div class="card border-left-dark border-left-yellowonhover shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
-                                <div class="mb-0 text-gray-800 text-justify"><?= esc($aideTechnique_item['description']); ?>
+        <div id="container" class="row col-md-10">
+            <?php
+            $lettre = '';
+            foreach ($aideTechnique as $aideTechnique_item) :
+                $newletter = esc($aideTechnique_item['nom'])[0];
+                if ($newletter != $lettre) {
+                    $lettre = $newletter;
+            ?>
+                    <div class="col-md-12 mt-4">
+                        <h2 class="lettre"><?= esc($lettre); ?></h2>
+                        <hr>
+                    </div>
+                <?php
+                }
+                ?>
+                <div class="aideTechnique col-md-6 mb-4 p-3">
+                    <div class="card border-left-dark border-left-yellowonhover shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1"><?= esc($aideTechnique_item['nom']); ?></h5>
+                                    <div class="mb-0 text-gray-800 text-justify"><?= esc($aideTechnique_item['description']); ?>
+                                    </div>
                                 </div>
+                                <div class="col-auto mx-5">
+                                    <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-800"></i>
+                                    <p class="d-none" id="prix"><?= esc($aideTechnique_item['prixMin']); ?>0</p>
+                                </div>
+                                <a href="<?= base_url('aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>
                             </div>
-                            <div class="col-auto mx-5">
-                                <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-800"></i>
-                                <p class="d-none" id="prix"><?= esc($aideTechnique_item['prixMin']); ?>0</p>
-                            </div>
-                            <a href="<?= base_url('aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-        <?php if (sizeof($aideTechnique) % 2 != 0) { ?>
-            <div class="col-md-5 mb-4 m-3">
-            </div>
-        <?php
-        } ?>
+            <?php endforeach; ?>
+            <?php if (sizeof($aideTechnique) % 2 != 0) { ?>
+                <div class="col-md-5 mb-4 m-3">
+                </div>
+            <?php
+            } ?>
 
-
+        </div>
     </div>
 
 <?php else :
