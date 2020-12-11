@@ -237,7 +237,7 @@
                         <h6 class="d-inline">
                             <?php
                             if ($aideTechnique['idDimPlie'] === null) {
-                                echo ("Ne se plie pas.");
+                                echo ("Non applicable");
                             }
                             if (esc($aideTechnique['longueurMaxPlie']) != 0 && esc($aideTechnique['longueurMaxPlie']) != null) {
                                 if (esc($aideTechnique['longueurMinPlie']) === esc($aideTechnique['longueurMaxPlie'])) {
