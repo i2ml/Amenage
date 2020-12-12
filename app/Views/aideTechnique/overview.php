@@ -122,7 +122,7 @@
     </div>
 
     <div class="row justify-content-md-center">
-        <div id="container" class="row col-md-10">
+        <div id="container" class="row col-md-10 m-3 m-md-0">
             <?php
             $lettre = '';
             foreach ($aideTechnique as $aideTechnique_item) :
