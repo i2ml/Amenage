@@ -145,3 +145,17 @@
 	-webkit-line-clamp: 2; /* number of lines to show */
 	-webkit-box-orient: vertical;
 }
+
+.border-heavy {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #373536;
+}
+
+.darkcolor {
+	color: #373536;
+}
+
+.darkcolor:hover {
+	color: #f5bf69;
+}

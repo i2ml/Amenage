@@ -104,113 +104,103 @@
 	</div>
 	<div class="container col-xl-10">
 
-		<div class="justify-content-center">
+		<div class="row justify-content-center">
 
 			<div class="col-xl-12 col-lg-12 col-md-12 bg-white">
-
-				<!-- 
-if we ever need a subtitle here
-				<div class="row mb-5 mt-xl-5 align-items-end d-flex justify-content-center">
-					<div class="col-12 align-self-center text-center justify-content-center">
-						<h2 class="subtitle bold"></h2>
-						<h3 class="h3 mb-0"></h3>
-					</div>
-				</div> 
-			-->
 				<div class="row justify-content-center">
-					<div class="col-lg-12 mt-lg-5 col-xl-6">
+					<div class="col-lg-12 mt-lg-5 col-xl-5">
 						<form action="<?php echo base_url('aideTechniques') ?>" method="post">
-							<div class="input-group">
-								<input type="text" name="searchBar" class="form-control bg-darkerlight border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
-								<div class="input-group-append">
-									<button class="btn btn-dark" type="submit">
-										<i class="fas fa-search fa-sm"></i>
-									</button>
-								</div>
+							<div class="input-group border-heavy buttonLarge p-1 ">
+								<input type="text" name="searchBar" class="form-control buttonLarge p-1 pl-3 border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
+								<div class="input-group-append"></div>
+								<button class="btn buttonLarge m-1" type="submit">
+									<i class="fas fa-search fa-sm darkcolor"></i>
+								</button>
 							</div>
-						</form>
 					</div>
-				</div>
-				<div class="row justify-content-center mb-5">
-					<div class="d-flex justify-content-center m-3 my-5">
-						<div class="col-7">
-							<a href="categories" class=" m-5 button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
-								<p class="m-auto">
-									<i class="fa fa-folder-open buttonIcon"></i>
-									Parcourir une catégorie
-								</p>
-							</a>
-						</div>
-						<div class="col-1">
-						</div>
-						<div class="col-7">
-							<a href="aideTechniques" class="m-5 button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
-								<p class="m-auto">
-									<i class="fas fa-list-ul buttonIcon"></i>
-									Voir toutes les aides techniques
-								</p>
-							</a>
-						</div>
-					</div>
+					</form>
 				</div>
 			</div>
-		</div>
-		<div class="row justify-content-center my-5">
-			<div class="d-block d-md-none col-8 align-self-center text-center">
-				<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
-			</div>
-			<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
-				<h2 class="h2 mb-3 subtitle bold">Installez Amenage 3D !</h2>
-				<h3 class="h3 mb-0">Visualisez les aides techniques en 3D dans votre domicile !</h3>
-				<div class="row justify-content-center my-5">
-					<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
-						<a href="<?php echo base_url('3d') ?>" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+			<div class="row justify-content-center mb-5 mt-5">
+				<div class="d-flex justify-content-center m-3 my-5">
+					<div class="col-7">
+						<a href="categories" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
 							<p class="m-auto">
-								<i class="fa fa-download buttonIcon"></i>
-								Télécharger gratuitement
+								<i class="fa fa-folder-open buttonIcon"></i>
+								Parcourir une catégorie
+							</p>
+						</a>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-7">
+						<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
+							<p class="m-auto">
+								<i class="fas fa-list-ul buttonIcon"></i>
+								Voir toutes les aides techniques
 							</p>
 						</a>
 					</div>
 				</div>
 			</div>
-			<div class="d-none d-md-block col-5 align-self-center text-center">
-				<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
+		</div>
+	</div>
+	<div class="row justify-content-center my-5">
+		<div class="d-block d-md-none col-8 align-self-center text-center">
+			<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
+		</div>
+		<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
+			<h2 class="h2 mb-3 subtitle bold">Installez Amenage 3D !</h2>
+			<h3 class="h3 mb-0">Visualisez les aides techniques en 3D dans votre domicile !</h3>
+			<div class="row justify-content-center my-5">
+				<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
+					<a href="<?php echo base_url('3d') ?>" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+						<p class="m-auto">
+							<i class="fa fa-download buttonIcon"></i>
+							Télécharger gratuitement
+						</p>
+					</a>
+				</div>
 			</div>
 		</div>
+		<div class="d-none d-md-block col-5 align-self-center text-center">
+			<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
+		</div>
+	</div>
 
-		<div class="row justify-content-center">
-			<h2 class="h3 mb-0 mt-5">Les acteurs du projet</h2>
-		</div>
-		<div class="row justify-content-center">
-			<div class="card shadow mb-4 m-3">
-				<a class="stretched-link" href="https://i2ml.fr">
-				</a>
-				<div class="card-body">
-					<div class="text-center">
-						<h6 class="m-0 font-weight-bold">Fondation i2ml</h6>
-						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/Logo_Square.png'); ?>" alt="logo partenaire">
-					</div>
-				</div>
-			</div>
-			<div class="card shadow mb-4 m-3">
-				<a class="stretched-link" href="https://www.gard.fr/toute-lactu-du-departement-du-gard/autonomie-la-conference-des-financeurs-lance-son-appel-a-initiatives-2020.html" <div class="text-center">
-				</a>
-				<div class="card-body">
-					<div class="text-center">
-						<h6 class="m-0 font-weight-bold">CFPPA 30</h6>
-						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/Logo CFPPA30 Gard.png'); ?>" alt="logo partenaire">
-					</div>
-				</div>
-			</div>
-			<div class="card shadow mb-4 m-3">
-				<a class="stretched-link" href="https://www.gard.fr/accueil.html" <div class="text-center">
-				</a>
-				<div class="card-body">
-					<h6 class="m-0 font-weight-bold">Département du gard</h6>
-					<img class="img-fluid px-3 px-sm-4 mt-1 mb-1 img-verysmall" src="<?php echo base_url('assets/img/logo_gard_2019_rvb_1000X1000.jpg'); ?>" alt="logo partenaire">
+	<div class="row justify-content-center">
+		<h2 class="h3 mb-0 mt-5">Les acteurs du projet</h2>
+	</div>
+	<div class="row justify-content-center">
+		<div class="card shadow mb-4 m-3">
+			<a class="stretched-link" href="https://i2ml.fr">
+			</a>
+			<div class="card-body">
+				<div class="text-center">
+					<h6 class="m-0 font-weight-bold">Fondation i2ml</h6>
+					<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/Logo_Square.png'); ?>" alt="logo partenaire">
 				</div>
 			</div>
 		</div>
+		<div class="card shadow mb-4 m-3">
+			<a class="stretched-link" href="https://www.gard.fr/toute-lactu-du-departement-du-gard/autonomie-la-conference-des-financeurs-lance-son-appel-a-initiatives-2020.html" <div class="text-center">
+			</a>
+			<div class="card-body">
+				<div class="text-center">
+					<h6 class="m-0 font-weight-bold">CFPPA 30</h6>
+					<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/Logo CFPPA30 Gard.png'); ?>" alt="logo partenaire">
+				</div>
+			</div>
+		</div>
+		<div class="card shadow mb-4 m-3">
+			<a class="stretched-link" href="https://www.gard.fr/accueil.html" <div class="text-center">
+			</a>
+			<div class="card-body">
+				<h6 class="m-0 font-weight-bold">Département du gard</h6>
+				<img class="img-fluid px-3 px-sm-4 mt-1 mb-1 img-verysmall" src="<?php echo base_url('assets/img/logo_gard_2019_rvb_1000X1000.jpg'); ?>" alt="logo partenaire">
+			</div>
+		</div>
+	</div>
 	</div>
 	<div class="row justify-content-center pb-5">
 		<p>
