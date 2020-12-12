@@ -63,7 +63,7 @@
                     H 0
                     V 67
                     Z">
-					<animate repeatCount="indefinite" fill="url(#grad1)" attributeName="d" dur="5s" attributeType="XML" values="
+					<animate repeatCount="indefinite" fill="url(#grad1)" attributeName="d" dur="35s" attributeType="XML" values="
                     M0 67
                     C 473,283
                     822,0
