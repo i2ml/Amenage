@@ -2009,7 +2009,7 @@ pre code {
 	background-color: #fff;
 	border-color: #f3dfba;
 	outline: 0;
-	box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+	box-shadow: 0 0 0 0.2rem rgba(223, 155, 78, 0.25);
 }
 
 .form-control::-webkit-input-placeholder {
