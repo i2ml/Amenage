@@ -144,7 +144,7 @@
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
                                     <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1 sort-noninvert sortinvert"><?= esc($aideTechnique_item['nom']); ?></h5>
-                                    <div class="mb-0 text-gray-800 text-justify"><?= esc($aideTechnique_item['description']); ?>
+                                    <div class="mb-0 text-gray-800 text-justify max-lines"><?= esc($aideTechnique_item['description']); ?>
                                     </div>
                                 </div>
                                 <div class="col-auto mx-5">
