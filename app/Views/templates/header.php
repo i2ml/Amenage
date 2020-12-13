@@ -20,41 +20,49 @@
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url('assets/css/sb-admin-2.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
-    <!-- Topbar -->
-    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow justify-content-end container-fluid">
 
-        <div class="col-md-3 col-sm-4 col-11 justify-content-center">
-            <a class="ml-5 d-flex align-items-center justify-content-center" href="<?php echo base_url('accueil') ?>">
-                <img src="https://cdn.discordapp.com/attachments/727854268987605083/760150393035948052/LOGOSAnsfondgris.png" style="max-width:200px;" alt="logo">
+    <div class="container-fluid p-0 mb-4 hero-bg-center">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-dark p-5 navbar-expand topbar static-top">
+
+            <a class="navbar-brand" href="<?php echo base_url('accueil') ?>">
+                <img src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" style="max-width:200px;" alt="logo">
             </a>
-        </div>
-        <div class="d-md-none d-block col-1 justify-content-center">
-        </div>
-        <div class="col-md-9 col-7 d-sm-block d-none justify-content-center">
-            <!-- Topbar Search -->
-            <form class="d-none d-sm-block float-right form-inline mr-md-3 my-2 my-md-0 mw-100 navbar-search" action="<?php echo base_url('aideTechniques') ?>" method="post">
-                <div class="input-group">
-                    <input type="text" name="searchBar" class="form-control bg-darkerlight border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
-                    <div class="input-group-append">
-                        <button class="btn btn-dark" type="submit">
-                            <i class="fas fa-search fa-sm"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <!-- Topbar Navbar -->
-        <ul class="navbar-nav ml-auto">
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-none">
-                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-search fa-fw"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <!-- End of Topbar -->
 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="menu-option mx-3"><a href="<?php echo base_url('about'); ?>">A propos</a></li>
+                    <li class="menu-option mx-3"><a href="<?php echo base_url('cibler-mon-besoin'); ?>">Cibler mon besoin</a></li>
+                    <li class="menu-option mx-3"><a href="<?php echo base_url('categories'); ?>">Parcourir une catégorie</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <div class="row">
+            <svg viewBox="0 0 1440 150" preserveAspectRatio="none" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#fff" />
+                </linearGradient>
+                <path fill="url(#grad1)" d="
+                    M0 67
+                    C 273,183
+                    822,0
+                    1440.00,106
+                    V 359
+                    H 0
+                    V 67
+                    Z">
+                </path>
+            </svg>
+        </div>
+    </div>
 </head>
 
 <body>
