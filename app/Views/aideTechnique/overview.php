@@ -57,47 +57,47 @@
                 <form class="font-weight-bold text-gray-900 small">
                     <div class="form-row">
                         <div class="col-md-3 mb-3 ">
-                            <label for="largeurMax">Largeur maximale. (en cm)</label>
+                            <label for="largeurMax">Largeur maximale (en cm)</label>
                             <input type="number" class="form-control" id="largeurMax">
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="longueurMax">Longueur maximale. (en cm)</label>
+                            <label for="longueurMax">Longueur maximale (en cm)</label>
                             <input type="number" class="form-control" id="longueurMax">
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="hauteurMax">Hauteur maximale. (en cm)</label>
+                            <label for="hauteurMax">Hauteur maximale (en cm)</label>
                             <input type="number" class="form-control" id="hauteurMax">
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="prixMax">Prix maximal.</label>
+                            <label for="prixMax">Prix maximal</label>
                             <input type="number" class="form-control" id="prixMax">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-2 mb-3">
-                            <label for="supPoidsMax">Poids supporté. (en kg)</label>
+                            <label for="supPoidsMax">Poids supporté (en kg)</label>
                             <input type="number" class="form-control" id="supPoidsMax">
                         </div>
                         <div class="col-md-2 mb-3">
-                            <label for="poidsMax">Poids maximal. (en kg)</label>
+                            <label for="poidsMax">Poids maximal (en kg)</label>
                             <input type="number" class="form-control" id="poidsMax">
                         </div>
                         <div class="col-md-2 col-sm-3  mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
                                 <input type="checkbox" class="custom-control-input" id="estAjustable">
-                                <label class="custom-control-label " for="estAjustable">Est ajustable.</label>
+                                <label class="custom-control-label " for="estAjustable">Est ajustable</label>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-3 mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
                                 <input type="checkbox" class="custom-control-input" id="estPliable">
-                                <label class="custom-control-label " for="estPliable">Est pliable.</label>
+                                <label class="custom-control-label " for="estPliable">Est pliable</label>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-3 mb-3 mt-4 pt-2">
                             <div class="custom-control custom-checkbox custom-checkbox-success">
                                 <input type="checkbox" class="custom-control-input" id="solo">
-                                <label class="custom-control-label " for="solo">Peut s'utiliser seul.</label>
+                                <label class="custom-control-label " for="solo">Peut s'utiliser seul</label>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-3 mb-3 mt-4 pt-2">
