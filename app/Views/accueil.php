@@ -117,6 +117,7 @@
 									<i class="fas fa-search fa-sm darkcolor"></i>
 								</button>
 							</div>
+						</form>
 					</div>
 					</form>
 				</div>
