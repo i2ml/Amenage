@@ -26,8 +26,8 @@
         <!-- Topbar -->
         <nav class="navbar navbar-dark p-5 navbar-expand topbar static-top">
 
-            <a class="navbar-brand" href="<?php echo base_url('accueil') ?>">
-                <img src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" style="max-width:200px;" alt="logo">
+            <a class="navbar-brand p-1" href="<?php echo base_url('accueil') ?>">
+                <img src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" style="max-width:250px;" alt="logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,11 +35,17 @@
             </button>
 
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="menu-option mx-3"><a href="<?php echo base_url('about'); ?>">A propos</a></li>
-                    <li class="menu-option mx-3"><a href="<?php echo base_url('cibler-mon-besoin'); ?>">Cibler mon besoin</a></li>
-                    <li class="menu-option mx-3"><a href="<?php echo base_url('categories'); ?>">Parcourir une catégorie</a></li>
-                </ul>
+                <div class="ml-auto pr-3">
+                    <form action="<?php echo base_url('aideTechniques') ?>" method="post">
+                        <div class="input-group border-heavy buttonLarge p-1 whitebar">
+                            <input type="text" name="searchBar" class="form-control buttonLarge p-1 pl-3 border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
+                            <div class="input-group-append"></div>
+                            <button class="btn buttonLarge m-1" type="submit">
+                                <i class="fas fa-search fa-sm whitecolor"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </nav>

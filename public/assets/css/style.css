@@ -161,6 +161,28 @@
 	color: #f5bf69;
 }
 
+.whitecolor {
+	color: #ffffff;
+}
+
+.whitecolor:hover {
+	color: #ffffff;
+}
+
+.whitebar {
+	min-width: 400px;
+	border-color: white;
+}
+
+.whitebar input {
+	background-color: transparent;
+	color: white;
+}
+
+.whitebar input::placeholder {
+	color: white;
+}
+
 .menu-option a {
 	color: white;
 	font-weight: 700;
