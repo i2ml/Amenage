@@ -1,17 +1,19 @@
 <div class="row justify-content-center m-5">
     <h2><?= esc($title); ?></h2>
 </div>
-<div class="row justify-content-md-center">
-
+<div class="row justify-content-md-center p-3 p-md-5">
     <?php if (!empty($zone) && is_array($zone)) :
         foreach ($zone as $zone_item) : ?>
-            <div class="card shadow mb-4 m-3">
-                <a href="aideTechniques/zone/<?= esc($zone_item['id']); ?>" class="stretched-link">
-                </a>
-                <div class="card-body">
-                    <div class="text-center">
-                        <h6 class="m-0 font-weight-bold"><?= esc($zone_item['nom']); ?></h6>
-                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/zones/' . $zone_item['id'] . '.jpg'); ?>" alt="img zone">
+            <div class="col-xl-3 col-lg-4 col-md-5 col-6 m-xl-1">
+                <div class="card shadow mb-4 m-md-3 m-sm-1">
+
+                    <a href="aideTechniques/zone/<?= esc($zone_item['id']); ?>" class="stretched-link">
+                    </a>
+                    <div class="card-body">
+                        <div class="text-center">
+                            <h5 class="m-0 font-weight-bold"><?= ucfirst(esc($zone_item['nom'])); ?></h5>
+                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 small-img" src="<?php echo base_url('assets/img/zones/' . $zone_item['id'] . '.jpg'); ?>" alt="img zone">
+                        </div>
                     </div>
                 </div>
             </div>
