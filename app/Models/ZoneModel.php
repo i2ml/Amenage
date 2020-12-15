@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class ZoneModel extends Model
 {
-    protected $table = 'Zone';
+    protected $table = 'zone';
 
     public function getZone($id = false)
     {
