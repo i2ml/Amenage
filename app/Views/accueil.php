@@ -102,11 +102,11 @@
 			</svg>
 		</div>
 	</div>
-	<div class="container col-xl-10">
+	<div class="container-fluid">
 
 		<div class="row justify-content-center">
 
-			<div class="col-xl-12 col-lg-12 col-md-12 bg-white">
+			<div class="col-xl-12 col-lg-10 col-md-12 bg-white">
 				<div class="row justify-content-center">
 					<div class="col-lg-12 mt-lg-5 col-xl-5">
 						<form action="<?php echo base_url('aideTechniques') ?>" method="post">
@@ -122,27 +122,31 @@
 					</form>
 				</div>
 			</div>
-			<div class="row justify-content-center mb-5 mt-5">
-				<div class="d-flex justify-content-center m-3 my-5">
-					<div class="col-7">
-						<a href="categories" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
-							<p class="m-auto">
-								<i class="fa fa-folder-open buttonIcon"></i>
-								Parcourir une catégorie
-							</p>
-						</a>
-					</div>
-					<div class="col-1">
-					</div>
-					<div class="col-7">
-						<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
-							<p class="m-auto">
-								<i class="fas fa-list-ul buttonIcon"></i>
-								Voir toutes les aides techniques
-							</p>
-						</a>
-					</div>
-				</div>
+		</div>
+		<div class="row justify-content-center my-5">
+			<div class="col-xl-3 col-md-5 mr-xl-0 mr-md-2 col-12">
+				<a href="categories" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
+					<p class="m-auto">
+						<i class="fa fa-folder-open buttonIcon"></i>
+						Parcourir une catégorie
+					</p>
+				</a>
+			</div>
+			<div class="col-xl-3 mx-xl-5 col-md-5 ml-xl-0 ml-md-2 col-12">
+				<a href="zones" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
+					<p class="m-auto">
+						<i class="fa fa-home buttonIcon"></i>
+						Parcourir une zone
+					</p>
+				</a>
+			</div>
+			<div class="col-xl-3 col-12">
+				<a href="aideTechniques" class="button btn-dark buttonLarge mt-3 w-100 p-3 px-5 d-flex justify-content-center">
+					<p class="m-auto">
+						<i class="fas fa-list-ul buttonIcon"></i>
+						Voir toutes les aides techniques
+					</p>
+				</a>
 			</div>
 		</div>
 	</div>
