@@ -18,6 +18,7 @@ class AideTechnique extends Controller
             'title' => 'Aides techniques',
             'searchInput' => "",
             'categorie' => "",
+            'zone' => "",
             'group' => ""
         ];
 
@@ -35,8 +36,28 @@ class AideTechnique extends Controller
             'title' => 'Aides techniques de la catégorie : ' . $categorieModel->getCategorie($categorie)['nom'],
             'searchInput' => "",
             'categorie' => $categorie,
+            'zone' => "",
             'group' => "",
             'previouspage' => " > " . $categorieModel->getCategorie($categorie)['nom']
+        ];
+
+        echo view('templates/header', $data);
+        echo view('aideTechnique/overview', $data);
+        echo view('templates/footer', $data);
+    }
+
+    public function displayByZone($zone = null)
+    {
+        $model = new AideTechniqueModel();
+        $zoneModel = new ZoneModel();
+        $data = [
+            'aideTechnique'  => $model->getAideTechnique(null, null, null, $zone),
+            'title' => 'Aides techniques de la zone : ' . $zoneModel->getZone($zone)['nom'],
+            'searchInput' => "",
+            'categorie' => "",
+            'zone' => $zone,
+            'group' => "",
+            'previouspage' => " > " . $zoneModel->getZone($zone)['nom']
         ];
 
         echo view('templates/header', $data);
@@ -54,6 +75,7 @@ class AideTechnique extends Controller
             'infos' => $groupeModel->getGroupe($group)['infos'],
             'searchInput' => "",
             'categorie' => "",
+            'zone' => "",
             'group' => $group,
             'previouspage' => "> " . $groupeModel->getGroupe($group)['nom']
         ];
@@ -79,6 +101,7 @@ class AideTechnique extends Controller
             'title' => 'Résultat de la recherche pour : ' . $input,
             'searchInput' => $input,
             'categorie' => "",
+            'zone' => "",
             'group' => ""
         ];
 

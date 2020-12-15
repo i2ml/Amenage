@@ -1,9 +1,14 @@
 <div class="row mt-md-3 mx-3 justify-content-center mb-4 ">
     <div class="col-md-10 ">
-        <?php if ($categorie != "" || $group != "") { ?>
+        <?php if ($categorie != "" || $group != "" || $zone != "") { ?>
             <div class="card shadow col-12">
                 <div class="card-body">
                     <h5 class="h5 mb-0 text-gray-800 ml-5">
+                        <?php if ($zone != "") { ?>
+                            <a href="<?php echo base_url('zones') ?>">
+                                Liste des zones
+                            </a>
+                        <?php } ?>
                         <?php if ($categorie != "") { ?>
                             <a href="<?php echo base_url('categories') ?>">
                                 Liste des catégories
