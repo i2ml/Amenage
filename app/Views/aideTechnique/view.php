@@ -68,10 +68,15 @@
                                                     if (!$first) {
                                                         echo (" / ");
                                                     }
-                                                    echo (ucfirst(esc($zones[$i]['nom'])));
+                                                ?>
+                                                    <a href="<?php echo base_url('aideTechniques/zone/' . esc($zones[$i]['id'])) ?>">
+                                                        <?= ucfirst(esc($zones[$i]['nom'])) ?>
+                                                    </a>
+                                                    <?php
+
                                                     $first = false;
                                                 }
-                                                ?>.
+                                                    ?>.
                                             </h6>
                                         <?php
                                         }
