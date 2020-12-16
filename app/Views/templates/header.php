@@ -26,7 +26,7 @@
         <!-- Topbar -->
         <nav class="navbar navbar-dark p-5 navbar-expand topbar static-top">
 
-            <a class="navbar-brand p-1" href="<?php echo base_url('accueil') ?>">
+            <a class="navbar-brand p-md-1 p-5" href="<?php echo base_url('accueil') ?>">
                 <img src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" style="max-width:250px;" alt="logo">
             </a>
 
@@ -34,8 +34,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <div class="ml-auto pr-3">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="ml-auto pr-3 d-md-block d-none">
                     <form action="<?php echo base_url('aideTechniques') ?>" method="post">
                         <div class="input-group border-heavy buttonLarge p-1 whitebar">
                             <input type="text" name="searchBar" class="form-control buttonLarge p-1 pl-3 border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
