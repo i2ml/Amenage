@@ -1,47 +1,45 @@
     <?php if (!empty($aideTechnique) && is_array($aideTechnique)) :
         $emoji = array("fas fa-dice", "fas fa-hands", "fas fa-people-arrows", "fas fa-shower", "fas fa-lock", "fas fa-route", "fas fa-couch", "fas fa-couch", "fas fa-bullhorn", "fas fa-dice", "fas fa-glasses", "fas fa-headset", null);
     ?>
-        <div id="container" class="row col-md-10">
+        <?php
+        $lettre = '';
+        foreach ($aideTechnique as $aideTechnique_item) :
+            $newletter = esc($aideTechnique_item['nom'])[0];
+            if ($newletter != $lettre) {
+                $lettre = $newletter;
+        ?>
+                <div class="aideTechnique col-md-12 mt-4">
+                    <h5 class="lettre sortinvert"><?= esc($lettre); ?></h5>
+                    <h5 class="d-none lettre sort-noninvert"><?= esc($lettre); ?></h5>
+                    <hr>
+                </div>
             <?php
-            $lettre = '';
-            foreach ($aideTechnique as $aideTechnique_item) :
-                $newletter = esc($aideTechnique_item['nom'])[0];
-                if ($newletter != $lettre) {
-                    $lettre = $newletter;
+            }
             ?>
-                    <div class="aideTechnique col-md-12 mt-4">
-                        <h5 class="lettre sortinvert"><?= esc($lettre); ?></h5>
-                        <h5 class="d-none lettre sort-noninvert"><?= esc($lettre); ?></h5>
-                        <hr>
-                    </div>
-                <?php
-                }
-                ?>
-                <div class="aideTechnique col-md-6 mb-4 p-3">
-                    <div class="card border-left-dark border-left-yellowonhover shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1 sort-noninvert sortinvert"><?= esc($aideTechnique_item['nom']); ?></h5>
-                                    <div class="mb-0 text-gray-800 text-justify"><?= esc($aideTechnique_item['description']); ?>
-                                    </div>
+            <div class="aideTechnique col-md-6 mb-4 p-3">
+                <div class="card border-left-dark border-left-yellowonhover shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <h5 class="font-weight-bold text-gray-800 text-uppercase mb-1 sort-noninvert sortinvert"><?= esc($aideTechnique_item['nom']); ?></h5>
+                                <div class="mb-0 text-gray-800 text-justify"><?= esc($aideTechnique_item['description']); ?>
                                 </div>
-                                <div class="col-auto mx-5">
-                                    <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-800"></i>
-                                </div>
-                                <a href="<?= base_url('aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>
                             </div>
+                            <div class="col-auto mx-5">
+                                <i class="<?= esc($emoji[$aideTechnique_item['idCat']]); ?> fa-2x text-gray-800"></i>
+                            </div>
+                            <a href="<?= base_url('aideTechniques/view/' . esc($aideTechnique_item['id'], 'url')) ?>" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-            <?php if (sizeof($aideTechnique) % 2 != 0) { ?>
-                <div class="col-md-5 mb-4 m-3">
-                </div>
-            <?php
-            } ?>
+            </div>
+        <?php endforeach; ?>
+        <?php if (sizeof($aideTechnique) % 2 != 0) { ?>
+            <div class="col-md-5 mb-4 m-3">
+            </div>
+        <?php
+        } ?>
 
-        </div>
 
     <?php else :
     ?>
