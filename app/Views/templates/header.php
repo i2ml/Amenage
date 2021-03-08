@@ -27,7 +27,7 @@
         <nav class="navbar navbar-dark p-5 navbar-expand topbar static-top">
 
             <a class="navbar-brand p-md-1 p-5" href="<?php echo base_url('accueil') ?>">
-                <img src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" style="max-width:250px;" alt="logo">
+                <img src="<?php echo base_url('assets/img/pngs/LOGOSAnsfondblanc.png'); ?>" style="max-width:250px;" alt="logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

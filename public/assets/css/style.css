@@ -194,6 +194,6 @@
 .hero-bg-center {
 	background-size: 180rem;
 	background-position: 50% 70%;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)) url(../img/696.svg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/696.svg);
 	background-color: #ffffff;
 }
