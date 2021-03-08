@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\CategorieModel;
 use CodeIgniter\Controller;
+use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Categorie extends Controller
 {
@@ -27,7 +28,7 @@ class Categorie extends Controller
         $data['categorie'] = $model->getCategorie($id);
 
         if (empty($data['categorie'])) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the categorie item: ' . $id);
+            throw new PageNotFoundException('Cannot find the categorie item: ' . $id);
         }
         
         $data['title'] = $data['categorie']['nom'];

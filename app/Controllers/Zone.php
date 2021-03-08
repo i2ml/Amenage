@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ZoneModel;
 use CodeIgniter\Controller;
+use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Zone extends Controller
 {
@@ -27,7 +28,7 @@ class Zone extends Controller
         $data['zone'] = $model->getZone($id);
 
         if (empty($data['zone'])) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the zone item: ' . $id);
+            throw new PageNotFoundException('Cannot find the zone item: ' . $id);
         }
 
         $data['title'] = $data['zone']['nom'];

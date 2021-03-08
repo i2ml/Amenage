@@ -7,6 +7,7 @@ use App\Models\CategorieModel;
 use App\Models\GroupeModel;
 use App\Models\ZoneModel;
 use CodeIgniter\Controller;
+use CodeIgniter\Exceptions\PageNotFoundException;
 
 class AideTechnique extends Controller
 {
@@ -151,7 +152,7 @@ class AideTechnique extends Controller
         }
 
         if (empty($data['aideTechnique'])) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the aideTechnique item: ' . $id);
+            throw new PageNotFoundException('Cannot find the aideTechnique item: ' . $id);
         }
 
         $data['title'] = $data['aideTechnique']['nom'];

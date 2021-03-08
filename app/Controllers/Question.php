@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\QuestionModel;
 use CodeIgniter\Controller;
+use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Question extends Controller
 {
@@ -32,7 +33,7 @@ class Question extends Controller
         ];
 
         if (empty($data['questions'])) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the question item: ' . $id);
+            throw new PageNotFoundException('Cannot find the question item: ' . $id);
         }
 
         echo view('templates/header', $data);
