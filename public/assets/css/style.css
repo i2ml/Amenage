@@ -1,6 +1,6 @@
 .hero-bg {
 	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
-		url(../img/696.jpg);
+		url(../img/696.svg);
 	background-color: #ffffff;
 	background-size: 180rem;
 	background-position: center;
@@ -8,10 +8,10 @@
 
 .hero-bg-project {
 	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
-		url(../img/backgroundProject.jpg);
+		url(../img/backgroundProject.svg);
 	background-color: #ffffff;
 	background-size: 100%;
-	background-size: 180rem;
+	background-size: 140rem;
 }
 
 .hero-bg-3d {
@@ -192,9 +192,8 @@
 }
 
 .hero-bg-center {
-	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
-		url(../img/696.jpg);
-	background-color: #ffffff;
 	background-size: 180rem;
 	background-position: 50% 70%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)) url(../img/696.svg);
+	background-color: #ffffff;
 }
