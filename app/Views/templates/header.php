@@ -38,7 +38,7 @@
                 <div class="ml-auto pr-3 d-md-block d-none">
                     <form action="<?php echo base_url('aideTechniques') ?>" method="post">
                         <div class="input-group border-heavy buttonLarge p-1 whitebar">
-                            <input type="text" name="searchBar" class="form-control buttonLarge p-1 pl-3 border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search" aria-describedby="basic-addon2" required>
+                            <input type="text" name="searchBar" class="form-control buttonLarge p-1 pl-3 border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search"  required>
                             <div class="input-group-append"></div>
                             <button class="btn buttonLarge m-1" type="submit">
                                 <i class="fas fa-search fa-sm whitecolor"></i>
