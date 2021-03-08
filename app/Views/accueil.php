@@ -23,7 +23,7 @@
 	<div class="container-fluid p-0 mb-4 hero-bg">
 
 		<header>
-			<a class="logo" href="<?php echo base_url() ?>"><img class="ml-5 mt-2 p-2" src="<?php echo base_url('assets/img/LOGOSAnsfondblanc.png'); ?>" alt="logo"></a>
+			<a class="logo" href="<?php echo base_url() ?>"><img class="ml-5 mt-2 p-2" src="<?php echo base_url('assets/img/pngs/LOGOSAnsfondblanc.png'); ?>" alt="logo"></a>
 		</header>
 		<!-- bg-gradient-primary -->
 		<div class="hero-infos container">
@@ -183,7 +183,7 @@
 			<div class="card-body">
 				<div class="text-center">
 					<h6 class="m-0 font-weight-bold">Fondation i2ml</h6>
-					<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/Logo_Square.png'); ?>" alt="logo partenaire">
+					<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/Logo_Square.jpg'); ?>" alt="logo partenaire">
 				</div>
 			</div>
 		</div>
@@ -193,7 +193,7 @@
 			<div class="card-body">
 				<div class="text-center">
 					<h6 class="m-0 font-weight-bold">CFPPA 30</h6>
-					<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/Logo CFPPA30 Gard.png'); ?>" alt="logo partenaire">
+					<img class="img-fluid px-3 px-sm-4 mt-3 mb-4 img-verysmall" src="<?php echo base_url('assets/img/Logo-CFPPA30-Gard.jpg'); ?>" alt="logo partenaire">
 				</div>
 			</div>
 		</div>
