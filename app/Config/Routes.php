@@ -43,6 +43,8 @@ $routes->get('aideTechniques', 'AideTechnique::index');
 $routes->match(['get', 'post'], 'aideTechniques', 'AideTechnique::search');
 $routes->match(['get', 'post'], 'filter', 'AideTechnique::filter');
 $routes->match(['get', 'post'], 'aideTechniques/categorie/filter', 'AideTechnique::filter');
+$routes->match(['get', 'post'], 'aideTechniques/group/filter', 'AideTechnique::filter');
+$routes->match(['get', 'post'], 'aideTechniques/zone/filter', 'AideTechnique::filter');
 $routes->get('categories', 'Categorie::index');
 $routes->get('zones', 'Zone::index');
 $routes->get('(:any)', 'Pages::view/$1');

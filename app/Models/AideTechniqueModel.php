@@ -27,7 +27,7 @@ class AideTechniqueModel extends Model
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
             WHERE cat.id =' .
-                    $categorieId . ' ORDER BY ait.nom'
+                $categorieId . ' ORDER BY ait.nom'
             )->getResult('array');
             return $query;
         }
@@ -149,7 +149,7 @@ class AideTechniqueModel extends Model
         return $query[0];
     }
 
-    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $rembourse, $searchInput, $categorieId)
+    public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $rembourse, $searchInput, $categorieId, $zone, $group)
     {
         $db = db_connect();
         if ($isReset == false) {
@@ -183,9 +183,15 @@ class AideTechniqueModel extends Model
                     OR ( ' . $rembourse . ' = 0))
                     AND ((cat.id = ' . $categorieId . ' ) 
                     OR ( ' . $categorieId . ' = 0))
+                    AND (((SELECT COUNT(*) FROM lieurzone lz WHERE lz.idZone = ' . $zone . ' 
+                        AND lz.idAideTechnique = ait.id) = 1)
+                    OR ( ' . $zone . ' = 0))
+                    AND (((SELECT COUNT(*) FROM lieurgroupe lg WHERE lg.idGroupe = ' . $group . ' 
+                        AND lg.idAideTechnique = ait.id) = 1)
+                    OR ( ' . $group . ' = 0))
                     AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")' .
-                    $estPliable
-                    . ' ORDER BY ait.nom'
+                $estPliable
+                . ' ORDER BY ait.nom'
             )->getResult('array');
             return $query;
         }
@@ -206,8 +212,14 @@ class AideTechniqueModel extends Model
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-            WHERE ((cat.id = ' . $categorieId . ' ) OR ( ' . $categorieId . ' = 0)) AND 
-            (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")
+            WHERE ((cat.id = ' . $categorieId . ' ) OR ( ' . $categorieId . ' = 0)) 
+            AND (((SELECT COUNT(*) FROM lieurzone lz WHERE lz.idZone = ' . $zone . ' 
+                AND lz.idAideTechnique = ait.id) = 1)
+            OR ( ' . $zone . ' = 0))
+            AND (((SELECT COUNT(*) FROM lieurgroupe lg WHERE lg.idGroupe = ' . $group . ' 
+                AND lg.idAideTechnique = ait.id) = 1)
+            OR ( ' . $group . ' = 0))
+            AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")
             ORDER BY ait.nom'
         )->getResult('array');
         return $query;

@@ -31,6 +31,8 @@
 <div class="row justify-content-center m-5">
     <h2><?= esc($title); ?></h2>
     <p id="catid" class="d-none "><?= esc($categorie); ?></p>
+    <p id="zoneid" class="d-none "><?= esc($zone); ?></p>
+    <p id="groupid" class="d-none "><?= esc($group); ?></p>
 </div>
 <?php if (isset($infos)) { ?>
     <div class="row justify-content-center m-5">

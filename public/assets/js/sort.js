@@ -52,7 +52,9 @@ $(document).ready(
                 solo: $('#solo').is(":checked"),
                 rembourse: $('#rembourse').is(":checked"),
                 searchInput: $('#searchInput').text(),
-                categorie: $('#catid').text()
+                categorie: $('#catid').text(),
+                zone: $('#zoneid').text(),
+                group: $('#groupid').text()
             },
             success: function (response) {
                 $('#container').html(response)
@@ -83,7 +85,9 @@ $(document).ready(
                 rtotal: null,
                 rembourse: null,
                 searchInput: $('#searchInput').text(),
-                categorie: $('#catid').text()
+                categorie: $('#catid').text(),
+                zone: $('#zoneid').text(),
+                group: $('#groupid').text()
             },
             success: function (response) {
                 $('#container').html(response)

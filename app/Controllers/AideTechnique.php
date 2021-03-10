@@ -15,7 +15,7 @@ class AideTechnique extends Controller
     {
         $model = new AideTechniqueModel();
         $data = [
-            'aideTechnique'  => $model->getAideTechnique(),
+            'aideTechnique' => $model->getAideTechnique(),
             'title' => 'Aides techniques',
             'searchInput' => "",
             'categorie' => "",
@@ -33,7 +33,7 @@ class AideTechnique extends Controller
         $model = new AideTechniqueModel();
         $categorieModel = new CategorieModel();
         $data = [
-            'aideTechnique'  => $model->getAideTechnique(null, $categorie),
+            'aideTechnique' => $model->getAideTechnique(null, $categorie),
             'title' => 'Aides techniques de la catégorie : ' . $categorieModel->getCategorie($categorie)['nom'],
             'searchInput' => "",
             'categorie' => $categorie,
@@ -52,7 +52,7 @@ class AideTechnique extends Controller
         $model = new AideTechniqueModel();
         $zoneModel = new ZoneModel();
         $data = [
-            'aideTechnique'  => $model->getAideTechnique(null, null, null, $zone),
+            'aideTechnique' => $model->getAideTechnique(null, null, null, $zone),
             'title' => 'Aides techniques de la zone : ' . $zoneModel->getZone($zone)['nom'],
             'searchInput' => "",
             'categorie' => "",
@@ -71,7 +71,7 @@ class AideTechnique extends Controller
         $model = new AideTechniqueModel();
         $groupeModel = new GroupeModel();
         $data = [
-            'aideTechnique'  => $model->getAideTechnique(null, null, $group),
+            'aideTechnique' => $model->getAideTechnique(null, null, $group),
             'title' => 'Aides techniques du groupe : ' . $groupeModel->getGroupe($group)['nom'],
             'infos' => $groupeModel->getGroupe($group)['infos'],
             'searchInput' => "",
@@ -90,8 +90,8 @@ class AideTechnique extends Controller
     {
         $model = new AideTechniqueModel();
         if ($this->request->getMethod() === 'post' && $this->validate([
-            'searchBar'  => 'required'
-        ])) {
+                'searchBar' => 'required'
+            ])) {
             $input = $this->request->getPost('searchBar');
         } else {
             $input = null;
@@ -121,7 +121,7 @@ class AideTechnique extends Controller
             $input = null;
         }
         $data = [
-            'aideTechnique'  => $model->filter(
+            'aideTechnique' => $model->filter(
                 $input['isReset'] == "true",
                 $input['largeurMax'] == null ? 1000000000 : $input['largeurMax'],
                 $input['longueurMax'] == null ? 1000000000 : $input['longueurMax'],
@@ -129,12 +129,14 @@ class AideTechnique extends Controller
                 $input['prixMax'] == null ? 1000000000 : $input['prixMax'],
                 $input['supPoidsMax'] == null ? 0 : $input['supPoidsMax'] * 1000,
                 $input['poidsMax'] == null ? 1000000000 : $input['poidsMax'] * 1000,
-                $input['estAjustable'] == "false" ?  0 : 1,
+                $input['estAjustable'] == "false" ? 0 : 1,
                 $input['estPliable'] == "false" ? "" : "AND dimPlie.id is not null",
                 $input['solo'] == "false" ? 0 : 1,
                 $input['rembourse'] == "false" ? 0 : 1,
                 $input['searchInput'],
-                $input['categorie'] == "" ? 0 : $input['categorie']
+                $input['categorie'] == "" ? 0 : $input['categorie'],
+                $input['zone'] == "" ? 0 : $input['zone'],
+                $input['group'] == "" ? 0 : $input['group']
             ),
         ];
         echo view('aideTechnique/listeAt', $data);
