@@ -31,7 +31,7 @@
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo ($aideTechnique['photoUrl']) ?>" alt="<?php echo ($aideTechnique['photoAlias']) ?>">
                                         <p>Crédit photo : <?php echo ($aideTechnique['photoSource']) ?></p>
                                     <?php else : ?>
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/illustrationsAt/error.jpg'); ?>" alt="Banière page d'accueil">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/illustrationsAt/error.jpg'); ?>" alt="aucune photo trouvée pour l'aide technique">
                                     <?php endif; ?>
                                 </div>
                             </div>
