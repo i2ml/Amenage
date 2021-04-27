@@ -200,26 +200,3 @@
 body{
 	overflow-x: hidden;
 }
-
-.img1{
-	width : 80%;
-	height: auto;
-}
-.presentation {
-	background-size: 100rem;
-	background-position: 50% 70%;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/background3d.jpg);
-	background-color: #ffffff;
-
-}
-.presentation h1{
-	color:white;
-	
-}
-.rotation90 {
-   -webkit-transform: rotate(180deg);
-   -moz-transform: rotate(180deg);
-   -ms-transform: rotate(180deg);
-   -o-transform: rotate(180deg);
-   transform: rotate(180deg);
- }
