@@ -31,8 +31,8 @@
 
       <div class="row align-items-end hero-titlerow d-flex justify-content-center">
           <h1>
-              <div class="d-sm-block d-none title">Aménâge - Présentation de l'application</div>
-              <div class="d-sm-none smalltitle">Aménâge - Catalogue d'aides techniques</div>
+              <div class="d-sm-block d-none title">Aménâge - Présentation du logiciel</div>
+
           </h1>
       </div>
   </div>
@@ -91,18 +91,18 @@
       </svg>
   </div>
   </div>
-<div class="row justify-content-center my-5">
+<div class="row justify-content-center my-5" id="guide">
     <div class="d-block d-md-none col-8 align-self-center text-center">
         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>"
              alt="No result illustration">
     </div>
     <div class="col-md-5 col-12 align-self-center text-center justify-content-center">
-        <h2 class="h2 mb-3 subtitle bold">Installez Amenage 3D !</h2>
-        <h3 class="h3 mb-0">Visualisez les aides techniques en 3D dans votre domicile !</h3>
+        <h2 class="h3 mb-3 subtitle bold">Guide d'utilisation</h2>
+        <h3 class="h4 mb-0">Pour commencer directement la prise en main du logiciel, cliquez sur le lien ci-dessous.</h3>
         <div class="row justify-content-center my-5">
-            <div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
-                <a href="<?php echo base_url('https://fondation-i2ml.gitbook.io/amenage-mode-d-emploi/') ?> "target="_blank" rel="noreferrer"
-                   class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center" >
+                <a href="<?php echo base_url('https://fondation-i2ml.gitbook.io/amenage-mode-d-emploi/') ?> "  target="_blank" rel="noreferrer"
+                   class="button btn-dark buttonLarge w-10 p-3 px-5 d-flex justify-content-center">
                     <p class="m-auto">
                         <i class="fa fa-download buttonIcon"></i>
 
@@ -113,12 +113,144 @@
         </div>
     </div>
     <div class="d-none d-md-block col-5 align-self-center text-center">
-        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>"
+        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 " src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>"
              alt="No result illustration">
     </div>
 </div>
+<div class="col-12 presentation">
+  <div class="row mt-3 rotation90">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none" width="100%" height="150" fill="none" version="1.1"
+           xmlns="http://www.w3.org/2000/svg">
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#fff"/>
+          </linearGradient>
+          <path fill="url(#grad1)" d="
+                  M0 67
+                  C 273,183
+                  822,0
+                  1440.00,106
+                  V 359
+                  H 0
+                  V 67
+                  Z">
+              <animate repeatCount="indefinite" fill="url(#grad1)" attributeName="d" dur="20s" attributeType="XML"
+                       values="
+                  M0 67
+                  C 473,283
+                  822,0
+                  1440,116
+                  V 359
+                  H 0
+                  V 67
+                  Z;
+                  M0 67
+                  C 473,0
+                  1222,283
+                  1440,67
+                  V 359
+                  H 0
+                  V 67
+                  Z;
+                  M0 67
+                  C 973,260
+                  1722,0
+                  1440,120
+                  V 359
+                  H 0
+                  V 67
+                  Z;
+                  M0 67
+                  C 473,283
+                  822,0
+                  1440,116
+                  V 359
+                  H 0
+                  V 67
+                  Z
+                  ">
+              </animate>
+          </path>
+      </svg>
+  </div>
+  <h1 class="h1 mb-3 subtitle bold text-center">Présentation</h1>
+  <div class="row mt-3  ">
+      <svg viewBox="0 0 1440 150" preserveAspectRatio="none" width="100%" height="150" fill="none" version="1.1"
+           xmlns="http://www.w3.org/2000/svg">
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#fff"/>
+          </linearGradient>
+          <path fill="url(#grad1)" d="
+                  M0 67
+                  C 273,183
+                  822,0
+                  1440.00,106
+                  V 359
+                  H 0
+                  V 67
+                  Z">
+              <animate repeatCount="indefinite" fill="url(#grad1)" attributeName="d" dur="20s" attributeType="XML"
+                       values="
+                  M0 67
+                  C 473,283
+                  822,0
+                  1440,116
+                  V 359
+                  H 0
+                  V 67
+                  Z;
+                  M0 67
+                  C 473,0
+                  1222,283
+                  1440,67
+                  V 359
+                  H 0
+                  V 67
+                  Z;
+                  M0 67
+                  C 973,260
+                  1722,0
+                  1440,120
+                  V 359
+                  H 0
+                  V 67
+                  Z;
+                  M0 67
+                  C 473,283
+                  822,0
+                  1440,116
+                  V 359
+                  H 0
+                  V 67
+                  Z
+                  ">
+              </animate>
+          </path>
+      </svg>
+  </div>
+</div>
+<div class="row justify-content-center my-5">
+
+<div class="d-none d-md-block col-8 align-self-center text-center">
+  <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 " src="<?php echo base_url('assets/img/présentation/ecranPrincipal.jpg'); ?>"
+       alt="No result illustration">
+</div>
+</div>
+<div class="row justify-content-center my-5">
+<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
+    <h2 class="h3 mb-3 subtitle bold">Qu'est-ce qu'Aménâge3D ?</h2>
+    <h3 class="h4 mb-0">Aménage3D est un logiciel en libre accès vous permettant de reproduire votre cadre de vie en 2D et 3D. Une multitude de meubles sont à votre dispostion afin de vous aider à recréer votre logement au plus près de la réalité.</h3>
+</div>
+<div class="d-block d-md-none col-10 align-self-center text-center">
+    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/présentation/ecranPrincipal.jpg'); ?>"
+         alt="No result illustration">
+</div>
+<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
+    <h2 class="h3 mb-3 subtitle bold">Pour qui ?</h2>
+    <h3 class="h4 mb-0">L'accès au logiciel est libre, ce qui signifie que n'importe qui peut travailler sur le logiciel que ce soit à des fins personnels ou professionnels, pour ce qui est de la participation au développement du logiciel nous vous conseillons de vous réfèrer au guide juste <a href="#guide">ici</a>.</h3>
 
 
+</div>
+</div>
 <footer class="sticky-footer">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
