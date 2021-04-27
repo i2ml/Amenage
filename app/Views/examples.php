@@ -112,7 +112,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
       </div>
     </div>
   </div>
-  <div class="d-none d-md-block col-5 align-self-center text-center">
+  <div class="d-none d-md-block col-3 align-self-center text-center">
     <img class="img-fluid px-3 px-sm-4 mt-3 mb-4 " src="<?php echo base_url('assets/img/présentation/biblioMan.jpg'); ?>"
     alt="No result illustration">
   </div>
