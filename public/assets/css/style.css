@@ -200,3 +200,8 @@
 body{
 	overflow-x: hidden;
 }
+.mention p{
+	font-size : 1.2em;
+	text-align: justify;
+	
+}
