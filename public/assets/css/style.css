@@ -21,7 +21,15 @@
 	background-size: 100%;
 	background-size: 180rem;
 }
+.hero-bg-3d-2 {
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+		url(../img/background3d.jpg) no-repeat center;
+	background-color: #ffffff;
+	background-size: 100% 250%;
 
+
+
+}
 .logo img {
 	max-width: 200px;
 }

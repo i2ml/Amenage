@@ -31,23 +31,13 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
 
 <body>
-  <div class="container-fluid p-0 mb-4 hero-bg">
+  <div class="hero-bg-3d-2">
     <header>
-      <a class="logo" href="<?php echo base_url() ?>"><img class="ml-5 mt-2 p-2"
+      <a class="logo" href="<?php echo base_url('3d') ?>"><img class="ml-5 mt-2 p-2"
         src="<?php echo base_url('assets/img/pngs/LOGOSAnsfondblanc.png'); ?>"
         alt="logo"></a>
       </header>
-      <!-- bg-gradient-primary -->
-      <div class="hero-infos container">
 
-
-        <div class="row align-items-end hero-titlerow d-flex justify-content-center">
-          <h1>
-            <div class="d-sm-block d-none title">Aménâge - Présentation du logiciel</div>
-            <div class="d-sm-none smalltitle">Aménâge - Présentation du logiciel</div>
-          </h1>
-        </div>
-      </div>
       <div class="row mt-3">
         <svg viewBox="0 0 1440 150" preserveAspectRatio="none" width="100%" height="150" fill="none" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
@@ -102,6 +92,13 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     </path>
   </svg>
 </div>
+</div>
+
+<div class="row align-items-end hero-titlerow d-flex justify-content-center">
+  <h1>
+    <div class="d-sm-block d-none title">Aménâge - Présentation du logiciel</div>
+    <div class="d-sm-none smalltitle">Aménâge - Présentation du logiciel</div>
+  </h1>
 </div>
 <div class="row justify-content-center my-5" id="guide">
   <div class="d-block d-md-none col-8 align-self-center text-center">
