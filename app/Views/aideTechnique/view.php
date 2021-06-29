@@ -28,7 +28,7 @@
                                 <div class="text-center">
                                     <?php
                                     if (strlen($aideTechnique['photoUrl']) != 0) : ?>
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo ($aideTechnique['photoUrl']) ?>" alt="<?php echo ($aideTechnique['photoAlias']) ?>">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url($aideTechnique['photoUrl']) ?>" alt="<?php echo ($aideTechnique['photoAlias']) ?>">
                                         <p>Crédit photo : <?php echo ($aideTechnique['photoSource']) ?></p>
                                     <?php else : ?>
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/illustrationsAt/error.jpg'); ?>" alt="aucune photo trouvée pour l'aide technique">
@@ -341,22 +341,6 @@
                                             } else if (esc($aideTechnique['estMultiUtilisateur']) == 1) {
                                                 echo ("Oui.");
                                             } else if (esc($aideTechnique['estMultiUtilisateur']) == 2) {
-                                                echo ("Sur certains modèles.");
-                                            } else {
-                                                echo ("Information inconnue.");
-                                            }
-                                            ?></h6>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-auto">
-                                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">S'utilise en exterieur : </h6>
-                                        <h6 class="d-inline">
-                                            <?php if (esc($aideTechnique['sutiliseEnExterieur']) == 0) {
-                                                echo ("Non.");
-                                            } else if (esc($aideTechnique['sutiliseEnExterieur']) == 1) {
-                                                echo ("Oui.");
-                                            } else if (esc($aideTechnique['sutiliseEnExterieur']) == 2) {
                                                 echo ("Sur certains modèles.");
                                             } else {
                                                 echo ("Information inconnue.");
