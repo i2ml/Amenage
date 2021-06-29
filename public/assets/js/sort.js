@@ -6,15 +6,14 @@ $('option.dropdown-item').click(function () {  //sort option selected
         case "alphabeticalOrderOption":
             divs = $("div.aideTechnique");
             let alphabeticallyOrderedDivs = divs.sort(function (a, b) {
-                console.log($(a).find("h5.sortinvert"))
-                return $(a).find("h5.sortinvert").text().toLowerCase() > $(b).find("h5.sortinvert").text().toLowerCase() ? 1 : ($(a).find("h5.sortinvert").text().toLowerCase() < $(b).find("h5.sortinvert").text().toLowerCase() ? -1 : 0);
+                return $(a).find("h5.sortinvert").text().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") > $(b).find("h5.sortinvert").text().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") ? 1 : ($(a).find("h5.sortinvert").text().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") < $(b).find("h5.sortinvert").text().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") ? -1 : 0);
             });
             $("#container").html(alphabeticallyOrderedDivs);
             break;
         default:
             divs = $("div.aideTechnique");
             let notalphabeticallyOrderedDivs = divs.sort(function (a, b) {
-                return $(a).find("h5.sort-noninvert").text().toLowerCase() > $(b).find("h5.sort-noninvert").text().toLowerCase() ? -1 : ($(a).find("h5.sort-noninvert").text().toLowerCase() < $(b).find("h5.sort-noninvert").text().toLowerCase() ? 1 : 0);
+                return $(a).find("h5.sort-noninvert").text().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") > $(b).find("h5.sort-noninvert").text().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") ? -1 : ($(a).find("h5.sort-noninvert").text().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") < $(b).find("h5.sort-noninvert").text().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") ? 1 : 0);
             });
             $("#container").html(notalphabeticallyOrderedDivs);
             break;
