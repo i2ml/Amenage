@@ -5,7 +5,7 @@
     $lettre = '';
     foreach ($aideTechnique as $aideTechnique_item) :
         $newletter = esc($aideTechnique_item['nom'])[0];
-        if ($newletter != $lettre && $newletter != '�') {
+        if ($newletter != $lettre && $newletter && preg_match("/^[A-Z]$/", $newletter)) {
             $lettre = $newletter;
             ?>
             <div class="aideTechnique col-md-12 mt-4">
