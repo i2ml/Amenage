@@ -21,7 +21,15 @@
 	background-size: 100%;
 	background-size: 180rem;
 }
+.hero-bg-3d-2 {
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+		url(../img/background3d.jpg) no-repeat center;
+	background-color: #ffffff;
+	background-size: 100% 250%;
 
+
+
+}
 .logo img {
 	max-width: 200px;
 }
@@ -196,4 +204,72 @@
 	background-position: 50% 70%;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../img/696.svg);
 	background-color: #ffffff;
+}
+body{
+	overflow-x: hidden;
+}
+.mention p{
+	font-size : 1.2em;
+	text-align: justify;
+}
+.txt p{
+	text-align: justify;
+}
+
+.image--gallery {
+	max-width: 70%;
+	max-height: 47rem;
+  display: block;
+  margin: auto;
+
+  object-fit: cover;
+}
+
+.image--selection {
+  display: grid;
+  grid-template-columns:  450px 450px 450px/*repeat(auto-fit, minmax(9rem, auto))*/;
+  justify-content: center;
+  align-items: center;
+	margin-top: 2%;
+}
+
+.image__item {
+  width: 60%;
+  height: 8rem;
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5rem;
+
+  cursor: pointer;
+}
+.image__item img {
+	border: 5px solid #222;
+}
+.image--gallery img {
+	border: 5px solid #222;
+}
+
+.animate-entrance {
+  animation: BounceIn 0.8s;
+}
+
+@keyframes BounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+#carouselExemple {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
 }

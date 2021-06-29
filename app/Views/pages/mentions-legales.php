@@ -1,11 +1,11 @@
 <div class="Box-body px-5 pb-5 justify-content-center text-center">
-    <div class="container-lg">
-        <p><a target="_blank" rel="noopener noreferrer"
+    <div class="mention container-lg">
+        <a target="_blank" rel="noopener noreferrer"
               href="https://camo.githubusercontent.com/d303327d7ea0f4c6062e2193c924549286ab5981/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3732373835343236383938373630353038332f3736303135303339333033353934383035322f4c4f474f53416e73666f6e64677269732e706e67"><img
                         src="https://camo.githubusercontent.com/d303327d7ea0f4c6062e2193c924549286ab5981/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3732373835343236383938373630353038332f3736303135303339333033353934383035322f4c4f474f53416e73666f6e64677269732e706e67"
                         alt="logo complet"
                         data-canonical-src="https://cdn.discordapp.com/attachments/727854268987605083/760150393035948052/LOGOSAnsfondgris.png"
-                        style="max-width:100%;"></a></p>
+                        style="max-width:100%;"></a>
 
         <h1 class="m-4">Mentions légales</h1>
 
@@ -50,14 +50,14 @@
         <p>Conformément à la loi n°78-17 du 6 janvier 1978 modifiée en 2004 relative à l’informatique, aux fichiers et
             aux libertés, toute personne peut obtenir communication et, le cas échéant, rectification, suppression ou
             opposition des informations la concernant. Ce droit peut être exercé par courriel à l’adresse :
-            contact@i2ml.fr</p>
+            <a href="mailto:contact@i2ml.fr"> contact@i2ml.fr</a>.</p>
         <p>Le site s’engage à garantir la confidentialité des informations recueillies auprès des personnes par le biais
             du formulaire de contact. Ces informations ne sont en aucun cas cédées ou rendues accessibles à une entité
             tierce.</p>
         <p>Vous pouvez trouver la loi relative à l’informatique, aux fichiers et aux libertés sur le site de la
-            Commission Nationale de l’Informatique et des Libertés, à l’adresse suivante : www.cnil.fr.</p>
+            Commission Nationale de l’Informatique et des Libertés, à l’adresse suivante : <a href="https://www.cnil.fr/">www.cnil.fr</a>.</p>
 
-        <h2 class="m-4">Cookies</h2>
+        <h2 class="m-4 ">Cookies</h2>
         <p>En vue d’adapter le site aux demandes de ses visiteurs, la Fondation i2ml mesure le nombre de visites, le
             nombre de pages vues ainsi que l’activité des visiteurs sur le site et leur fréquence de retour. Nous
             n’avons pas d’autres exploitations des données.</p>
