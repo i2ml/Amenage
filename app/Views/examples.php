@@ -183,31 +183,31 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     <div class="carousel-inner">
 
       <div class="carousel-item active">
-        <img src="assets/img/présentation/appart1.jpg"
+        <img alt="Capture d'écran du logiciel amenage 3D" src="assets/img/présentation/appart1.jpg"
         class="d-block">
       </div>
 
       <div class="carousel-item">
-        <img src="assets/img/présentation/appart1VueHaut.jpg"
+        <img alt="Capture d'écran du logiciel amenage 3D" src="assets/img/présentation/appart1VueHaut.jpg"
         class="d-block">
       </div>
 
       <div class="carousel-item">
-        <img src="assets/img/présentation/appart2.jpg"
+        <img alt="Capture d'écran du logiciel amenage 3D" src="assets/img/présentation/appart2.jpg"
         class="d-block">
       </div>
 
       <div class="carousel-item">
-        <img src="assets/img/présentation/appart2VueHaut.jpg"
+        <img alt="Capture d'écran du logiciel amenage 3D" src="assets/img/présentation/appart2VueHaut.jpg"
         class="d-block">
       </div>
       <div class="carousel-item">
-        <img src="assets/img/présentation/appart3.jpg"
+        <img alt="Capture d'écran du logiciel amenage 3D" src="assets/img/présentation/appart3.jpg"
         class="d-block">
       </div>
 
       <div class="carousel-item">
-        <img src="assets/img/présentation/appart3VueHaut.jpg"
+        <img alt="Capture d'écran du logiciel amenage 3D" src="assets/img/présentation/appart3VueHaut.jpg"
         class="d-block">
       </div>
 

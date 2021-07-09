@@ -17,8 +17,6 @@
 <link href="<?php echo base_url('assets/css/sb-admin-2.css'); ?>" rel="stylesheet">
 <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
 
-</head>
-
 <body>
 	<div class="hero-bg-3d">
 

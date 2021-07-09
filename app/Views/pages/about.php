@@ -54,7 +54,6 @@
             </li>
             <li>les aides techniques sont mal acceptées parce qu’elles stigmatisent l’usager.</li>
         </ul>
-        </p>
         <p>Par ailleurs, il est bien souvent nécessaire que la personne prenne un temps de réflexion et d’acceptation de
             sa perte d’autonomie avant de se procurer une aide technique. En ce sens, il n’existe pas d’outil (au regard
             de l’état de l’art actuel) pour accompagner la personne dans ce processus d’acceptation et d’intégration des
@@ -138,7 +137,6 @@
                 besoins et vous préconise des solutions adaptées.
             </li>
         </ul>
-        </p>
 
 
         <h1 class="m-4">Les acteurs du projet</h1>
@@ -151,7 +149,7 @@
 
 
         <h1 class="m-4">Guide d'installation</h1>
-        <p>Vous souhaitez contribuer au developpement de la plateforme ? Suivez ce guide pour lancer l'application
+        <p>Vous souhaitez contribuer au développement de la plateforme ? Suivez ce guide pour lancer l'application
             web.</p>
         <ul style="text-align:justify;">
             <li>Clonez le projet <code>git clone https://github.com/i2ml/Amenage.git</code></li>
