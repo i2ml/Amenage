@@ -318,7 +318,7 @@
                                                 } else {
                                                     echo (esc($aideTechnique['poidsMaxSupporte'] / 1000) . "kg");
                                                 } ?>
-                                                suivant les aides techniques.
+                                                suivant les modèles.
                                             </h6>
                                         <?php
                                         }
@@ -334,7 +334,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-auto">
-                                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Necessite une autre personne pour être utilisée : </h6>
+                                        <h6 class="d-inline m-0 font-weight-bold text-gray-1000">Nécessite une autre personne pour être utilisée : </h6>
                                         <h6 class="d-inline">
                                             <?php if (esc($aideTechnique['estMultiUtilisateur']) == 0) {
                                                 echo ("Non.");
