@@ -28,8 +28,8 @@
 
 			<div class="row align-items-end hero-titlerow d-flex justify-content-center">
 				<h1>
-					<div class="d-sm-block d-none title">Aménâge 3D - Faciliter les amenagements pour l'autonomie à domicile</div>
-					<div class="d-sm-none smalltitle">Aménâge 3D- Faciliter les amenagements pour l'autonomie à domicile</div>
+					<div class="d-sm-block d-none title">Aménâge 3D - Faciliter les aménagements pour l'autonomie à domicile</div>
+					<div class="d-sm-none smalltitle">Aménâge 3D- Faciliter les aménagements pour l'autonomie à domicile</div>
 				</h1>
 			</div>
 			<div class=" row mt-5 align-items-center hero-row d-flex justify-content-center zindex-dropdown">
@@ -157,7 +157,7 @@
 					</div>
 					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
 						<h2 class="h2 mb-3 subtitle bold">Recherchez des aides techniques sur Amenage</h2>
-						<h3 class="h3 mb-0">Découvrez des aides techniques qui correspondent à votre besoin ou renseignez vous sur les caractèristiques techniques des aides que vous connaissez.</h3>
+						<h3 class="h3 mb-0">Découvrez des aides techniques qui correspondent à votre besoin ou renseignez vous sur les caractéristiques techniques des aides que vous connaissez.</h3>
 						<div class="row justify-content-center my-5">
 							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
 								<a href="accueil" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
