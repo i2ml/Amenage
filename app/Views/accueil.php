@@ -117,12 +117,11 @@
         <div class="col-xl-12 col-lg-10 col-md-12 bg-white">
             <div class="row justify-content-center">
                 <div class="col-lg-12 mt-lg-5 col-xl-5">
-                    <form action="<?php echo base_url('aideTechniques') ?>" method="post">
-                        <div class="input-group border-heavy buttonLarge p-1 ">
-                            <input type="text" name="searchBar" class="form-control buttonLarge p-1 pl-3 border-0 small"
-                                   placeholder="Rechercher une aide technique..." aria-label="Search" required>
+                    <form onsubmit="this.action='<?php echo(base_url('aideTechniques')) ?>/search/'+this.search.value;">
+                        <div class="input-group border-heavy buttonLarge p-1">
+                            <input type="text" id="search" class="form-control buttonLarge p-1 pl-3 border-0 small" placeholder="Rechercher une aide technique..." aria-label="Search"  required>
                             <div class="input-group-append"></div>
-                            <button class="btn buttonLarge m-1" type="submit" aria-label="search">
+                            <button class="btn buttonLarge m-1" type="submit" aria-label="Search">
                                 <i class="fas fa-search fa-sm darkcolor"></i>
                             </button>
                         </div>

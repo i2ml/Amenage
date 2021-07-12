@@ -86,17 +86,10 @@ class AideTechnique extends Controller
         echo view('templates/footer', $data);
     }
 
-    public function search()
+    public function search($input = null)
     {
+        $input = urldecode($input);
         $model = new AideTechniqueModel();
-        if ($this->request->getMethod() === 'post' && $this->validate([
-                'searchBar' => 'required'
-            ])) {
-            $input = $this->request->getPost('searchBar');
-        } else {
-            $input = null;
-        }
-
         $data = [
             'aideTechnique' => $model->search($input),
             'title' => 'Résultat de la recherche pour : ' . $input,
