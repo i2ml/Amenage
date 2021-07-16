@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use CodeIgniter\Database\Query;
 
 class AideTechniqueModel extends Model
 {
@@ -12,8 +13,8 @@ class AideTechniqueModel extends Model
     {
         $db = db_connect();
         if ($categorieId != null) {
-            $query = $db->query(
-                'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
+            $pQuery = $db->prepare(function ($db) {
+                $sql = "SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin,  dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
             p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin,
             ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
@@ -26,15 +27,19 @@ class AideTechniqueModel extends Model
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-            WHERE cat.id =' .
-                $categorieId . ' ORDER BY ait.nom'
-            )->getResult('array');
-            return $query;
+            WHERE cat.id = ? ORDER BY ait.nom";
+                return (new Query($db))->setQuery($sql);
+            });
+            $result = $pQuery->execute($categorieId);
+            if ($result != null) {
+                $result = $result->getResult('array');
+            }
+            return $result;
         }
 
         if ($zoneid != null) {
-            $query = $db->query(
-                'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
+            $pQuery = $db->prepare(function ($db) {
+                $sql = "SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin,  dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
             p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin,
             ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
@@ -47,14 +52,19 @@ class AideTechniqueModel extends Model
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-            JOIN lieurzone lz ON lz.idAideTechnique = ait.id join zone z ON lz.idZone = z.id WHERE z.id =' . $zoneid . '  GROUP BY ait.id ORDER BY ait.nom'
-            )->getResult('array');
-            return $query;
+            JOIN lieurzone lz ON lz.idAideTechnique = ait.id join zone z ON lz.idZone = z.id WHERE z.id = ?  GROUP BY ait.id ORDER BY ait.nom";
+                return (new Query($db))->setQuery($sql);
+            });
+            $result = $pQuery->execute($zoneid);
+            if ($result != null) {
+                $result = $result->getResult('array');
+            }
+            return $result;
         }
 
         if ($groupId != null) {
-            $query = $db->query(
-                'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
+            $pQuery = $db->prepare(function ($db) {
+                $sql = "SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
             ph.url AS photoUrl, ph.source AS photoSource, ph.textRemplacement AS photoAlias,
             p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin
@@ -69,9 +79,14 @@ class AideTechniqueModel extends Model
             LEFT JOIN lieurgroupe lg ON lg.idAideTechnique = ait.id
             LEFT JOIN groupe g ON lg.idGroupe = g.id
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-            WHERE g.id =' . $groupId . ' ORDER BY ait.nom'
-            )->getResult('array');
-            return $query;
+            WHERE g.id = ? ORDER BY ait.nom";
+                return (new Query($db))->setQuery($sql);
+            });
+            $result = $pQuery->execute($groupId);
+            if ($result != null) {
+                $result = $result->getResult('array');
+            }
+            return $result;
         }
         if ($id === null) {
             $query = $db->query(
@@ -94,8 +109,8 @@ class AideTechniqueModel extends Model
             )->getResult('array');
             return $query;
         }
-        $query = $db->query(
-            'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
+        $pQuery = $db->prepare(function ($db) {
+            $sql = "SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
             p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec, pec.prixMin AS priseEnChargeMin
             ,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté, dimPlie.largeurMin AS largeurMinPlie, dimPlie.longueurMin AS longueurMinPlie,
@@ -108,12 +123,17 @@ class AideTechniqueModel extends Model
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-            WHERE ait.id =' . $id
-        )->getResult('array');
-        if (empty($query)) {
-            return null;
+            WHERE ait.id = ?";
+            return (new Query($db))->setQuery($sql);
+        });
+
+        $result = $pQuery->execute($id);
+
+        if ($result != null) {
+            $result = $result->getResult('array');
         }
-        return $query[0];
+
+        return $result[0];
     }
 
 
@@ -121,8 +141,8 @@ class AideTechniqueModel extends Model
     {
         $db = db_connect();
         if ($input != false) {
-            $query = $db->query(
-                'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
+            $pQuery = $db->prepare(function ($db) {
+                $sql = "SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
                 dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
                 p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec,
                 pec.prixMin AS priseEnChargeMin,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté,
@@ -137,24 +157,24 @@ class AideTechniqueModel extends Model
                 LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
                 LEFT JOIN categorie cat ON cat.id = ait.idCategorie
                 LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-                WHERE ait.nom LIKE "%' . $input . '%" OR ait.description LIKE "%' . $input . '%"
-                ORDER BY ait.nom'
-            )->getResult('array');
-            return $query;
+                WHERE ait.nom LIKE ? OR ait.description LIKE ?
+                ORDER BY ait.nom";
+                return (new Query($db))->setQuery($sql);
+            });
+            $result = $pQuery->execute("%" . $db->escapeLikeString($input) . "%", "%" . $db->escapeLikeString($input) . "%");
+            if ($result != null) {
+                $result = $result->getResult('array');
+            }
+            return $result;
         }
-
-        if (empty($query)) {
-            return null;
-        }
-        return $query[0];
     }
 
     public function filter($isReset, $largeurMax, $longueurMax, $hauteurMax, $prixMax, $supPoidsMax, $poidsMax, $estAjustable, $estPliable, $solo, $rembourse, $searchInput, $categorieId, $zone, $group)
     {
         $db = db_connect();
         if ($isReset == false) {
-            $query = $db->query(
-                'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
+            $pQuery = $db->prepare(function ($db) {
+                $sql = "SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
                 dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
                 p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec,
                 pec.prixMin AS priseEnChargeMin,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté,
@@ -169,33 +189,61 @@ class AideTechniqueModel extends Model
                 LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
                 LEFT JOIN categorie cat ON cat.id = ait.idCategorie
                 LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-                WHERE ((dim.largeurMax <= ' . $largeurMax . ' AND dim.longueurMax <= ' . $longueurMax . ' AND dim.hauteurMax <= ' . $hauteurMax . ') 
+                WHERE ((dim.largeurMax <= ? AND dim.longueurMax <= ? AND dim.hauteurMax <= ?) 
                     OR dim.id is NULL) 
-                    AND (p.prixMax <= ' . $prixMax . ' OR p.id is NULL) 
-                    AND (po.poidsMax <= ' . $poidsMax . ' OR po.id is NULL) 
-                    AND (psupporte.poidsMax >= ' . $supPoidsMax . ' OR psupporte.id is NULL) 
-                    AND ((estAjustable != 3 AND estAjustable >= ' . $estAjustable . ' AND ' . $estAjustable . ' != 0) 
-                    OR ( ' . $estAjustable . ' = 0)) 
-                    AND ((estMultiUtilisateur != ' . $solo . ') 
-                    OR ( ' . $solo . ' = 0))
-                    AND ((pec.prixMin > 0 AND ' . $rembourse . ' = 1) 
-                    OR ( ' . $rembourse . ' = 0))
-                    AND ((cat.id = ' . $categorieId . ' ) 
-                    OR ( ' . $categorieId . ' = 0))
-                    AND (((SELECT COUNT(*) FROM lieurzone lz WHERE lz.idZone = ' . $zone . ' 
+                    AND (p.prixMax <= ? OR p.id is NULL) 
+                    AND (po.poidsMax <= ? OR po.id is NULL) 
+                    AND (psupporte.poidsMax >= ? OR psupporte.id is NULL) 
+                    AND ((estAjustable != 3 AND estAjustable >= ? AND ? != 0) 
+                    OR ( ? = 0)) 
+                    AND ((estMultiUtilisateur != ?) 
+                    OR ( ? = 0))
+                    AND ((ait.idDimensionPlie != ) 
+                    OR ( ? = 0))
+                    AND ((pec.prixMin > 0 AND ? = 1) 
+                    OR ( ? = 0))
+                    AND ((cat.id = ? ) 
+                    OR ( ? = 0))
+                    AND (((SELECT COUNT(*) FROM lieurzone lz WHERE lz.idZone = ? 
                         AND lz.idAideTechnique = ait.id) = 1)
-                    OR ( ' . $zone . ' = 0))
-                    AND (((SELECT COUNT(*) FROM lieurgroupe lg WHERE lg.idGroupe = ' . $group . ' 
+                    OR ( ? = 0))
+                    AND (((SELECT COUNT(*) FROM lieurgroupe lg WHERE lg.idGroupe = ? 
                         AND lg.idAideTechnique = ait.id) = 1)
-                    OR ( ' . $group . ' = 0))
-                    AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")' .
-                $estPliable
-                . ' ORDER BY ait.nom'
-            )->getResult('array');
-            return $query;
+                    OR ( ? = 0))
+                    AND (ait.nom LIKE ? OR ait.description LIKE ?)
+                    ORDER BY ait.nom";
+                return (new Query($db))->setQuery($sql);
+            });
+            $result = $pQuery->execute(
+                $largeurMax,
+                $longueurMax,
+                $hauteurMax,
+                $prixMax,
+                $poidsMax,
+                $supPoidsMax,
+                $estAjustable,
+                $estAjustable,
+                $estAjustable,
+                $solo,
+                $solo,
+                $rembourse,
+                $rembourse,
+                $categorieId,
+                $categorieId,
+                $zone,
+                $zone,
+                $group,
+                $group,
+                "%" . $db->escapeLikeString($searchInput) . "%",
+                "%" . $db->escapeLikeString($searchInput) . "%");
+            if ($result != null) {
+                $result = $result->getResult('array');
+            }
+            return $result;
         }
-        $query = $db->query(
-            'SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
+
+        $pQuery = $db->prepare(function ($db) {
+            $sql = "SELECT ait.id, ait.nom, ait.description, ait.idPrix, ait.idPoids, dim.id AS idDim,
             dim.largeurMin, dim.longueurMin, dim.hauteurMin, dim.largeurMax, dim.longueurMax, dim.hauteurMax,
             p.prixMin, p.prixMax,po.poidsMin, po.poidsMax, ait.idPriseEnCharge AS idPec,
             pec.prixMin AS priseEnChargeMin,pec.prixMax AS priseEnChargeMax, estAjustable, estAlimenté,
@@ -211,16 +259,30 @@ class AideTechniqueModel extends Model
             LEFT JOIN dimensions dimPlie ON dimPlie.id = ait.idDimensionPlie LEFT JOIN poids psupporte ON psupporte.id = ait.idPoidsSupporte 
             LEFT JOIN categorie cat ON cat.id = ait.idCategorie
             LEFT JOIN photo ph ON ph.idAideTechnique = ait.id
-            WHERE ((cat.id = ' . $categorieId . ' ) OR ( ' . $categorieId . ' = 0)) 
-            AND (((SELECT COUNT(*) FROM lieurzone lz WHERE lz.idZone = ' . $zone . ' 
+            WHERE ((cat.id = ? ) OR ( ? = 0)) 
+            AND (((SELECT COUNT(*) FROM lieurzone lz WHERE lz.idZone = ?
                 AND lz.idAideTechnique = ait.id) = 1)
-            OR ( ' . $zone . ' = 0))
-            AND (((SELECT COUNT(*) FROM lieurgroupe lg WHERE lg.idGroupe = ' . $group . ' 
+            OR ( ? = 0))
+            AND (((SELECT COUNT(*) FROM lieurgroupe lg WHERE lg.idGroupe = ? 
                 AND lg.idAideTechnique = ait.id) = 1)
-            OR ( ' . $group . ' = 0))
-            AND (ait.nom LIKE "%' . $searchInput . '%" OR ait.description LIKE "%' . $searchInput . '%")
-            ORDER BY ait.nom'
-        )->getResult('array');
-        return $query;
+            OR ( ? = 0))
+            AND (ait.nom LIKE ? 
+            OR ait.description LIKE ?)
+            ORDER BY ait.nom";
+            return (new Query($db))->setQuery($sql);
+        });
+        $result = $pQuery->execute(
+            $categorieId,
+            $categorieId,
+            $zone,
+            $zone,
+            $group,
+            $group,
+            "%" . $db->escapeLikeString($searchInput) . "%",
+            "%" . $db->escapeLikeString($searchInput) . "%");
+        if ($result != null) {
+            $result = $result->getResult('array');
+        }
+        return $result;
     }
 }

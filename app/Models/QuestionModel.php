@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use CodeIgniter\Database\Query;
 use CodeIgniter\Model;
 
 class QuestionModel extends Model
@@ -24,7 +25,14 @@ class QuestionModel extends Model
     public function getSubQuestion($id)
     {
         $db = db_connect();
-        $test = $db->query('SELECT * FROM question q WHERE q.idMere = ' . $id)->getResult('array');
-        return $test;
+        $pQuery = $db->prepare(function ($db) {
+            $sql = "SELECT * FROM question q WHERE q.idMere = ?";
+            return (new Query($db))->setQuery($sql);
+        });
+        $result = $pQuery->execute($id);
+        if ($result != null) {
+            $result = $result->getResult('array');
+        }
+        return $result;
     }
 }
