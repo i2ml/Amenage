@@ -198,7 +198,7 @@ class AideTechniqueModel extends Model
                     OR ( ? = 0)) 
                     AND ((estMultiUtilisateur != ?) 
                     OR ( ? = 0))
-                    AND ((ait.idDimensionPlie != ) 
+                    AND ((ait.idDimensionPlie IS NOT NULL) 
                     OR ( ? = 0))
                     AND ((pec.prixMin > 0 AND ? = 1) 
                     OR ( ? = 0))
@@ -226,6 +226,7 @@ class AideTechniqueModel extends Model
                 $estAjustable,
                 $solo,
                 $solo,
+                $estPliable,
                 $rembourse,
                 $rembourse,
                 $categorieId,
