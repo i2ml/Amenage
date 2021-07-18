@@ -48,7 +48,7 @@
 			</div>
 		</div>
 		<div class="row mt-3">
-			<svg viewBox="0 0 1440 150" preserveAspectRatio="none" width="100%" height="150" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<svg viewBox="0 0 1440 150" preserveAspectRatio="none" id="mainsvg" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
 				<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
 					<stop offset="0%" stop-color="#fff" />
 				</linearGradient>
