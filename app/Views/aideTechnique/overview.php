@@ -63,7 +63,7 @@
                 <h4 class="font-weight-bold text-gray-900 text-uppercase mb-0 small">Choix des filtres à appliquer :</h4>
             </div>
             <div class="card-body">
-                <form class="font-weight-bold text-gray-900 small">
+                <form id="filterFormFormItem" class="font-weight-bold text-gray-900 small">
                     <div class="form-row">
                         <div class="col-md-3 mb-3 ">
                             <label for="largeurMax">Largeur maximale (en cm)</label>

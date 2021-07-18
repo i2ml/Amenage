@@ -67,6 +67,7 @@ $(document).ready(
 
 $(document).ready(
     $('#reset-filter').click(function () { //filter applied
+        document.getElementById("filterFormFormItem").reset();
         $.ajax({
             url: 'filter',
             method: 'post',
