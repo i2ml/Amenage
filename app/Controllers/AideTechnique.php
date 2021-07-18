@@ -123,7 +123,7 @@ class AideTechnique extends Controller
                 $input['supPoidsMax'] == null ? 0 : $input['supPoidsMax'] * 1000,
                 $input['poidsMax'] == null ? 1000000000 : $input['poidsMax'] * 1000,
                 $input['estAjustable'] == "false" ? 0 : 1,
-                $input['estPliable'] == "false" ? "" : "AND dimPlie.id is not null",
+                $input['estPliable'] == "false" ? 0 : 1,
                 $input['solo'] == "false" ? 0 : 1,
                 $input['rembourse'] == "false" ? 0 : 1,
                 $input['searchInput'],
