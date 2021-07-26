@@ -30,8 +30,8 @@
 
 			<div class="row align-items-end hero-titlerow d-flex justify-content-center mt-sm-0 mt-sm-5 ">
 				<h1>
-					<div class="d-sm-block d-none title">Aménâge - Faciliter les amenagements pour l'autonomie à domicile</div>
-					<div class="d-sm-none smalltitle">Aménâge - Faciliter les amenagements pour l'autonomie à domicile</div>
+					<div class="d-sm-block d-none title">Aménâge - Faciliter les aménagements pour l'autonomie à domicile</div>
+					<div class="d-sm-none smalltitle">Aménâge - Faciliter les aménagements pour l'autonomie à domicile</div>
 				</h1>
 			</div>
 			<div class="row d-md-flex d-none align-items-end hero-subtitlerow justify-content-center mt-3">
@@ -122,8 +122,8 @@
 						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/appimg.jpg'); ?>" alt="No result illustration">
 					</div>
 					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
-						<h2 class="h2 mb-3 subtitle bold">Recherchez des aides techniques sur Amenage</h2>
-						<h3 class="h3 mb-0">Découvrez des aides techniques qui correspondent à votre besoin ou renseignez vous sur les caractèristiques techniques des aides que vous connaissez.</h3>
+						<h2 class="h2 mb-3 subtitle bold">Recherchez des aides techniques sur Aménâge</h2>
+						<h3 class="h3 mb-0">Découvrez des aides techniques qui correspondent à votre besoin ou renseignez vous sur les caractéristiques techniques des aides que vous connaissez.</h3>
 						<div class="row justify-content-center my-5">
 							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
 								<a href="accueil" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
@@ -143,7 +143,7 @@
 						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/dowloadamenage3d.jpg'); ?>" alt="No result illustration">
 					</div>
 					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
-						<h2 class="h2 mb-3 subtitle bold">Installez Amenage 3D !</h2>
+						<h2 class="h2 mb-3 subtitle bold">Installez Aménâge 3D !</h2>
 						<h3 class="h3 mb-0">Visualisez les aides techniques en 3D dans votre domicile !</h3>
 						<div class="row justify-content-center my-5">
 							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">

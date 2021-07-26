@@ -51,7 +51,7 @@
                 <a href="about" class="button btn-dark buttonLarge p-3 px-5">
                     <i class="fas fa-chevron-right buttonIcon"></i>
                     En savoir plus...
-                </a>²
+                </a>
             </div>
         </div>
     </div>
@@ -164,7 +164,7 @@
              alt="No result illustration">
     </div>
     <div class="col-md-5 col-12 align-self-center text-center justify-content-center">
-        <h2 class="h2 mb-3 subtitle bold">Installez Amenage 3D !</h2>
+        <h2 class="h2 mb-3 subtitle bold">Installez Aménâge 3D !</h2>
         <h3 class="h3 mb-0">Visualisez les aides techniques en 3D dans votre domicile !</h3>
         <div class="row justify-content-center my-5">
             <div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">

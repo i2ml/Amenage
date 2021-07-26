@@ -5,7 +5,7 @@ Aménâge est une application web permettant d’obtenir simplement et rapidemen
 
 Open-source et gratuite, la solution est accessible à tous à l'adresse https://amenage.i2ml.fr 
 
-La plateforme est liée au logiciel d'amenagement Amenage3D, autre projet open-source de la fondation i2ml (https://github.com/i2ml/Amenage3D), le site permet en effet d'obtenir des informations supplémentaires sur les aides techniques présente dans le logiciel.
+La plateforme est liée au logiciel d'aménagement Amenage3D, autre projet open-source de la fondation i2ml (https://github.com/i2ml/Amenage3D), le site permet en effet d'obtenir des informations supplémentaires sur les aides techniques présente dans le logiciel.
 
 Aménâge est développé par la Fondation i2ml et financé par la CFPPA du Gard et le Conseil Départemental du Gard. 
 
@@ -57,9 +57,9 @@ Pour cela, l'équipe d'Aménâge conseille de vous rapprocher de :
 
 # Guide d'installation
 
-Vous souhaitez contribuer au developpement de la plateforme ? Suivez ce guide pour lancer l'application web.
+Vous souhaitez contribuer au développement de la plateforme ? Suivez ce guide pour lancer l'application web.
 
 * Clonez le projet `git clone https://github.com/i2ml/Amenage.git`
-* Suivez le guide d'installation mannuel de code igniter [(lien direct)](https://codeigniter.com/user_guide/installation/installing_manual.html).
+* Suivez le guide d'installation manuelle de CodeIgniter [(lien direct)](https://codeigniter.com/user_guide/installation/installing_manual.html).
 * Décompressez le fichier public/assets package.zip
 * Renommez le fichier `env` en `.env` et complétez les champs qui ne sont pas commentés à l'aide de la commande `nano .env`

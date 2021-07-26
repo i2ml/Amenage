@@ -112,7 +112,8 @@
 					</div>
 					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
 						<h2 class="h2 mb-3 subtitle bold">Un logiciel complet</h2>
-						<h3 class="h3 mb-0">Amenage 3D vous permet de modéliser un logement complet, équipé de toutes les aides techniques dont vous pouvez avoir besoin !</h3>
+						<h3 class="h3 mb-0">Aménâge 3D vous permet de modéliser un logement complet, équipé de toutes les aides techniques dont vous pouvez avoir besoin !</h3>
+						<h3 class="h3 mb-0">Aménâge 3D vous permet de modéliser un logement complet, équipé de toutes les aides techniques dont vous pouvez avoir besoin !</h3>
 						<div class="row justify-content-center my-5">
 							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
 								<a href="examples" class="button btn-dark buttonLarge w-100 p-3 px-5 d-flex justify-content-center">
@@ -156,7 +157,7 @@
 						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="<?php echo base_url('assets/img/appimg.jpg'); ?>" alt="No result illustration">
 					</div>
 					<div class="col-md-5 col-12 align-self-center text-center justify-content-center">
-						<h2 class="h2 mb-3 subtitle bold">Recherchez des aides techniques sur Amenage</h2>
+						<h2 class="h2 mb-3 subtitle bold">Recherchez des aides techniques sur Aménâge</h2>
 						<h3 class="h3 mb-0">Découvrez des aides techniques qui correspondent à votre besoin ou renseignez vous sur les caractéristiques techniques des aides que vous connaissez.</h3>
 						<div class="row justify-content-center my-5">
 							<div class="col-md-12 col-lg-10 col-xl-8 align-self-center text-center justify-content-center">
